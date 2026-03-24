@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Unit 9 — ML, SQL & APIs | PyTrack</title>
+<link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="../index.html">Py<span>Track</span></a>
+  <div class="nav-right">
+    <div class="progress-badge" id="nav-progress">0 / 90 lessons</div>
+    <a class="btn-outline" href="../index.html">⌂ All Units</a>
+  </div>
+</nav>
+
+<div class="lesson-page">
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <a href="../index.html" class="sidebar-home">⌂ PyTrack — All Units</a>
+    </div>
+    <div class="sidebar-inner">
+      <div class="sidebar-unit">
+  <div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🚀</span><span>Unit 1: Getting Started</span><span class="sidebar-unit-arrow">▶</span></div>
+  <div class="sidebar-lessons"><a class="sidebar-lesson" id="slink-1-0" href="unit-1.html" ><span class="lesson-check" id="chk-1-0"></span>What is Python & Data Analysis?</a><a class="sidebar-lesson" id="slink-1-1" href="unit-1.html" ><span class="lesson-check" id="chk-1-1"></span>Installing Anaconda</a><a class="sidebar-lesson" id="slink-1-2" href="unit-1.html" ><span class="lesson-check" id="chk-1-2"></span>Jupyter Notebook Basics</a><a class="sidebar-lesson" id="slink-1-3" href="unit-1.html" ><span class="lesson-check" id="chk-1-3"></span>Your First Python Code</a><a class="sidebar-lesson" id="slink-1-4" href="unit-1.html" ><span class="lesson-check" id="chk-1-4"></span>Understanding Errors</a><a class="sidebar-lesson" id="slink-1-5" href="unit-1.html" ><span class="lesson-check" id="chk-1-5"></span>Variables & Operators</a><a class="sidebar-lesson" id="slink-1-6" href="unit-1.html" ><span class="lesson-check" id="chk-1-6"></span>Virtual Environments & pip</a><a class="sidebar-lesson" id="slink-1-7" href="unit-1.html" ><span class="lesson-check" id="chk-1-7"></span>Python in VS Code</a><a class="sidebar-lesson" id="slink-1-8" href="unit-1.html" ><span class="lesson-check" id="chk-1-8"></span>Running Python Scripts</a><a class="sidebar-lesson" id="slink-1-9" href="unit-1.html" ><span class="lesson-check" id="chk-1-9"></span>Comments & Code Style</a></div>
+</div><div class="sidebar-unit">
+  <div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🐍</span><span>Unit 2: Python Fundamentals</span><span class="sidebar-unit-arrow">▶</span></div>
+  <div class="sidebar-lessons"><a class="sidebar-lesson" id="slink-2-0" href="unit-2.html" ><span class="lesson-check" id="chk-2-0"></span>Variables & Data Types</a><a class="sidebar-lesson" id="slink-2-1" href="unit-2.html" ><span class="lesson-check" id="chk-2-1"></span>Numbers & Math</a><a class="sidebar-lesson" id="slink-2-2" href="unit-2.html" ><span class="lesson-check" id="chk-2-2"></span>Strings</a><a class="sidebar-lesson" id="slink-2-3" href="unit-2.html" ><span class="lesson-check" id="chk-2-3"></span>Lists</a><a class="sidebar-lesson" id="slink-2-4" href="unit-2.html" ><span class="lesson-check" id="chk-2-4"></span>Dictionaries</a><a class="sidebar-lesson" id="slink-2-5" href="unit-2.html" ><span class="lesson-check" id="chk-2-5"></span>Tuples & Sets</a><a class="sidebar-lesson" id="slink-2-6" href="unit-2.html" ><span class="lesson-check" id="chk-2-6"></span>Type Conversion</a><a class="sidebar-lesson" id="slink-2-7" href="unit-2.html" ><span class="lesson-check" id="chk-2-7"></span>Modules & Import</a><a class="sidebar-lesson" id="slink-2-8" href="unit-2.html" ><span class="lesson-check" id="chk-2-8"></span>Regular Expressions</a><a class="sidebar-lesson" id="slink-2-9" href="unit-2.html" ><span class="lesson-check" id="chk-2-9"></span>Exception Handling</a></div>
+</div><div class="sidebar-unit">
+  <div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🔄</span><span>Unit 3: Control Flow</span><span class="sidebar-unit-arrow">▶</span></div>
+  <div class="sidebar-lessons"><a class="sidebar-lesson" id="slink-3-0" href="unit-3.html" ><span class="lesson-check" id="chk-3-0"></span>If / Elif / Else</a><a class="sidebar-lesson" id="slink-3-1" href="unit-3.html" ><span class="lesson-check" id="chk-3-1"></span>For Loops</a><a class="sidebar-lesson" id="slink-3-2" href="unit-3.html" ><span class="lesson-check" id="chk-3-2"></span>While Loops</a><a class="sidebar-lesson" id="slink-3-3" href="unit-3.html" ><span class="lesson-check" id="chk-3-3"></span>Functions</a><a class="sidebar-lesson" id="slink-3-4" href="unit-3.html" ><span class="lesson-check" id="chk-3-4"></span>Lambda Functions</a><a class="sidebar-lesson" id="slink-3-5" href="unit-3.html" ><span class="lesson-check" id="chk-3-5"></span>List Comprehensions</a><a class="sidebar-lesson" id="slink-3-6" href="unit-3.html" ><span class="lesson-check" id="chk-3-6"></span>Dict & Set Comprehensions</a><a class="sidebar-lesson" id="slink-3-7" href="unit-3.html" ><span class="lesson-check" id="chk-3-7"></span>File I/O</a><a class="sidebar-lesson" id="slink-3-8" href="unit-3.html" ><span class="lesson-check" id="chk-3-8"></span>Classes & OOP Basics</a><a class="sidebar-lesson" id="slink-3-9" href="unit-3.html" ><span class="lesson-check" id="chk-3-9"></span>Inheritance & Methods</a></div>
+</div><div class="sidebar-unit">
+  <div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🔢</span><span>Unit 4: NumPy Arrays</span><span class="sidebar-unit-arrow">▶</span></div>
+  <div class="sidebar-lessons"><a class="sidebar-lesson" id="slink-4-0" href="unit-4.html" ><span class="lesson-check" id="chk-4-0"></span>Introduction to NumPy</a><a class="sidebar-lesson" id="slink-4-1" href="unit-4.html" ><span class="lesson-check" id="chk-4-1"></span>Arrays & Dimensions</a><a class="sidebar-lesson" id="slink-4-2" href="unit-4.html" ><span class="lesson-check" id="chk-4-2"></span>Operations & Filtering</a><a class="sidebar-lesson" id="slink-4-3" href="unit-4.html" ><span class="lesson-check" id="chk-4-3"></span>Statistics with NumPy</a><a class="sidebar-lesson" id="slink-4-4" href="unit-4.html" ><span class="lesson-check" id="chk-4-4"></span>Reshape, Sort & Search</a><a class="sidebar-lesson" id="slink-4-5" href="unit-4.html" ><span class="lesson-check" id="chk-4-5"></span>Random Numbers</a><a class="sidebar-lesson" id="slink-4-6" href="unit-4.html" ><span class="lesson-check" id="chk-4-6"></span>Broadcasting</a><a class="sidebar-lesson" id="slink-4-7" href="unit-4.html" ><span class="lesson-check" id="chk-4-7"></span>Linear Algebra Basics</a><a class="sidebar-lesson" id="slink-4-8" href="unit-4.html" ><span class="lesson-check" id="chk-4-8"></span>Date & Time with NumPy</a><a class="sidebar-lesson" id="slink-4-9" href="unit-4.html" ><span class="lesson-check" id="chk-4-9"></span>Performance Tips</a></div>
+</div><div class="sidebar-unit">
+  <div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🐼</span><span>Unit 5: Pandas Basics</span><span class="sidebar-unit-arrow">▶</span></div>
+  <div class="sidebar-lessons"><a class="sidebar-lesson" id="slink-5-0" href="unit-5.html" ><span class="lesson-check" id="chk-5-0"></span>Pandas Series</a><a class="sidebar-lesson" id="slink-5-1" href="unit-5.html" ><span class="lesson-check" id="chk-5-1"></span>DataFrames</a><a class="sidebar-lesson" id="slink-5-2" href="unit-5.html" ><span class="lesson-check" id="chk-5-2"></span>Reading CSV & Excel</a><a class="sidebar-lesson" id="slink-5-3" href="unit-5.html" ><span class="lesson-check" id="chk-5-3"></span>Exploring Your Data</a><a class="sidebar-lesson" id="slink-5-4" href="unit-5.html" ><span class="lesson-check" id="chk-5-4"></span>Selecting & Filtering</a><a class="sidebar-lesson" id="slink-5-5" href="unit-5.html" ><span class="lesson-check" id="chk-5-5"></span>Adding & Modifying Columns</a><a class="sidebar-lesson" id="slink-5-6" href="unit-5.html" ><span class="lesson-check" id="chk-5-6"></span>Sorting & Ranking</a><a class="sidebar-lesson" id="slink-5-7" href="unit-5.html" ><span class="lesson-check" id="chk-5-7"></span>apply() & map()</a><a class="sidebar-lesson" id="slink-5-8" href="unit-5.html" ><span class="lesson-check" id="chk-5-8"></span>String Methods in Pandas</a><a class="sidebar-lesson" id="slink-5-9" href="unit-5.html" ><span class="lesson-check" id="chk-5-9"></span>Working with Dates</a></div>
+</div><div class="sidebar-unit">
+  <div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🧹</span><span>Unit 6: Data Cleaning</span><span class="sidebar-unit-arrow">▶</span></div>
+  <div class="sidebar-lessons"><a class="sidebar-lesson" id="slink-6-0" href="unit-6.html" ><span class="lesson-check" id="chk-6-0"></span>Finding Missing Values</a><a class="sidebar-lesson" id="slink-6-1" href="unit-6.html" ><span class="lesson-check" id="chk-6-1"></span>Filling & Dropping Missing Data</a><a class="sidebar-lesson" id="slink-6-2" href="unit-6.html" ><span class="lesson-check" id="chk-6-2"></span>Duplicates & Data Types</a><a class="sidebar-lesson" id="slink-6-3" href="unit-6.html" ><span class="lesson-check" id="chk-6-3"></span>String Cleaning</a><a class="sidebar-lesson" id="slink-6-4" href="unit-6.html" ><span class="lesson-check" id="chk-6-4"></span>Detecting Outliers</a><a class="sidebar-lesson" id="slink-6-5" href="unit-6.html" ><span class="lesson-check" id="chk-6-5"></span>Removing Outliers</a><a class="sidebar-lesson" id="slink-6-6" href="unit-6.html" ><span class="lesson-check" id="chk-6-6"></span>Data Validation</a><a class="sidebar-lesson" id="slink-6-7" href="unit-6.html" ><span class="lesson-check" id="chk-6-7"></span>Encoding Categorical Data</a><a class="sidebar-lesson" id="slink-6-8" href="unit-6.html" ><span class="lesson-check" id="chk-6-8"></span>Binning & Discretization</a><a class="sidebar-lesson" id="slink-6-9" href="unit-6.html" ><span class="lesson-check" id="chk-6-9"></span>Full Cleaning Pipeline</a></div>
+</div><div class="sidebar-unit">
+  <div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>📊</span><span>Unit 7: Data Analysis</span><span class="sidebar-unit-arrow">▶</span></div>
+  <div class="sidebar-lessons"><a class="sidebar-lesson" id="slink-7-0" href="unit-7.html" ><span class="lesson-check" id="chk-7-0"></span>Descriptive Statistics</a><a class="sidebar-lesson" id="slink-7-1" href="unit-7.html" ><span class="lesson-check" id="chk-7-1"></span>GroupBy — Grouped Analysis</a><a class="sidebar-lesson" id="slink-7-2" href="unit-7.html" ><span class="lesson-check" id="chk-7-2"></span>Merging DataFrames</a><a class="sidebar-lesson" id="slink-7-3" href="unit-7.html" ><span class="lesson-check" id="chk-7-3"></span>Concat & Join</a><a class="sidebar-lesson" id="slink-7-4" href="unit-7.html" ><span class="lesson-check" id="chk-7-4"></span>Pivot Tables</a><a class="sidebar-lesson" id="slink-7-5" href="unit-7.html" ><span class="lesson-check" id="chk-7-5"></span>Time Series Basics</a><a class="sidebar-lesson" id="slink-7-6" href="unit-7.html" ><span class="lesson-check" id="chk-7-6"></span>Window Functions</a><a class="sidebar-lesson" id="slink-7-7" href="unit-7.html" ><span class="lesson-check" id="chk-7-7"></span>Correlation & Regression</a><a class="sidebar-lesson" id="slink-7-8" href="unit-7.html" ><span class="lesson-check" id="chk-7-8"></span>Sampling & Hypothesis Testing</a><a class="sidebar-lesson" id="slink-7-9" href="unit-7.html" ><span class="lesson-check" id="chk-7-9"></span>Building Analysis Reports</a></div>
+</div><div class="sidebar-unit">
+  <div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>📈</span><span>Unit 8: Data Visualization</span><span class="sidebar-unit-arrow">▶</span></div>
+  <div class="sidebar-lessons"><a class="sidebar-lesson" id="slink-8-0" href="unit-8.html" ><span class="lesson-check" id="chk-8-0"></span>Matplotlib Basics</a><a class="sidebar-lesson" id="slink-8-1" href="unit-8.html" ><span class="lesson-check" id="chk-8-1"></span>Bar & Line Charts</a><a class="sidebar-lesson" id="slink-8-2" href="unit-8.html" ><span class="lesson-check" id="chk-8-2"></span>Histograms & Scatter Plots</a><a class="sidebar-lesson" id="slink-8-3" href="unit-8.html" ><span class="lesson-check" id="chk-8-3"></span>Pie & Area Charts</a><a class="sidebar-lesson" id="slink-8-4" href="unit-8.html" ><span class="lesson-check" id="chk-8-4"></span>Seaborn Charts</a><a class="sidebar-lesson" id="slink-8-5" href="unit-8.html" ><span class="lesson-check" id="chk-8-5"></span>Heatmaps & Pair Plots</a><a class="sidebar-lesson" id="slink-8-6" href="unit-8.html" ><span class="lesson-check" id="chk-8-6"></span>Subplots & Dashboards</a><a class="sidebar-lesson" id="slink-8-7" href="unit-8.html" ><span class="lesson-check" id="chk-8-7"></span>Plotly — Interactive Charts</a><a class="sidebar-lesson" id="slink-8-8" href="unit-8.html" ><span class="lesson-check" id="chk-8-8"></span>Chart Styling & Themes</a><a class="sidebar-lesson" id="slink-8-9" href="unit-8.html" ><span class="lesson-check" id="chk-8-9"></span>Exporting & Sharing Charts</a></div>
+</div><div class="sidebar-unit">
+  <div class="sidebar-unit-header active-unit open" onclick="toggleUnit(this)"><span>🤖</span><span>Unit 9: ML, SQL & APIs</span><span class="sidebar-unit-arrow">▶</span></div>
+  <div class="sidebar-lessons open"><a class="sidebar-lesson active" id="slink-9-0" href="javascript:showLesson(0)" onclick="showLesson(0);return false;"><span class="lesson-check" id="chk-9-0"></span>Intro to Machine Learning</a><a class="sidebar-lesson" id="slink-9-1" href="javascript:showLesson(1)" onclick="showLesson(1);return false;"><span class="lesson-check" id="chk-9-1"></span>Scikit-learn Basics</a><a class="sidebar-lesson" id="slink-9-2" href="javascript:showLesson(2)" onclick="showLesson(2);return false;"><span class="lesson-check" id="chk-9-2"></span>Linear Regression</a><a class="sidebar-lesson" id="slink-9-3" href="javascript:showLesson(3)" onclick="showLesson(3);return false;"><span class="lesson-check" id="chk-9-3"></span>Logistic Regression</a><a class="sidebar-lesson" id="slink-9-4" href="javascript:showLesson(4)" onclick="showLesson(4);return false;"><span class="lesson-check" id="chk-9-4"></span>Decision Trees & Random Forest</a><a class="sidebar-lesson" id="slink-9-5" href="javascript:showLesson(5)" onclick="showLesson(5);return false;"><span class="lesson-check" id="chk-9-5"></span>Model Evaluation</a><a class="sidebar-lesson" id="slink-9-6" href="javascript:showLesson(6)" onclick="showLesson(6);return false;"><span class="lesson-check" id="chk-9-6"></span>Feature Engineering</a><a class="sidebar-lesson" id="slink-9-7" href="javascript:showLesson(7)" onclick="showLesson(7);return false;"><span class="lesson-check" id="chk-9-7"></span>SQL with Python</a><a class="sidebar-lesson" id="slink-9-8" href="javascript:showLesson(8)" onclick="showLesson(8);return false;"><span class="lesson-check" id="chk-9-8"></span>REST APIs & requests</a><a class="sidebar-lesson" id="slink-9-9" href="javascript:showLesson(9)" onclick="showLesson(9);return false;"><span class="lesson-check" id="chk-9-9"></span>Web Scraping</a></div>
+</div><div class="sidebar-unit"><div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🏆</span><span>Capstone Projects</span><span class="sidebar-unit-arrow">▶</span></div><div class="sidebar-lessons"><a class="sidebar-lesson" href="../capstone.html">View Projects</a></div></div>
+    </div>
+  </aside>
+
+  <main class="lesson-main">
+    <div class="breadcrumb"><a href="../index.html">PyTrack</a> › <span>Unit 9 — ML, SQL & APIs</span></div>
+    <div id="lesson-panels"><!-- ═══ LESSON 0: Intro to ML ═══ -->
+<div class="lesson-panel active" id="panel-0">
+  <div class="lesson-title-bar"><h2>🤖 Intro to Machine Learning</h2><p>Unit 9 — ML, SQL, APIs & Web Scraping. Real-world Python skills.</p></div>
+  <div class="lesson-body">
+<h3>What is Machine Learning?</h3>
+<p>Machine Learning is <strong>teaching computers to learn from data</strong> without being explicitly programmed for every case. Instead of writing rules, you show the computer examples and it figures out the patterns.</p>
+<div class="tip-box"><strong>💡 Analogy:</strong> Traditional programming = "If price > 100, label as expensive." ML = Show the computer 10,000 examples of expensive/cheap items and let it figure out the rule itself.</div>
+<h3>Types of ML</h3>
+<ul>
+<li><strong>Supervised Learning</strong> — Learn from labeled examples (most common). Predict house prices, classify spam.</li>
+<li><strong>Unsupervised Learning</strong> — Find patterns in unlabeled data. Clustering customers by behavior.</li>
+<li><strong>Reinforcement Learning</strong> — Learn by trial and error with rewards. Games, robotics.</li>
+</ul>
+<h3>The ML Workflow</h3>
+<div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body"># The ML workflow — every project follows this pattern
+# 1. Get data
+# 2. Explore & clean data (EDA)
+# 3. Choose features (columns used to predict)
+# 4. Split: train set + test set
+# 5. Train a model on train set
+# 6. Evaluate on test set
+# 7. Improve & iterate
+
+import pandas as pd
+from sklearn.model_selection import train_test_split
+
+# Example: house price dataset
+df = pd.DataFrame({
+    'size': [50, 80, 120, 200, 300],
+    'rooms': [1, 2, 3, 4, 5],
+    'price': [250, 400, 600, 950, 1400]  # in thousands
+})
+
+X = df[['size', 'rooms']]  # Features (inputs)
+y = df['price']            # Target (what we predict)
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+print("Train:", len(X_train), "Test:", len(X_test))</div></div>
+<div class="output-block"><div class="output-label">Output</div>Train: 4  Test: 1</div>
+<h3>Key Vocabulary</h3>
+<ul>
+<li><strong>Features (X)</strong> — Input columns used to make predictions</li>
+<li><strong>Target (y)</strong> — The column we're trying to predict</li>
+<li><strong>Training set</strong> — Data the model learns from (usually 80%)</li>
+<li><strong>Test set</strong> — Data to evaluate how well the model performs (20%)</li>
+<li><strong>Overfitting</strong> — Model memorized training data but fails on new data</li>
+</ul>
+  </div>
+  <div class="task-section">
+    <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Explore the Iris Dataset</span></div>
+    <div class="task-desc">Load the built-in Iris dataset from sklearn. Print its shape, feature names, and target names. Then split it into train/test (80/20).</div>
+    <div class="task-starter-label">Starter code:</div>
+    <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+
+iris = load_iris()
+# Print: shape, feature_names, target_names
+print(???)
+X_train, X_test, y_train, y_test = train_test_split(???)</div></div>
+  <button class="btn-try-it" onclick="tryCode(this.previousElementSibling.querySelector('.code-body').textContent)">⚡ Try in Playground</button>
+  <button class="btn-show-solution" onclick="toggleSolution(this)">👁 Show Solution</button>
+    <div class="task-solution" style="display:none">
+      <div class="solution-label">✅ Solution</div>
+      <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+import pandas as pd
+
+iris = load_iris()
+print("Shape:", iris.data.shape)
+print("Features:", iris.feature_names)
+print("Targets:", iris.target_names)
+
+X_train, X_test, y_train, y_test = train_test_split(
+    iris.data, iris.target, test_size=0.2, random_state=42
+)
+print(f"Train: {len(X_train)}, Test: {len(X_test)}")</div></div>
+      <div class="output-block"><div class="output-label">Output</div>Shape: (150, 4)
+Features: ['sepal length (cm)', ...]
+Targets: ['setosa' 'versicolor' 'virginica']
+Train: 120, Test: 30</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ LESSON 1: Scikit-learn ═══ -->
+<div class="lesson-panel" id="panel-1">
+  <div class="lesson-title-bar"><h2>🔧 Scikit-learn Basics</h2><p>The most important Python ML library.</p></div>
+  <div class="lesson-body">
+<h3>What is Scikit-learn?</h3>
+<p>Scikit-learn (sklearn) is Python's most popular ML library. It has <strong>consistent API</strong> across all algorithms: every model has the same <code class="ci">fit()</code>, <code class="ci">predict()</code>, and <code class="ci">score()</code> methods.</p>
+<div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">from sklearn.linear_model import LinearRegression
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
+
+# All sklearn models follow the same pattern:
+# 1. Create model
+model = LinearRegression()
+
+# 2. Train (fit) on training data
+model.fit(X_train, y_train)
+
+# 3. Predict on new data
+predictions = model.predict(X_test)
+
+# 4. Evaluate
+score = model.score(X_test, y_test)
+print(f"R² score: {score:.3f}")</div></div>
+<h3>sklearn's Main Modules</h3>
+<ul>
+<li><code class="ci">sklearn.linear_model</code> — Linear/Logistic Regression</li>
+<li><code class="ci">sklearn.tree</code> — Decision Trees</li>
+<li><code class="ci">sklearn.ensemble</code> — Random Forest, Gradient Boosting</li>
+<li><code class="ci">sklearn.preprocessing</code> — Scale, encode, transform data</li>
+<li><code class="ci">sklearn.model_selection</code> — train_test_split, cross-validation</li>
+<li><code class="ci">sklearn.metrics</code> — accuracy, MSE, confusion matrix</li>
+</ul>
+<h3>Preprocessing — Scaling Features</h3>
+<div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">from sklearn.preprocessing import StandardScaler
+import numpy as np
+
+# Raw data: salary (60000-120000) vs age (25-55)
+# These scales are very different — scaling equalizes them
+X = np.array([[25, 60000], [35, 80000], [45, 120000]])
+
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+print("Original:\n", X)
+print("\nScaled:\n", X_scaled.round(2))</div></div>
+<div class="output-block"><div class="output-label">Output</div>Original:
+ [[    25  60000]
+  [    35  80000]
+  [    45 120000]]
+
+Scaled:
+ [[-1.22 -1.07]
+  [ 0.    -0.27]
+  [ 1.22   1.34]]</div>
+<div class="note-box"><strong>📌 Rule:</strong> Always fit the scaler on training data only, then transform both train and test. Never fit on test data — this causes <em>data leakage</em>.</div>
+  </div>
+  <div class="task-section">
+    <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Scale the Iris Dataset</span></div>
+    <div class="task-desc">Load the Iris dataset, split into train/test, then apply StandardScaler. Print the mean and std of the scaled training features (should be ~0 and ~1).</div>
+    <div class="task-starter-label">Starter code:</div>
+    <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+
+iris = load_iris()
+X_train, X_test, y_train, y_test = train_test_split(
+    iris.data, iris.target, test_size=0.2, random_state=42)
+
+scaler = StandardScaler()
+X_train_s = ???  # fit_transform on train
+X_test_s  = ???  # transform only on test
+print("Mean:", X_train_s.mean(axis=0).round(2))</div></div>
+  <button class="btn-try-it" onclick="tryCode(this.previousElementSibling.querySelector('.code-body').textContent)">⚡ Try in Playground</button>
+  <button class="btn-show-solution" onclick="toggleSolution(this)">👁 Show Solution</button>
+    <div class="task-solution" style="display:none">
+      <div class="solution-label">✅ Solution</div>
+      <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">X_train_s = scaler.fit_transform(X_train)
+X_test_s  = scaler.transform(X_test)
+print("Mean:", X_train_s.mean(axis=0).round(2))
+print("Std: ", X_train_s.std(axis=0).round(2))</div></div>
+      <div class="output-block"><div class="output-label">Output</div>Mean: [-0.  0.  0.  0.]
+Std:  [1. 1. 1. 1.]</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ LESSON 2: Linear Regression ═══ -->
+<div class="lesson-panel" id="panel-2">
+  <div class="lesson-title-bar"><h2>📈 Linear Regression</h2><p>Predicting continuous values.</p></div>
+  <div class="lesson-body">
+<h3>What is Linear Regression?</h3>
+<p>Linear Regression finds the <strong>best straight line</strong> through your data to predict a continuous number. It answers: "Given house size, what is the predicted price?"</p>
+<div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import numpy as np
+import pandas as pd
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error, r2_score
+
+# Generate sample data: house size vs price
+np.random.seed(42)
+size   = np.random.randint(50, 300, 100)
+noise  = np.random.normal(0, 30, 100)
+price  = 3.5 * size + 80 + noise  # price = 3.5×size + 80 + noise
+
+X = size.reshape(-1, 1)  # sklearn needs 2D array
+y = price
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Train model
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# Results
+print(f"Coefficient: {model.coef_[0]:.2f}  (slope)")
+print(f"Intercept:   {model.intercept_:.2f}")
+print(f"Formula: price = {model.coef_[0]:.1f} × size + {model.intercept_:.0f}")
+
+# Predict
+y_pred = model.predict(X_test)
+print(f"\nR² Score: {r2_score(y_test, y_pred):.3f}")
+print(f"RMSE:     {mean_squared_error(y_test, y_pred)**0.5:.1f}")</div></div>
+<div class="output-block"><div class="output-label">Output</div>Coefficient: 3.50  (slope)
+Intercept:   80.68
+Formula: price = 3.5 × size + 81
+
+R² Score: 0.978
+RMSE:     29.4</div>
+<h3>Metrics: R² and RMSE</h3>
+<ul>
+<li><strong>R² (R-squared)</strong> — How much variance the model explains. 1.0 = perfect, 0 = no better than average. Aim for &gt; 0.85.</li>
+<li><strong>RMSE (Root Mean Squared Error)</strong> — Average prediction error in the same unit as y. Lower is better.</li>
+</ul>
+<div class="tip-box"><strong>💡 Rule of thumb:</strong> R² &gt; 0.9 = excellent, 0.7-0.9 = good, &lt; 0.7 = consider other models or more features.</div>
+  </div>
+  <div class="task-section">
+    <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Predict Salary from Years of Experience</span></div>
+    <div class="task-desc">Create a dataset with 50 people: years_experience (1-20) and salary (roughly 30000 + 5000×years + noise). Train a LinearRegression model and predict the salary for someone with 10 years experience. Print R² score.</div>
+    <div class="task-starter-label">Starter code:</div>
+    <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import numpy as np
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import r2_score
+
+np.random.seed(0)
+years = np.random.randint(1, 21, 50)
+salary = 30000 + 5000 * years + np.random.normal(0, 3000, 50)
+
+X = years.reshape(-1, 1)
+# Split, train, predict salary for [[10]], print R²</div></div>
+  <button class="btn-try-it" onclick="tryCode(this.previousElementSibling.querySelector('.code-body').textContent)">⚡ Try in Playground</button>
+  <button class="btn-show-solution" onclick="toggleSolution(this)">👁 Show Solution</button>
+    <div class="task-solution" style="display:none">
+      <div class="solution-label">✅ Solution</div>
+      <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">X_train, X_test, y_train, y_test = train_test_split(X, salary, test_size=0.2, random_state=42)
+model = LinearRegression()
+model.fit(X_train, y_train)
+pred_10 = model.predict([[10]])
+print(f"Predicted salary (10 yrs): ${pred_10[0]:,.0f}")
+print(f"R² score: {r2_score(y_test, model.predict(X_test)):.3f}")</div></div>
+      <div class="output-block"><div class="output-label">Output</div>Predicted salary (10 yrs): $79,854
+R² score: 0.956</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ LESSON 3: Logistic Regression ═══ -->
+<div class="lesson-panel" id="panel-3">
+  <div class="lesson-title-bar"><h2>🔀 Logistic Regression</h2><p>Classification — predicting categories.</p></div>
+  <div class="lesson-body">
+<h3>Classification vs Regression</h3>
+<p>When the answer is a <strong>category</strong> (spam/not spam, fraud/normal, pass/fail) — use classification. Logistic Regression is the simplest classifier.</p>
+<div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">from sklearn.linear_model import LogisticRegression
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, classification_report
+
+iris = load_iris()
+X_train, X_test, y_train, y_test = train_test_split(
+    iris.data, iris.target, test_size=0.2, random_state=42)
+
+model = LogisticRegression(max_iter=200)
+model.fit(X_train, y_train)
+
+y_pred = model.predict(X_test)
+print(f"Accuracy: {accuracy_score(y_test, y_pred):.1%}")
+print("\nDetailed report:")
+print(classification_report(y_test, y_pred,
+      target_names=iris.target_names))</div></div>
+<div class="output-block"><div class="output-label">Output</div>Accuracy: 100.0%
+
+Detailed report:
+              precision    recall  f1-score
+    setosa       1.00      1.00      1.00
+versicolor       1.00      1.00      1.00
+ virginica       1.00      1.00      1.00</div>
+<h3>Understanding the Classification Report</h3>
+<ul>
+<li><strong>Precision</strong> — Of all predicted positives, how many were actually positive? (avoid false alarms)</li>
+<li><strong>Recall</strong> — Of all actual positives, how many did we catch? (avoid missing cases)</li>
+<li><strong>F1-score</strong> — Balance between precision and recall. Use when classes are imbalanced.</li>
+</ul>
+  </div>
+  <div class="task-section">
+    <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Email Spam Classifier</span></div>
+    <div class="task-desc">Using the breast cancer dataset (sklearn.datasets.load_breast_cancer), train a LogisticRegression model and print accuracy + classification report. This dataset has 2 classes: malignant / benign.</div>
+    <button class="btn-show-solution" onclick="toggleSolution(this)">👁 Show Solution</button>
+    <div class="task-solution" style="display:none">
+      <div class="solution-label">✅ Solution</div>
+      <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">from sklearn.datasets import load_breast_cancer
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, classification_report
+from sklearn.preprocessing import StandardScaler
+
+data = load_breast_cancer()
+X_train, X_test, y_train, y_test = train_test_split(
+    data.data, data.target, test_size=0.2, random_state=42)
+
+scaler = StandardScaler()
+X_train = scaler.fit_transform(X_train)
+X_test  = scaler.transform(X_test)
+
+model = LogisticRegression(max_iter=1000)
+model.fit(X_train, y_train)
+print(f"Accuracy: {accuracy_score(y_test, model.predict(X_test)):.1%}")
+print(classification_report(y_test, model.predict(X_test)))</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ LESSON 4: Decision Trees ═══ -->
+<div class="lesson-panel" id="panel-4">
+  <div class="lesson-title-bar"><h2>🌳 Decision Trees & Random Forest</h2><p>The most powerful and interpretable models.</p></div>
+  <div class="lesson-body">
+<h3>Decision Trees</h3>
+<p>A Decision Tree splits data by asking yes/no questions. <strong>Random Forest</strong> = 100s of trees voting together — much more accurate and robust.</p>
+<div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">from sklearn.ensemble import RandomForestClassifier
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+import pandas as pd
+
+iris = load_iris()
+X_train, X_test, y_train, y_test = train_test_split(
+    iris.data, iris.target, test_size=0.2, random_state=42)
+
+# Random Forest = many decision trees
+rf = RandomForestClassifier(n_estimators=100, random_state=42)
+rf.fit(X_train, y_train)
+
+print(f"Accuracy: {accuracy_score(y_test, rf.predict(X_test)):.1%}")
+
+# Feature importance — which features matter most?
+importance = pd.DataFrame({
+    'feature': iris.feature_names,
+    'importance': rf.feature_importances_
+}).sort_values('importance', ascending=False)
+print("\nFeature Importance:")
+print(importance.to_string(index=False))</div></div>
+<div class="output-block"><div class="output-label">Output</div>Accuracy: 100.0%
+
+Feature Importance:
+               feature  importance
+petal length (cm)       0.44
+ petal width (cm)       0.42
+sepal length (cm)       0.09
+ sepal width (cm)       0.05</div>
+<div class="tip-box"><strong>💡 Random Forest tip:</strong> Start with n_estimators=100 for most problems. Feature importance tells you which columns actually matter — use this to simplify your model.</div>
+  </div>
+  <div class="task-section">
+    <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Compare Models on Wine Dataset</span></div>
+    <div class="task-desc">Load sklearn.datasets.load_wine. Compare accuracy of LogisticRegression, DecisionTreeClassifier, and RandomForestClassifier. Which one wins?</div>
+    <button class="btn-show-solution" onclick="toggleSolution(this)">👁 Show Solution</button>
+    <div class="task-solution" style="display:none">
+      <div class="solution-label">✅ Solution</div>
+      <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">from sklearn.datasets import load_wine
+from sklearn.linear_model import LogisticRegression
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import accuracy_score
+
+wine = load_wine()
+X_tr, X_te, y_tr, y_te = train_test_split(wine.data, wine.target, test_size=0.2, random_state=42)
+sc = StandardScaler()
+X_tr = sc.fit_transform(X_tr); X_te = sc.transform(X_te)
+
+for name, m in [('Logistic', LogisticRegression(max_iter=500)),
+                ('DecTree',  DecisionTreeClassifier()),
+                ('Forest',   RandomForestClassifier(100))]:
+    m.fit(X_tr, y_tr)
+    print(f"{name:12}: {accuracy_score(y_te, m.predict(X_te)):.1%}")</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ LESSON 5: Model Evaluation ═══ -->
+<div class="lesson-panel" id="panel-5">
+  <div class="lesson-title-bar"><h2>📊 Model Evaluation</h2><p>How to properly measure model performance.</p></div>
+  <div class="lesson-body">
+<h3>The Confusion Matrix</h3>
+<div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.datasets import load_breast_cancer
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+
+data = load_breast_cancer()
+X_tr, X_te, y_tr, y_te = train_test_split(data.data, data.target, test_size=0.2, random_state=42)
+sc = StandardScaler()
+X_tr = sc.fit_transform(X_tr); X_te = sc.transform(X_te)
+
+rf = RandomForestClassifier(100, random_state=42)
+rf.fit(X_tr, y_tr)
+y_pred = rf.predict(X_te)
+
+cm = confusion_matrix(y_te, y_pred)
+print("Confusion Matrix:")
+print(cm)
+print(f"\nTrue Positives:  {cm[1,1]}")
+print(f"False Positives: {cm[0,1]}  (predicted cancer, was benign)")
+print(f"False Negatives: {cm[1,0]}  (missed cancer!)")</div></div>
+<div class="output-block"><div class="output-label">Output</div>Confusion Matrix:
+[[40  3]
+ [ 1 70]]
+
+True Positives:  70
+False Positives: 3  (predicted cancer, was benign)
+False Negatives: 1  (missed cancer!)</div>
+<h3>Cross-Validation</h3>
+<div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">from sklearn.model_selection import cross_val_score
+import numpy as np
+
+# 5-fold cross validation — more reliable than a single split
+scores = cross_val_score(rf, data.data, data.target, cv=5, scoring='accuracy')
+print(f"CV Scores: {scores.round(3)}")
+print(f"Mean: {scores.mean():.3f} ± {scores.std():.3f}")</div></div>
+<div class="output-block"><div class="output-label">Output</div>CV Scores: [0.956 0.965 0.956 0.974 0.965]
+Mean: 0.963 ± 0.006</div>
+  </div>
+  <div class="task-section">
+    <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Evaluate with Cross-Validation</span></div>
+    <div class="task-desc">Load the digits dataset (load_digits). Run 5-fold cross-validation with RandomForestClassifier and print mean accuracy ± std. This dataset has 10 classes (digits 0-9).</div>
+    <button class="btn-show-solution" onclick="toggleSolution(this)">👁 Show Solution</button>
+    <div class="task-solution" style="display:none">
+      <div class="solution-label">✅ Solution</div>
+      <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">from sklearn.datasets import load_digits
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import cross_val_score
+import numpy as np
+
+digits = load_digits()
+rf = RandomForestClassifier(100, random_state=42)
+scores = cross_val_score(rf, digits.data, digits.target, cv=5)
+print(f"Accuracy: {scores.mean():.1%} ± {scores.std():.1%}")</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ LESSON 6: Feature Engineering ═══ -->
+<div class="lesson-panel" id="panel-6">
+  <div class="lesson-title-bar"><h2>⚙️ Feature Engineering</h2><p>Creating better inputs for your model.</p></div>
+  <div class="lesson-body">
+<h3>What is Feature Engineering?</h3>
+<p>"<strong>Garbage in, garbage out.</strong>" The quality of your features determines the quality of your model more than the algorithm itself.</p>
+<div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import pandas as pd
+from sklearn.preprocessing import LabelEncoder, OneHotEncoder
+
+df = pd.DataFrame({
+    'age':    [25, 35, 45, 22, 58],
+    'city':   ['Cairo', 'Alex', 'Cairo', 'Giza', 'Alex'],
+    'salary': [45000, 72000, 95000, 38000, 88000]
+})
+
+# 1. Label Encoding (for ordinal/binary categories)
+le = LabelEncoder()
+df['city_encoded'] = le.fit_transform(df['city'])
+
+# 2. One-Hot Encoding (for nominal categories)
+df_ohe = pd.get_dummies(df, columns=['city'], prefix='city')
+print(df_ohe.head())
+
+# 3. Create new features
+df['salary_per_age'] = df['salary'] / df['age']
+df['is_senior'] = (df['age'] >= 40).astype(int)
+print("\nNew features:")
+print(df[['age','salary','salary_per_age','is_senior']])</div></div>
+<h3>Handling Missing Values for ML</h3>
+<div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">from sklearn.impute import SimpleImputer
+import numpy as np
+
+X = np.array([[1, 2], [np.nan, 3], [7, np.nan]])
+imp = SimpleImputer(strategy='mean')  # fill NaN with column mean
+X_filled = imp.fit_transform(X)
+print(X_filled)</div></div>
+<div class="output-block"><div class="output-label">Output</div>[[1.  2. ]
+ [4.  3. ]
+ [7.  2.5]]</div>
+  </div>
+  <div class="task-section">
+    <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Engineer Features from Date</span></div>
+    <div class="task-desc">Create a DataFrame with 100 random sales dates (2023-2024) and amounts. Extract: month, day_of_week, is_weekend, quarter. Then check which feature correlates most with amount using .corr().</div>
+    <button class="btn-show-solution" onclick="toggleSolution(this)">👁 Show Solution</button>
+    <div class="task-solution" style="display:none">
+      <div class="solution-label">✅ Solution</div>
+      <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import pandas as pd
+import numpy as np
+
+np.random.seed(42)
+dates = pd.date_range('2023-01-01', '2024-12-31', periods=100)
+df = pd.DataFrame({'date': dates, 'amount': np.random.randint(100, 5000, 100)})
+df['month']      = df['date'].dt.month
+df['day_of_week']= df['date'].dt.dayofweek
+df['is_weekend'] = (df['day_of_week'] >= 5).astype(int)
+df['quarter']    = df['date'].dt.quarter
+print(df[['month','day_of_week','is_weekend','quarter','amount']].corr()['amount'])</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ LESSON 7: SQL with Python ═══ -->
+<div class="lesson-panel" id="panel-7">
+  <div class="lesson-title-bar"><h2>🗄️ SQL with Python</h2><p>Query databases directly from Python.</p></div>
+  <div class="lesson-body">
+<h3>Why SQL + Python?</h3>
+<p>Most real-world data lives in <strong>databases</strong>. Python's <code class="ci">sqlite3</code> module lets you query SQLite databases, and <strong>pandas can read SQL queries directly</strong>.</p>
+<div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import sqlite3
+import pandas as pd
+
+# Create in-memory database
+conn = sqlite3.connect(':memory:')
+
+# Create a table and insert data
+conn.executescript("""
+CREATE TABLE sales (
+    id      INTEGER PRIMARY KEY,
+    product TEXT,
+    amount  REAL,
+    month   INTEGER,
+    region  TEXT
+);
+INSERT INTO sales VALUES
+  (1,'Laptop',1200,1,'Cairo'),
+  (2,'Phone',800,1,'Alex'),
+  (3,'Laptop',1100,2,'Cairo'),
+  (4,'Tablet',600,2,'Giza'),
+  (5,'Phone',850,3,'Cairo'),
+  (6,'Laptop',1300,3,'Alex');
+""")
+
+# Query with pandas
+df = pd.read_sql_query("SELECT * FROM sales", conn)
+print(df)</div></div>
+<div class="output-block"><div class="output-label">Output</div>   id product  amount  month region
+0   1  Laptop  1200.0      1  Cairo
+1   2   Phone   800.0      1   Alex
+...</div>
+<h3>SQL Queries with pandas</h3>
+<div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body"># GROUP BY — total sales per product
+q1 = pd.read_sql_query("""
+  SELECT product, SUM(amount) as total, COUNT(*) as orders
+  FROM sales GROUP BY product ORDER BY total DESC
+""", conn)
+print("Sales by product:\n", q1)
+
+# WHERE + aggregate
+q2 = pd.read_sql_query("""
+  SELECT region, AVG(amount) as avg_sale
+  FROM sales WHERE month >= 2
+  GROUP BY region
+""", conn)
+print("\nAvg sale by region (from month 2):\n", q2)
+
+# Write DataFrame back to SQL
+df_new = pd.DataFrame({'product':['Camera'],'amount':[950],'month':[4],'region':['Giza'],'id':[7]})
+df_new.to_sql('sales', conn, if_exists='append', index=False)
+print("\nRows after insert:", pd.read_sql_query("SELECT COUNT(*) FROM sales", conn).iloc[0,0])</div></div>
+  </div>
+  <div class="task-section">
+    <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Employee Database Query</span></div>
+    <div class="task-desc">Create an SQLite table 'employees' with columns: name, department, salary, hire_year. Insert 8 employees. Query: (1) average salary per department, (2) employees hired after 2020, (3) the top earner.</div>
+    <button class="btn-show-solution" onclick="toggleSolution(this)">👁 Show Solution</button>
+    <div class="task-solution" style="display:none">
+      <div class="solution-label">✅ Solution</div>
+      <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import sqlite3, pandas as pd
+conn = sqlite3.connect(':memory:')
+conn.executescript("""
+CREATE TABLE employees (name TEXT, department TEXT, salary REAL, hire_year INT);
+INSERT INTO employees VALUES
+  ('Ahmed','Engineering',85000,2019),('Sara','Marketing',72000,2021),
+  ('Mohamed','Engineering',92000,2018),('Nour','HR',65000,2022),
+  ('Karim','Marketing',78000,2020),('Dina','Engineering',88000,2023),
+  ('Omar','HR',60000,2019),('Layla','Marketing',82000,2021);
+""")
+print(pd.read_sql_query("SELECT department, AVG(salary) as avg FROM employees GROUP BY department", conn))
+print(pd.read_sql_query("SELECT name, salary FROM employees WHERE hire_year > 2020", conn))
+print(pd.read_sql_query("SELECT name, salary FROM employees ORDER BY salary DESC LIMIT 1", conn))</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ LESSON 8: REST APIs ═══ -->
+<div class="lesson-panel" id="panel-8">
+  <div class="lesson-title-bar"><h2>🌐 REST APIs & requests</h2><p>Fetch live data from the internet.</p></div>
+  <div class="lesson-body">
+<h3>What is a REST API?</h3>
+<p>APIs let programs talk to each other over HTTP. <strong>REST APIs</strong> return data (usually JSON) when you call a URL. Python's <code class="ci">requests</code> library makes this simple.</p>
+<div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import requests
+
+# GET request — fetch data from an API
+response = requests.get('https://api.coinbase.com/v2/prices/BTC-USD/spot')
+
+print("Status:", response.status_code)   # 200 = success
+print("Headers:", dict(list(response.headers.items())[:3]))
+
+# Parse JSON response
+data = response.json()
+print("\nBitcoin price:", data['data']['amount'], data['data']['currency'])</div></div>
+<h3>Working with JSON APIs + pandas</h3>
+<div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import requests
+import pandas as pd
+
+# Public API: Random user data
+response = requests.get('https://randomuser.me/api/?results=5')
+data = response.json()
+
+users = []
+for user in data['results']:
+    users.append({
+        'name':    user['name']['first'] + ' ' + user['name']['last'],
+        'country': user['location']['country'],
+        'age':     user['dob']['age'],
+        'email':   user['email']
+    })
+
+df = pd.DataFrame(users)
+print(df)</div></div>
+<h3>API Authentication & Headers</h3>
+<div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import requests
+
+# Many APIs require an API key
+headers = {
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content-Type': 'application/json'
+}
+params = {'country': 'EG', 'limit': 10}
+
+# Example pattern (don't run — needs real key)
+# response = requests.get('https://api.example.com/data',
+#                         headers=headers, params=params)
+
+# POST request — send data to an API
+payload = {'name': 'Ahmed', 'score': 95}
+# response = requests.post('https://api.example.com/scores',
+#                          json=payload, headers=headers)
+
+# Error handling
+try:
+    r = requests.get('https://httpbin.org/status/404', timeout=5)
+    r.raise_for_status()  # Raises exception for 4xx/5xx
+except requests.exceptions.HTTPError as e:
+    print(f"HTTP Error: {e}")
+except requests.exceptions.Timeout:
+    print("Request timed out")</div></div>
+  </div>
+  <div class="task-section">
+    <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Fetch & Analyze Country Data</span></div>
+    <div class="task-desc">Use the REST Countries API (restcountries.com/v3.1/region/africa) to fetch all African countries. Create a DataFrame with name, capital, population, and area. Then find the top 5 most populous countries.</div>
+    <button class="btn-show-solution" onclick="toggleSolution(this)">👁 Show Solution</button>
+    <div class="task-solution" style="display:none">
+      <div class="solution-label">✅ Solution</div>
+      <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import requests, pandas as pd
+
+r = requests.get('https://restcountries.com/v3.1/region/africa')
+countries = []
+for c in r.json():
+    countries.append({
+        'name':       c['name']['common'],
+        'capital':    c.get('capital', ['N/A'])[0],
+        'population': c.get('population', 0),
+        'area_km2':   c.get('area', 0)
+    })
+df = pd.DataFrame(countries)
+print("Top 5 by population:")
+print(df.nlargest(5, 'population')[['name','population']].to_string(index=False))</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ LESSON 9: Web Scraping ═══ -->
+<div class="lesson-panel" id="panel-9">
+  <div class="lesson-title-bar"><h2>🕷️ Web Scraping</h2><p>Extract data from websites automatically.</p></div>
+  <div class="lesson-body">
+<h3>Web Scraping with BeautifulSoup</h3>
+<p>When there's no API, you can scrape the HTML directly. <code class="ci">requests</code> fetches the page, <code class="ci">BeautifulSoup</code> parses the HTML.</p>
+<div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+
+# Fetch a page
+url = 'https://books.toscrape.com/'
+response = requests.get(url)
+soup = BeautifulSoup(response.text, 'html.parser')
+
+print("Title:", soup.title.text)
+print("H1:", soup.find('h1').text if soup.find('h1') else 'N/A')</div></div>
+<h3>Extracting Structured Data</h3>
+<div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+
+# books.toscrape.com is a practice scraping site
+url = 'https://books.toscrape.com/'
+soup = BeautifulSoup(requests.get(url).text, 'html.parser')
+
+books = []
+for article in soup.select('article.product_pod'):
+    title = article.h3.a['title']
+    price = article.select_one('.price_color').text.strip()
+    rating = article.p['class'][1]  # "One", "Two", etc.
+    books.append({'title': title, 'price': price, 'rating': rating})
+
+df = pd.DataFrame(books)
+print(df.head())</div></div>
+<h3>Scraping Multiple Pages</h3>
+<div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import requests, time
+from bs4 import BeautifulSoup
+import pandas as pd
+
+all_books = []
+for page in range(1, 4):  # First 3 pages
+    url = f'https://books.toscrape.com/catalogue/page-{page}.html'
+    soup = BeautifulSoup(requests.get(url).text, 'html.parser')
+    for art in soup.select('article.product_pod'):
+        all_books.append({
+            'title': art.h3.a['title'],
+            'price': float(art.select_one('.price_color').text.replace('Â£','').replace('£',''))
+        })
+    time.sleep(0.5)  # Be polite — don't hammer the server!
+
+df = pd.DataFrame(all_books)
+print(f"Scraped {len(df)} books")
+print(f"Avg price: £{df['price'].mean():.2f}")
+print(df.nlargest(3,'price')[['title','price']])</div></div>
+<div class="note-box"><strong>📌 Ethics:</strong> Always check robots.txt, respect rate limits, and don't scrape private/copyrighted data. Use APIs when available.</div>
+  </div>
+  <div class="task-section">
+    <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Scrape & Analyze Quotes</span></div>
+    <div class="task-desc">Scrape quotes.toscrape.com — get all quotes from the first 3 pages. Create a DataFrame with: quote_text, author, tags. Then find the most frequent author and the most common tag.</div>
+    <button class="btn-show-solution" onclick="toggleSolution(this)">👁 Show Solution</button>
+    <div class="task-solution" style="display:none">
+      <div class="solution-label">✅ Solution</div>
+      <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import requests, time, pandas as pd
+from bs4 import BeautifulSoup
+
+quotes = []
+for page in range(1, 4):
+    soup = BeautifulSoup(requests.get(f'https://quotes.toscrape.com/page/{page}/').text, 'html.parser')
+    for q in soup.select('.quote'):
+        quotes.append({
+            'text':   q.select_one('.text').text,
+            'author': q.select_one('.author').text,
+            'tags':   ', '.join(t.text for t in q.select('.tag'))
+        })
+    time.sleep(0.3)
+
+df = pd.DataFrame(quotes)
+print(f"Scraped {len(df)} quotes")
+print("Top author:", df['author'].value_counts().index[0])</div></div>
+    </div>
+  </div>
+</div>
+
+    </div><!-- /unit-page -->
+  
+  <!-- Shared Nav Bar -->
+  <div class="lesson-quiz-bar" style="margin-bottom:.8rem">
+    <button class="btn-quiz" id="quiz-btn" onclick="openCurrentQuiz()">📝 Lesson Quiz — 5 Questions</button>
+    <span class="quiz-done-badge" id="quiz-done-global" style="display:none">✓ Quiz done</span>
+  </div>
+  <div class="lesson-nav">
+    <button class="btn-nav" id="btn-prev" onclick="prevLesson()" disabled>← Prev</button>
+    <button class="btn-mark" id="btn-mark" onclick="markAndNext()">✓ Mark Done & Next →</button>
+    <a class="btn-nav" id="btn-next-unit" href="../capstone.html" style="display:none">Capstone Projects →</a>
+    <button class="btn-nav" id="btn-next" onclick="showLesson(currentLesson+1)">Next →</button>
+  </div>
+</main>
+</div><!-- /lesson-page -->
+
+<!-- Quiz Modal -->
+<div class="modal-overlay" id="quiz-modal">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 id="quiz-title">Quiz</h3>
+      <button class="modal-close" onclick="closeQuiz()">✕</button>
+    </div>
+    <div id="quiz-body"></div>
+  </div>
+</div>
+
+<script src="../js/app.js"></script>
+<script>
+initUnit({
+  id: 9,
+  lessons: [
+    {"title":"Intro to Machine Learning","quizzes":[{"q":"What is Machine Learning?","opts":["Writing rules manually for every case","Teaching computers to learn from data examples","A type of database","A Python library"],"ans":1,"exp":"ML teaches computers to learn patterns from data rather than following explicitly programmed rules."},{"q":"Which is supervised learning?","opts":["Clustering customers into groups","Generating new images","Predicting house prices from historical data","Finding patterns without labels"],"ans":2,"exp":"Supervised learning uses labeled examples (input → known output) to learn predictions."},{"q":"The 'test set' is used for:","opts":["Training the model","Evaluating model performance on unseen data","Cleaning data","Feature engineering"],"ans":1,"exp":"The test set simulates unseen real-world data. Never train on it — only evaluate."},{"q":"train_test_split(X, y, test_size=0.2) means:","opts":["20% train, 80% test","80% train, 20% test","Split randomly with seed 20","Use 20 samples only"],"ans":1,"exp":"test_size=0.2 means 20% goes to the test set, 80% to training."},{"q":"What is overfitting?","opts":["Model too simple","Model memorized training data but fails on new data","Model trains too slowly","Using wrong algorithm"],"ans":1,"exp":"Overfitting: excellent training performance but poor test performance. The model memorized instead of generalizing."}]},
+    {"title":"Scikit-learn Basics","quizzes":[{"q":"All sklearn models share which methods?","opts":["train() and test()","run() and evaluate()","fit() and predict()","learn() and score()"],"ans":2,"exp":"All sklearn estimators use fit(X, y) to train and predict(X) to get predictions. Consistent API."},{"q":"StandardScaler transforms data to have:","opts":["Values between 0 and 1","Mean 0 and standard deviation 1","All positive values","Integer values only"],"ans":1,"exp":"StandardScaler centers data at mean=0 and scales to std=1. This equalizes feature scales."},{"q":"Why fit scaler on train data only?","opts":["It's faster","Fitting on test data causes data leakage","Test data is too small","Scalers don't work on test data"],"ans":1,"exp":"Fitting on test data would leak test information into training. Always fit_transform on train, transform only on test."},{"q":"What does model.score(X_test, y_test) return for classifiers?","opts":["Loss value","Accuracy score","F1 score","Confusion matrix"],"ans":1,"exp":"For classifiers, score() returns accuracy. For regressors, it returns R² score."},{"q":"Which module contains train_test_split?","opts":["sklearn.metrics","sklearn.preprocessing","sklearn.model_selection","sklearn.utils"],"ans":2,"exp":"train_test_split is in sklearn.model_selection, which also contains cross_val_score and GridSearchCV."}]},
+    {"title":"Linear Regression","quizzes":[{"q":"Linear Regression is used for:","opts":["Classification (spam/not spam)","Clustering","Predicting continuous numbers","Image recognition"],"ans":2,"exp":"Linear Regression predicts continuous numeric values like price, temperature, or sales."},{"q":"R² = 0.85 means:","opts":["85% of predictions are correct","The model explains 85% of the variance in y","Error rate is 15%","Model is 85% accurate"],"ans":1,"exp":"R² (coefficient of determination) measures what fraction of y's variance the model explains. 1.0 is perfect."},{"q":"RMSE measures:","opts":["Model speed","Correlation between features","Average prediction error in the same units as y","Model complexity"],"ans":2,"exp":"RMSE (Root Mean Squared Error) is the average error in the same unit as the target variable. Lower is better."},{"q":"What does model.coef_ contain?","opts":["Training accuracy","The slope(s) — how much y changes per unit of X","The intercept","Predictions"],"ans":1,"exp":"coef_ contains the slopes (weights) for each feature. Intercept is in intercept_."},{"q":"When should you NOT use Linear Regression?","opts":["When predicting house prices","When the relationship is curved/non-linear","When you have many features","When data has noise"],"ans":1,"exp":"Linear Regression assumes a linear relationship. For non-linear patterns, use polynomial regression or tree-based models."}]},
+    {"title":"Logistic Regression","quizzes":[{"q":"Logistic Regression is used for:","opts":["Predicting numbers","Predicting categories (classification)","Clustering","Dimensionality reduction"],"ans":1,"exp":"Despite the name 'regression', Logistic Regression is a classification algorithm that predicts categories."},{"q":"Accuracy = 0.95 means:","opts":["Model is 95% correct on training data","95% of test predictions were correct","R² is 0.95","Error rate is 95%"],"ans":1,"exp":"Accuracy = correct predictions / total predictions. 0.95 means 95% of test set predictions were right."},{"q":"When is F1-score better than accuracy?","opts":["Always","When classes are imbalanced (e.g., 95% negative, 5% positive)","When accuracy is below 90%","For regression problems"],"ans":1,"exp":"F1 balances precision and recall. When classes are imbalanced, accuracy is misleading (predicting all negatives = high accuracy but useless)."},{"q":"Recall measures:","opts":["Precision of positive predictions","Of all actual positives, how many did we catch?","Of all predicted positives, how many were correct?","Model speed"],"ans":1,"exp":"Recall = TP / (TP + FN). High recall means we catch most actual positives. Critical in medical diagnosis."},{"q":"max_iter in LogisticRegression controls:","opts":["Training set size","Number of features","Maximum optimization iterations before convergence","Learning rate"],"ans":2,"exp":"max_iter limits how many steps the optimizer takes. Increase it if you see 'did not converge' warnings."}]},
+    {"title":"Decision Trees & Random Forest","quizzes":[{"q":"A Decision Tree makes predictions by:","opts":["Averaging neighbors","Asking a series of yes/no questions","Finding the nearest centroid","Gradient descent"],"ans":1,"exp":"Decision Trees split data by asking threshold questions (is feature > value?) until reaching a leaf with a prediction."},{"q":"Random Forest improves on Decision Trees by:","opts":["Using fewer features","Training 1 very deep tree","Combining many trees and averaging their votes","Running faster"],"ans":2,"exp":"Random Forest trains 100s of trees on random subsets and averages results — much more robust and accurate than a single tree."},{"q":"feature_importances_ tells you:","opts":["Model accuracy","How correlated features are","Which features contribute most to predictions","Feature data types"],"ans":2,"exp":"feature_importances_ ranks features by how much they reduce impurity in the trees. Great for feature selection."},{"q":"A Decision Tree with max_depth=None will:","opts":["Stop after 3 splits","Train faster","Keep splitting until each leaf has 1 sample (overfit)","Use random features"],"ans":2,"exp":"Unlimited depth = the tree memorizes training data perfectly (100% accuracy on train, poor on test). Use max_depth to regularize."},{"q":"n_estimators=100 in RandomForestClassifier means:","opts":["Use 100 features","Train 100 separate decision trees","Run 100 training epochs","Use 100% of data"],"ans":1,"exp":"n_estimators is the number of trees. More trees = more stable predictions but slower training. 100 is a good default."}]},
+    {"title":"Model Evaluation","quizzes":[{"q":"In a confusion matrix, False Negatives are:","opts":["Predicted negative, actually positive","Predicted positive, actually negative","Correct negative predictions","Correct positive predictions"],"ans":0,"exp":"False Negative: model predicted negative (0) but actual was positive (1). Critical in medical tests — a missed diagnosis."},{"q":"5-fold cross-validation splits data into:","opts":["5 features","5 equal folds, using each as test set once","5 separate models","5 random samples"],"ans":1,"exp":"CV trains 5 models, each time using a different fold as test set. Average score is more reliable than a single split."},{"q":"When your train accuracy=0.99 but test accuracy=0.72, this is:","opts":["Underfitting","Perfect generalization","Overfitting","Data leakage"],"ans":2,"exp":"Large gap between train and test accuracy = overfitting. The model memorized training data instead of learning general patterns."},{"q":"precision = TP / (TP + FP) measures:","opts":["How many true positives were found","Of all predicted positives, how many were actually positive","Recall","Accuracy"],"ans":1,"exp":"Precision = of all the times we predicted positive, how often were we right? High precision = few false alarms."},{"q":"GridSearchCV is used for:","opts":["Visualizing models","Finding the best hyperparameters","Feature selection","Data cleaning"],"ans":1,"exp":"GridSearchCV exhaustively tries all combinations of hyperparameters and returns the best combination using cross-validation."}]},
+    {"title":"Feature Engineering","quizzes":[{"q":"'Garbage in, garbage out' means:","opts":["Clean code produces clean output","Bad input features = bad model regardless of algorithm","Databases need cleaning","Variables should be named well"],"ans":1,"exp":"The quality of features is the most important factor in model performance — more than the choice of algorithm."},{"q":"One-Hot Encoding is used for:","opts":["Scaling numbers","Nominal categories with no natural order (e.g., city names)","Ordinal data","Missing values"],"ans":1,"exp":"One-Hot Encoding creates binary columns for each category value. Use for nominal data where no order exists."},{"q":"Label Encoding assigns:","opts":["Random numbers","Frequency counts","Integer codes (0, 1, 2...) to categories","Scaled values"],"ans":2,"exp":"Label Encoding converts categories to integers. Fine for tree models; avoid for linear models (implies false ordering)."},{"q":"SimpleImputer(strategy='mean') fills NaN with:","opts":["0","The most frequent value","The column mean","Removes rows"],"ans":2,"exp":"strategy='mean' fills missing values with the column mean. 'median' is more robust to outliers. 'most_frequent' for categories."},{"q":"Creating salary_per_age from salary and age is:","opts":["Data leakage","Feature engineering — creating a meaningful ratio","Data cleaning","Normalization"],"ans":1,"exp":"Feature engineering creates new informative features from existing ones. Ratios, differences, and date parts are common examples."}]},
+    {"title":"SQL with Python","quizzes":[{"q":"sqlite3.connect(':memory:') creates:","opts":["A file on disk","A remote connection","An in-memory database (disappears when script ends)","A backup database"],"ans":2,"exp":"':memory:' creates a temporary SQLite database in RAM — perfect for testing and one-time analysis."},{"q":"pd.read_sql_query() returns:","opts":["A list","A dictionary","A pandas DataFrame","A JSON object"],"ans":2,"exp":"pd.read_sql_query(sql, conn) executes the SQL and returns results as a pandas DataFrame — best of both worlds."},{"q":"GROUP BY in SQL is equivalent to pandas:","opts":["df.sort_values()","df.filter()","df.groupby()","df.pivot()"],"ans":2,"exp":"SQL GROUP BY and pandas groupby() both aggregate data by category. pd.read_sql_query() lets you use SQL syntax directly."},{"q":"df.to_sql('table', conn, if_exists='append') does:","opts":["Reads from SQL","Replaces the table","Adds DataFrame rows to existing table","Creates a new connection"],"ans":2,"exp":"if_exists='append' adds new rows to the table. 'replace' drops and recreates it. 'fail' raises error if exists."},{"q":"Which SQL statement filters rows?","opts":["GROUP BY","HAVING","WHERE","ORDER BY"],"ans":2,"exp":"WHERE filters rows before aggregation. HAVING filters groups after GROUP BY. Both are used in pd.read_sql_query()."}]},
+    {"title":"REST APIs & requests","quizzes":[{"q":"HTTP status 200 means:","opts":["Error","Not found","Success — request completed","Unauthorized"],"ans":2,"exp":"200 OK = success. 404 = not found. 401 = unauthorized. 500 = server error. Always check response.status_code."},{"q":"response.json() returns:","opts":["A string","A bytes object","A Python dict or list parsed from JSON","An XML object"],"ans":2,"exp":"response.json() parses the JSON response body into Python dicts and lists — ready to use or convert to DataFrame."},{"q":"What does requests.get(url, params=dict) do?","opts":["POSTs data","Adds query parameters to the URL (?key=value)","Sets headers","Authenticates the request"],"ans":1,"exp":"params dict is appended as query string: url?key1=val1&key2=val2. Cleaner than building the URL string manually."},{"q":"r.raise_for_status() is used to:","opts":["Print the response","Raise an exception if status is 4xx or 5xx","Return headers","Convert to JSON"],"ans":1,"exp":"raise_for_status() raises requests.HTTPError for any error status code. Use it in try/except for robust error handling."},{"q":"The Authorization header typically contains:","opts":["Your IP address","API key or Bearer token for authentication","Content type","Response format"],"ans":1,"exp":"Authorization header carries credentials. Format: 'Bearer YOUR_TOKEN' for OAuth2, or 'Api-Key YOUR_KEY' for API key auth."}]},
+    {"title":"Web Scraping","quizzes":[{"q":"BeautifulSoup parses:","opts":["CSV files","JSON data","HTML/XML documents","Excel files"],"ans":2,"exp":"BeautifulSoup parses HTML and XML, turning them into navigable Python objects (find, select, etc.)."},{"q":"soup.select('.price_color') selects:","opts":["Elements with id='price_color'","Elements with class='price_color'","All price elements","The first price element"],"ans":1,"exp":"CSS selector syntax: .class selects by class, #id by ID, tag for element type. soup.select() returns a list."},{"q":"Why add time.sleep() between requests?","opts":["Python requirement","To avoid overwhelming the server (be polite)","Required by HTTP","Makes code more readable"],"ans":1,"exp":"time.sleep(0.5-1) adds a small delay between requests. Without it, you may get banned or cause server problems."},{"q":"robots.txt is:","opts":["A Python scraping library","A file telling scrapers which paths are allowed","A list of banned IPs","A JavaScript file"],"ans":1,"exp":"robots.txt (at domain.com/robots.txt) specifies which pages bots can/cannot access. Always check before scraping."},{"q":"When should you use an API instead of scraping?","opts":["When the site is large","When no API exists","When an official API is available — it's more reliable and ethical","When data changes frequently"],"ans":2,"exp":"Always prefer official APIs over scraping when available. APIs are more stable, documented, and respectful of the provider's terms."}]}
+  ]
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>PyTrack — Python for Data Analysis</title>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Py<span>Track</span></a>
+  <div class="nav-right">
+    <div class="progress-badge" id="nav-progress">0 / 90 lessons</div>
+    <a class="btn-outline" href="index.html">⌂ All Units</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-tag">Full Track Course</div>
+  <h1 class="hero-title">Python for<br/><em>Data Analysis</em></h1>
+  <p class="hero-sub">From absolute zero to professional data analyst. 9 units, 90 lessons, hands-on tasks and quizzes — all free.</p>
+
+  <div class="hero-stats">
+    <div class="stat"><span class="stat-num">9</span><span class="stat-lbl">Units</span></div>
+    <div class="stat"><span class="stat-num">90</span><span class="stat-lbl">Lessons</span></div>
+    <div class="stat"><span class="stat-num">90</span><span class="stat-lbl">Tasks</span></div>
+    <div class="stat"><span class="stat-num">450</span><span class="stat-lbl">Quiz Qs</span></div>
+  </div>
+
+  <div class="overall-progress">
+    <span class="op-label">Your Progress</span>
+    <div class="op-bar"><div class="op-fill" id="op-fill" style="width:0%"></div></div>
+    <span class="op-pct" id="op-pct">0%</span>
+  </div>
+
+  <div class="units-grid"><a class="unit-card" id="card-1" href="units/unit-1.html">
+  <div class="unit-top">
+    <div class="unit-icon-wrap">🚀</div>
+    <div class="unit-meta">
+      <div class="unit-num">UNIT 01 — 10 LESSONS</div>
+      <div class="unit-title">Getting Started</div>
+    </div>
+  </div>
+  <div class="unit-desc">Set up your environment and write your first Python code. No experience needed!</div>
+  <div class="unit-prog-row">
+    <div class="unit-prog-bar">
+      <div class="unit-prog-fill" id="prog-1" style="width:0%"></div>
+    </div>
+    <span class="unit-prog-label" id="plabel-1">0 / 10</span>
+  </div>
+</a>
+<a class="unit-card" id="card-2" href="units/unit-2.html">
+  <div class="unit-top">
+    <div class="unit-icon-wrap">🐍</div>
+    <div class="unit-meta">
+      <div class="unit-num">UNIT 02 — 10 LESSONS</div>
+      <div class="unit-title">Python Fundamentals</div>
+    </div>
+  </div>
+  <div class="unit-desc">Variables, data types, strings, lists, dictionaries, and more — the building blocks of every Python program.</div>
+  <div class="unit-prog-row">
+    <div class="unit-prog-bar">
+      <div class="unit-prog-fill" id="prog-2" style="width:0%"></div>
+    </div>
+    <span class="unit-prog-label" id="plabel-2">0 / 10</span>
+  </div>
+</a>
+<a class="unit-card" id="card-3" href="units/unit-3.html">
+  <div class="unit-top">
+    <div class="unit-icon-wrap">🔄</div>
+    <div class="unit-meta">
+      <div class="unit-num">UNIT 03 — 10 LESSONS</div>
+      <div class="unit-title">Control Flow</div>
+    </div>
+  </div>
+  <div class="unit-desc">Make decisions, repeat actions, write functions — the logic that makes programs smart.</div>
+  <div class="unit-prog-row">
+    <div class="unit-prog-bar">
+      <div class="unit-prog-fill" id="prog-3" style="width:0%"></div>
+    </div>
+    <span class="unit-prog-label" id="plabel-3">0 / 10</span>
+  </div>
+</a>
+<a class="unit-card" id="card-4" href="units/unit-4.html">
+  <div class="unit-top">
+    <div class="unit-icon-wrap">🔢</div>
+    <div class="unit-meta">
+      <div class="unit-num">UNIT 04 — 10 LESSONS</div>
+      <div class="unit-title">NumPy Arrays</div>
+    </div>
+  </div>
+  <div class="unit-desc">Fast numerical computing with N-dimensional arrays — the engine behind all data science in Python.</div>
+  <div class="unit-prog-row">
+    <div class="unit-prog-bar">
+      <div class="unit-prog-fill" id="prog-4" style="width:0%"></div>
+    </div>
+    <span class="unit-prog-label" id="plabel-4">0 / 10</span>
+  </div>
+</a>
+<a class="unit-card" id="card-5" href="units/unit-5.html">
+  <div class="unit-top">
+    <div class="unit-icon-wrap">🐼</div>
+    <div class="unit-meta">
+      <div class="unit-num">UNIT 05 — 10 LESSONS</div>
+      <div class="unit-title">Pandas Basics</div>
+    </div>
+  </div>
+  <div class="unit-desc">The #1 tool for data analysis — load, explore, filter, and manipulate tabular data with ease.</div>
+  <div class="unit-prog-row">
+    <div class="unit-prog-bar">
+      <div class="unit-prog-fill" id="prog-5" style="width:0%"></div>
+    </div>
+    <span class="unit-prog-label" id="plabel-5">0 / 10</span>
+  </div>
+</a>
+<a class="unit-card" id="card-6" href="units/unit-6.html">
+  <div class="unit-top">
+    <div class="unit-icon-wrap">🧹</div>
+    <div class="unit-meta">
+      <div class="unit-num">UNIT 06 — 10 LESSONS</div>
+      <div class="unit-title">Data Cleaning</div>
+    </div>
+  </div>
+  <div class="unit-desc">Real-world data is messy. Learn to find and fix every type of data quality problem.</div>
+  <div class="unit-prog-row">
+    <div class="unit-prog-bar">
+      <div class="unit-prog-fill" id="prog-6" style="width:0%"></div>
+    </div>
+    <span class="unit-prog-label" id="plabel-6">0 / 10</span>
+  </div>
+</a>
+<a class="unit-card" id="card-7" href="units/unit-7.html">
+  <div class="unit-top">
+    <div class="unit-icon-wrap">📊</div>
+    <div class="unit-meta">
+      <div class="unit-num">UNIT 07 — 10 LESSONS</div>
+      <div class="unit-title">Data Analysis</div>
+    </div>
+  </div>
+  <div class="unit-desc">Extract real insights from data — grouping, pivoting, merging, time series, and statistical analysis.</div>
+  <div class="unit-prog-row">
+    <div class="unit-prog-bar">
+      <div class="unit-prog-fill" id="prog-7" style="width:0%"></div>
+    </div>
+    <span class="unit-prog-label" id="plabel-7">0 / 10</span>
+  </div>
+</a>
+<a class="unit-card" id="card-8" href="units/unit-8.html">
+  <div class="unit-top">
+    <div class="unit-icon-wrap">📈</div>
+    <div class="unit-meta">
+      <div class="unit-num">UNIT 08 — 10 LESSONS</div>
+      <div class="unit-title">Data Visualization</div>
+    </div>
+  </div>
+  <div class="unit-desc">Turn numbers into insights — create professional charts with Matplotlib, Seaborn, and Plotly.</div>
+  <div class="unit-prog-row">
+    <div class="unit-prog-bar">
+      <div class="unit-prog-fill" id="prog-8" style="width:0%"></div>
+    </div>
+    <span class="unit-prog-label" id="plabel-8">0 / 10</span>
+  </div>
+</a>
+<a class="unit-card" id="card-9" href="units/unit-9.html">
+  <div class="unit-top">
+    <div class="unit-icon-wrap">🤖</div>
+    <div class="unit-meta">
+      <div class="unit-num">UNIT 09 — 10 LESSONS</div>
+      <div class="unit-title">ML, SQL & APIs</div>
+    </div>
+  </div>
+  <div class="unit-desc">Machine Learning with Scikit-learn, SQL with Python, REST APIs, and Web Scraping.</div>
+  <div class="unit-prog-row">
+    <div class="unit-prog-bar">
+      <div class="unit-prog-fill" id="prog-9" style="width:0%"></div>
+    </div>
+    <span class="unit-prog-label" id="plabel-9">0 / 10</span>
+  </div>
+</a>
+<a class="unit-card" id="card-cap" href="capstone.html" style="border-color:rgba(245,158,11,.35);background:linear-gradient(135deg,rgba(245,158,11,.04),rgba(7,13,26,1));">
+  <div class="unit-top">
+    <div class="unit-icon-wrap">🏆</div>
+    <div class="unit-meta">
+      <div class="unit-num">CAPSTONE — 3 PROJECTS</div>
+      <div class="unit-title">Final Projects</div>
+    </div>
+  </div>
+  <div class="unit-desc">Apply everything in 3 real-world projects with real public datasets. The final step.</div>
+  <div class="unit-prog-row">
+    <div class="unit-prog-bar" style="background:rgba(245,158,11,.15)">
+      <div class="unit-prog-fill" style="width:0%;background:linear-gradient(90deg,#f59e0b,#f97316)"></div>
+    </div>
+    <span class="unit-prog-label" style="color:var(--accent3)">Real Data</span>
+  </div>
+</a>
+</div>
+</div>
+
+<script src="js/app.js"></script>
+<script>
+(function updateHome() {
+  const LESSONS_PER_UNIT = {"1": 10, "2": 10, "3": 10, "4": 10, "5": 10, "6": 10, "7": 10, "8": 10, "9": 10};
+  const TOTAL = 90;
+  let grand_total = 0;
+
+  Object.entries(LESSONS_PER_UNIT).forEach(([uid, n_lessons]) => {
+    uid = parseInt(uid);
+    const done  = unitDoneCount(uid);
+    const pct   = Math.round(done / n_lessons * 100);
+    grand_total += done;
+
+    const bar   = document.getElementById("prog-"   + uid);
+    const label = document.getElementById("plabel-" + uid);
+    const card  = document.getElementById("card-"   + uid);
+    if (bar)   bar.style.width    = pct + "%";
+    if (label) label.textContent  = done + " / " + n_lessons;
+    if (done === n_lessons && card) {
+      card.classList.add("done");
+      if (!card.querySelector(".unit-done-badge")) {
+        const b = document.createElement("div");
+        b.className = "unit-done-badge"; b.textContent = "✓";
+        card.querySelector(".unit-top").appendChild(b);
+      }
+    }
+  });
+
+  const pct = Math.round(grand_total / TOTAL * 100);
+  document.getElementById("op-fill").style.width = pct + "%";
+  document.getElementById("op-pct").textContent  = pct + "%";
+  updateNavBadge();
+})();
+</script>
+</body>
+</html>
