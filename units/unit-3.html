@@ -4,15 +4,17 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Unit 3 — Control Flow | PyTrack</title>
-<link rel="stylesheet" href="../css/style.css"/>
+<link rel="stylesheet" href="../css/style.css?v=20260514"/>
+  <link rel="icon" type="image/png" href="../New Logo last.png">
 </head>
-<body>
+<body class="code-card-preview">
 
 <nav>
-  <a class="nav-logo" href="../index.html">Py<span>Track</span></a>
+  <a class="nav-logo" href="../index.html"><img src="../New Logo last.png" alt="Ta3laM" class="nav-logo-img"></a>
   <div class="nav-right">
-    <div class="progress-badge" id="nav-progress">0 / 80 lessons</div>
+    <div class="progress-badge" id="nav-progress">0 / 100 lessons</div>
     <a class="btn-outline" href="../index.html">⌂ All Units</a>
+    <button id="theme-toggle" class="btn-theme-toggle" onclick="toggleTheme()" title="Toggle theme">☀️</button>
   </div>
 </nav>
 
@@ -49,7 +51,9 @@
 </div><div class="sidebar-unit">
   <div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🤖</span><span>Unit 9: ML, SQL & APIs</span><span class="sidebar-unit-arrow">▶</span></div>
   <div class="sidebar-lessons"><a class="sidebar-lesson" id="slink-9-0" href="unit-9.html" ><span class="lesson-check" id="chk-9-0"></span>Intro to Machine Learning</a><a class="sidebar-lesson" id="slink-9-1" href="unit-9.html" ><span class="lesson-check" id="chk-9-1"></span>Scikit-learn Basics</a><a class="sidebar-lesson" id="slink-9-2" href="unit-9.html" ><span class="lesson-check" id="chk-9-2"></span>Linear Regression</a><a class="sidebar-lesson" id="slink-9-3" href="unit-9.html" ><span class="lesson-check" id="chk-9-3"></span>Logistic Regression</a><a class="sidebar-lesson" id="slink-9-4" href="unit-9.html" ><span class="lesson-check" id="chk-9-4"></span>Decision Trees & Random Forest</a><a class="sidebar-lesson" id="slink-9-5" href="unit-9.html" ><span class="lesson-check" id="chk-9-5"></span>Model Evaluation</a><a class="sidebar-lesson" id="slink-9-6" href="unit-9.html" ><span class="lesson-check" id="chk-9-6"></span>Feature Engineering</a><a class="sidebar-lesson" id="slink-9-7" href="unit-9.html" ><span class="lesson-check" id="chk-9-7"></span>SQL with Python</a><a class="sidebar-lesson" id="slink-9-8" href="unit-9.html" ><span class="lesson-check" id="chk-9-8"></span>REST APIs & requests</a><a class="sidebar-lesson" id="slink-9-9" href="unit-9.html" ><span class="lesson-check" id="chk-9-9"></span>Web Scraping</a></div>
-</div><div class="sidebar-unit"><div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🏆</span><span>Capstone Projects</span><span class="sidebar-unit-arrow">▶</span></div><div class="sidebar-lessons"><a class="sidebar-lesson" href="../capstone.html">View Projects</a></div></div>
+</div><div class="sidebar-unit">
+  <div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🧰</span><span>Unit 10: Git & Portfolio Workflow</span><span class="sidebar-unit-arrow">▶</span></div>
+  <div class="sidebar-lessons"><a class="sidebar-lesson" id="slink-10-0" href="unit-10.html"><span class="lesson-check" id="chk-10-0"></span>Why Git for Data Projects?</a><a class="sidebar-lesson" id="slink-10-1" href="unit-10.html"><span class="lesson-check" id="chk-10-1"></span>Install & Configure Git</a><a class="sidebar-lesson" id="slink-10-2" href="unit-10.html"><span class="lesson-check" id="chk-10-2"></span>Repositories & Commits</a><a class="sidebar-lesson" id="slink-10-3" href="unit-10.html"><span class="lesson-check" id="chk-10-3"></span>Branches & Experiments</a><a class="sidebar-lesson" id="slink-10-4" href="unit-10.html"><span class="lesson-check" id="chk-10-4"></span>GitHub Remote Workflow</a><a class="sidebar-lesson" id="slink-10-5" href="unit-10.html"><span class="lesson-check" id="chk-10-5"></span>.gitignore & Data Safety</a><a class="sidebar-lesson" id="slink-10-6" href="unit-10.html"><span class="lesson-check" id="chk-10-6"></span>Project Folder Structure</a><a class="sidebar-lesson" id="slink-10-7" href="unit-10.html"><span class="lesson-check" id="chk-10-7"></span>requirements.txt & Environments</a><a class="sidebar-lesson" id="slink-10-8" href="unit-10.html"><span class="lesson-check" id="chk-10-8"></span>README for Data Projects</a><a class="sidebar-lesson" id="slink-10-9" href="unit-10.html"><span class="lesson-check" id="chk-10-9"></span>Portfolio Release Checklist</a></div></div><div class="sidebar-unit"><div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🏆</span><span>Capstone Projects</span><span class="sidebar-unit-arrow">▶</span></div><div class="sidebar-lessons"><a class="sidebar-lesson" href="../capstone.html">View Projects</a></div></div>
     </div>
   </aside>
 
@@ -119,7 +123,7 @@ print(grade)   # C</div></div>
   <div class="task-section">
   <div class="task-header">
     <span class="task-badge">🎯 TASK</span>
-    <span class="task-title">Practice Exercise</span>
+    <span class="task-title">Practice: If / Elif / Else</span>
   </div>
   <div class="task-desc">Build a loan eligibility checker: age 21-60, income >= 5000, credit score >= 650, no existing loans. Print eligibility and reason if rejected.</div>
   <div class="task-starter-label">Starter code:</div>
@@ -224,7 +228,7 @@ Apr: 61,000 / 60,000 ✅</div></div>
   <div class="task-section">
   <div class="task-header">
     <span class="task-badge">🎯 TASK</span>
-    <span class="task-title">Practice Exercise</span>
+    <span class="task-title">Practice: For Loops</span>
   </div>
   <div class="task-desc">Loop through a list of transactions. Calculate running total, flag transactions > 10000 as 'Large', count each category, and print a summary.</div>
   <div class="task-starter-label">Starter code:</div>
@@ -344,7 +348,7 @@ while True:
   <div class="task-section">
   <div class="task-header">
     <span class="task-badge">🎯 TASK</span>
-    <span class="task-title">Practice Exercise</span>
+    <span class="task-title">Practice: While Loops</span>
   </div>
   <div class="task-desc">Simulate a simple ATM: start with balance 10000 EGP. Loop to allow withdrawals. Reject if amount > balance or > 5000 per transaction. Exit when user enters 0.</div>
   <div class="task-starter-label">Starter code:</div>
@@ -450,7 +454,7 @@ print(f"Total: {total:,} | Avg: {avg:,.0f} | Best: {best:,} | Worst: {worst:,}")
   <div class="task-section">
   <div class="task-header">
     <span class="task-badge">🎯 TASK</span>
-    <span class="task-title">Practice Exercise</span>
+    <span class="task-title">Practice: Functions</span>
   </div>
   <div class="task-desc">Write 3 utility functions for a sales system: calculate_commission(sales, rate), apply_discount(price, pct), and format_report(name, data_dict). Use default parameters.</div>
   <div class="task-starter-label">Starter code:</div>
@@ -573,7 +577,7 @@ Layla    15,000
   <div class="task-section">
   <div class="task-header">
     <span class="task-badge">🎯 TASK</span>
-    <span class="task-title">Practice Exercise</span>
+    <span class="task-title">Practice: Lambda Functions</span>
   </div>
   <div class="task-desc">Use lambda with sorted(), filter(), and map() to: sort products by price descending, filter only in-stock items, and apply 20% discount to expensive items (>10000).</div>
   <div class="task-starter-label">Starter code:</div>
@@ -681,7 +685,7 @@ print(depts)   # {'Sales', 'IT'}</div></div>
   <div class="task-section">
   <div class="task-header">
     <span class="task-badge">🎯 TASK</span>
-    <span class="task-title">Practice Exercise</span>
+    <span class="task-title">Practice: List Comprehensions</span>
   </div>
   <div class="task-desc">Use comprehensions to process sales data: create a list of formatted strings, a dict of name→annual salary, and filter employees earning above average.</div>
   <div class="task-starter-label">Starter code:</div>
@@ -787,7 +791,7 @@ print(by_dept)</div></div>
   <div class="task-section">
   <div class="task-header">
     <span class="task-badge">🎯 TASK</span>
-    <span class="task-title">Practice Exercise</span>
+    <span class="task-title">Practice: Dict & Set Comprehensions</span>
   </div>
   <div class="task-desc">Given sales data, use comprehensions to: normalize sales (0-1 scale), create a rank dict, and group cities by performance tier (High/Medium/Low).</div>
   <div class="task-starter-label">Starter code:</div>
@@ -890,7 +894,7 @@ print(cfg["host"])    # localhost</div></div>
   <div class="task-section">
   <div class="task-header">
     <span class="task-badge">🎯 TASK</span>
-    <span class="task-title">Practice Exercise</span>
+    <span class="task-title">Practice: File I/O</span>
   </div>
   <div class="task-desc">Write a complete file pipeline: save employee data as both CSV and JSON, then read the CSV back, filter high earners, and append a summary to a text report.</div>
   <div class="task-starter-label">Starter code:</div>
@@ -994,7 +998,7 @@ TechCorp</div></div>
   <div class="task-section">
   <div class="task-header">
     <span class="task-badge">🎯 TASK</span>
-    <span class="task-title">Practice Exercise</span>
+    <span class="task-title">Practice: Classes & OOP Basics</span>
   </div>
   <div class="task-desc">Create a BankAccount class with: balance, owner, deposit(), withdraw() (check funds), and statement() methods.</div>
   <div class="task-starter-label">Starter code:</div>
@@ -1118,7 +1122,7 @@ print(len(mgr))     # calls __len__ → 8</div></div>
   <div class="task-section">
   <div class="task-header">
     <span class="task-badge">🎯 TASK</span>
-    <span class="task-title">Practice Exercise</span>
+    <span class="task-title">Practice: Inheritance & Methods</span>
   </div>
   <div class="task-desc">Create a Product class and a DiscountedProduct subclass. Product has name, price, category. DiscountedProduct adds discount_pct and overrides price to return discounted price.</div>
   <div class="task-starter-label">Starter code:</div>
@@ -1185,11 +1189,6 @@ Laptop with VAT: 13,680</div>
   </div>
 </div>
 </div></div>
-    <div style="display:flex;justify-content:space-between;margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border)">
-      <a class="btn-nav" href="unit-2.html">← Unit 2: Python Fundamentals</a>
-      <a class="btn-nav" href="unit-4.html">Unit 4: NumPy Arrays →</a>
-    </div>
-  
   <!-- Shared Nav Bar -->
   <div class="lesson-quiz-bar" style="margin-bottom:.8rem">
     <button class="btn-quiz" id="quiz-btn" onclick="openCurrentQuiz()">📝 Lesson Quiz — 5 Questions</button>
@@ -1214,7 +1213,7 @@ Laptop with VAT: 13,680</div>
   </div>
 </div>
 
-<script src="../js/app.js"></script>
+<script src="../js/app.js?v=20260514"></script>
 <script>
 initUnit({
   id: 3,

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Search | PyTrack</title>
+<link rel="stylesheet" href="css/style.css?v=20260514"/>
+<link rel="icon" type="image/png" href="New Logo last.png">
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html"><img src="New Logo last.png" alt="Ta3laM" class="nav-logo-img"></a>
+  <div class="nav-right">
+    <div class="progress-badge" id="nav-progress">0 / 100 lessons</div>
+    <a class="btn-outline" href="index.html">⌂ All Units</a>
+    <button id="theme-toggle" class="btn-theme-toggle" onclick="toggleTheme()" title="Toggle theme">☀️</button>
+  </div>
+</nav>
+
+<div class="search-page">
+  <div class="search-hero">
+    <div class="hero-tag">Find anything</div>
+    <h1 class="hero-title">Search <em>Lessons</em></h1>
+    <div class="search-box-wrap">
+      <input type="search" id="search-input" class="search-input" placeholder="e.g. loops, pandas, matplotlib..." autocomplete="off" autofocus/>
+      <span class="search-icon">⌕</span>
+    </div>
+    <p class="search-hint" id="search-hint">100 lessons across 10 units</p>
+  </div>
+
+  <div class="search-results" id="search-results"></div>
+</div>
+
+<script src="js/app.js?v=20260514"></script>
+<script>
+const SEARCH_INDEX = [
+  { unit:1, title:"What is Python & Data Analysis?",  url:"units/unit-1.html", idx:0 },
+  { unit:1, title:"Installing Anaconda",               url:"units/unit-1.html", idx:1 },
+  { unit:1, title:"Jupyter Notebook Basics",           url:"units/unit-1.html", idx:2 },
+  { unit:1, title:"Your First Python Code",            url:"units/unit-1.html", idx:3 },
+  { unit:1, title:"Understanding Errors",              url:"units/unit-1.html", idx:4 },
+  { unit:1, title:"Variables & Operators",             url:"units/unit-1.html", idx:5 },
+  { unit:1, title:"Virtual Environments & pip",        url:"units/unit-1.html", idx:6 },
+  { unit:1, title:"Python in VS Code",                 url:"units/unit-1.html", idx:7 },
+  { unit:1, title:"Running Python Scripts",            url:"units/unit-1.html", idx:8 },
+  { unit:1, title:"Comments & Code Style",             url:"units/unit-1.html", idx:9 },
+
+  { unit:2, title:"Variables & Data Types",            url:"units/unit-2.html", idx:0 },
+  { unit:2, title:"Numbers & Math",                    url:"units/unit-2.html", idx:1 },
+  { unit:2, title:"Strings",                           url:"units/unit-2.html", idx:2 },
+  { unit:2, title:"Lists",                             url:"units/unit-2.html", idx:3 },
+  { unit:2, title:"Dictionaries",                      url:"units/unit-2.html", idx:4 },
+  { unit:2, title:"Tuples & Sets",                     url:"units/unit-2.html", idx:5 },
+  { unit:2, title:"Type Conversion",                   url:"units/unit-2.html", idx:6 },
+  { unit:2, title:"Modules & Import",                  url:"units/unit-2.html", idx:7 },
+  { unit:2, title:"Regular Expressions",               url:"units/unit-2.html", idx:8 },
+  { unit:2, title:"Exception Handling",                url:"units/unit-2.html", idx:9 },
+
+  { unit:3, title:"If / Elif / Else",                  url:"units/unit-3.html", idx:0 },
+  { unit:3, title:"For Loops",                         url:"units/unit-3.html", idx:1 },
+  { unit:3, title:"While Loops",                       url:"units/unit-3.html", idx:2 },
+  { unit:3, title:"Functions",                         url:"units/unit-3.html", idx:3 },
+  { unit:3, title:"Lambda Functions",                  url:"units/unit-3.html", idx:4 },
+  { unit:3, title:"List Comprehensions",               url:"units/unit-3.html", idx:5 },
+  { unit:3, title:"Dict & Set Comprehensions",         url:"units/unit-3.html", idx:6 },
+  { unit:3, title:"File I/O",                          url:"units/unit-3.html", idx:7 },
+  { unit:3, title:"Classes & OOP Basics",              url:"units/unit-3.html", idx:8 },
+  { unit:3, title:"Inheritance & Methods",             url:"units/unit-3.html", idx:9 },
+
+  { unit:4, title:"Introduction to NumPy",             url:"units/unit-4.html", idx:0 },
+  { unit:4, title:"Arrays & Dimensions",               url:"units/unit-4.html", idx:1 },
+  { unit:4, title:"Operations & Filtering",            url:"units/unit-4.html", idx:2 },
+  { unit:4, title:"Statistics with NumPy",             url:"units/unit-4.html", idx:3 },
+  { unit:4, title:"Reshape, Sort & Search",            url:"units/unit-4.html", idx:4 },
+  { unit:4, title:"Random Numbers",                    url:"units/unit-4.html", idx:5 },
+  { unit:4, title:"Broadcasting",                      url:"units/unit-4.html", idx:6 },
+  { unit:4, title:"Linear Algebra Basics",             url:"units/unit-4.html", idx:7 },
+  { unit:4, title:"Date & Time with NumPy",            url:"units/unit-4.html", idx:8 },
+  { unit:4, title:"Performance Tips",                  url:"units/unit-4.html", idx:9 },
+
+  { unit:5, title:"Introduction to Pandas",            url:"units/unit-5.html", idx:0 },
+  { unit:5, title:"DataFrames & Series",               url:"units/unit-5.html", idx:1 },
+  { unit:5, title:"Loading Data",                      url:"units/unit-5.html", idx:2 },
+  { unit:5, title:"Selecting & Filtering",             url:"units/unit-5.html", idx:3 },
+  { unit:5, title:"Adding & Removing Columns",         url:"units/unit-5.html", idx:4 },
+  { unit:5, title:"Sorting & Ranking",                 url:"units/unit-5.html", idx:5 },
+  { unit:5, title:"GroupBy & Aggregation",             url:"units/unit-5.html", idx:6 },
+  { unit:5, title:"Merging & Joining",                 url:"units/unit-5.html", idx:7 },
+  { unit:5, title:"Reshaping Data",                    url:"units/unit-5.html", idx:8 },
+  { unit:5, title:"Date & Time with Pandas",           url:"units/unit-5.html", idx:9 },
+
+  { unit:6, title:"Types of Dirty Data",               url:"units/unit-6.html", idx:0 },
+  { unit:6, title:"Missing Values",                    url:"units/unit-6.html", idx:1 },
+  { unit:6, title:"Duplicate Records",                 url:"units/unit-6.html", idx:2 },
+  { unit:6, title:"Data Type Problems",                url:"units/unit-6.html", idx:3 },
+  { unit:6, title:"String Cleaning",                   url:"units/unit-6.html", idx:4 },
+  { unit:6, title:"Outlier Detection",                 url:"units/unit-6.html", idx:5 },
+  { unit:6, title:"Inconsistent Categories",           url:"units/unit-6.html", idx:6 },
+  { unit:6, title:"Cross-Column Validation",           url:"units/unit-6.html", idx:7 },
+  { unit:6, title:"Cleaning Pipelines",                url:"units/unit-6.html", idx:8 },
+  { unit:6, title:"Real-World Cleaning Project",       url:"units/unit-6.html", idx:9 },
+
+  { unit:7, title:"Exploratory Data Analysis",         url:"units/unit-7.html", idx:0 },
+  { unit:7, title:"Descriptive Statistics",            url:"units/unit-7.html", idx:1 },
+  { unit:7, title:"Grouping & Segmentation",           url:"units/unit-7.html", idx:2 },
+  { unit:7, title:"Pivot Tables",                      url:"units/unit-7.html", idx:3 },
+  { unit:7, title:"Correlation Analysis",              url:"units/unit-7.html", idx:4 },
+  { unit:7, title:"Time Series Analysis",              url:"units/unit-7.html", idx:5 },
+  { unit:7, title:"Window Functions",                  url:"units/unit-7.html", idx:6 },
+  { unit:7, title:"Applying Functions",                url:"units/unit-7.html", idx:7 },
+  { unit:7, title:"Multi-Level Indexing",              url:"units/unit-7.html", idx:8 },
+  { unit:7, title:"Analysis Project",                  url:"units/unit-7.html", idx:9 },
+
+  { unit:8, title:"Matplotlib Basics",                 url:"units/unit-8.html", idx:0 },
+  { unit:8, title:"Plot Types",                        url:"units/unit-8.html", idx:1 },
+  { unit:8, title:"Customizing Charts",                url:"units/unit-8.html", idx:2 },
+  { unit:8, title:"Seaborn",                           url:"units/unit-8.html", idx:3 },
+  { unit:8, title:"Statistical Plots",                 url:"units/unit-8.html", idx:4 },
+  { unit:8, title:"Plotly Interactive Charts",         url:"units/unit-8.html", idx:5 },
+  { unit:8, title:"Subplots & Layouts",                url:"units/unit-8.html", idx:6 },
+  { unit:8, title:"Chart Styling & Themes",            url:"units/unit-8.html", idx:7 },
+  { unit:8, title:"Saving & Exporting",                url:"units/unit-8.html", idx:8 },
+  { unit:8, title:"Visualization Project",             url:"units/unit-8.html", idx:9 },
+
+  { unit:9, title:"Introduction to Machine Learning",  url:"units/unit-9.html", idx:0 },
+  { unit:9, title:"Train / Test Split",                url:"units/unit-9.html", idx:1 },
+  { unit:9, title:"Linear & Logistic Regression",      url:"units/unit-9.html", idx:2 },
+  { unit:9, title:"Decision Trees & Random Forests",   url:"units/unit-9.html", idx:3 },
+  { unit:9, title:"Model Evaluation",                  url:"units/unit-9.html", idx:4 },
+  { unit:9, title:"SQL with Python (sqlite3)",         url:"units/unit-9.html", idx:5 },
+  { unit:9, title:"REST APIs & requests",              url:"units/unit-9.html", idx:6 },
+  { unit:9, title:"Web Scraping",                      url:"units/unit-9.html", idx:7 },
+  { unit:9, title:"JSON & Data Formats",               url:"units/unit-9.html", idx:8 },
+  { unit:9, title:"End-to-End Mini Project",           url:"units/unit-9.html", idx:9 },
+
+  { unit:10, title:"Introduction to Git",              url:"units/unit-10.html", idx:0 },
+  { unit:10, title:"Your First Repository",            url:"units/unit-10.html", idx:1 },
+  { unit:10, title:"Branching & Merging",              url:"units/unit-10.html", idx:2 },
+  { unit:10, title:"GitHub & Remote Repos",            url:"units/unit-10.html", idx:3 },
+  { unit:10, title:"Project Structure",                url:"units/unit-10.html", idx:4 },
+  { unit:10, title:"README & Documentation",           url:"units/unit-10.html", idx:5 },
+  { unit:10, title:"Reproducibility",                  url:"units/unit-10.html", idx:6 },
+  { unit:10, title:"Jupyter Notebooks in Git",         url:"units/unit-10.html", idx:7 },
+  { unit:10, title:"Release Checklist",                url:"units/unit-10.html", idx:8 },
+  { unit:10, title:"Portfolio Workflow",               url:"units/unit-10.html", idx:9 },
+];
+
+const UNIT_LABELS = {
+  1:'Getting Started', 2:'Python Fundamentals', 3:'Control Flow',
+  4:'NumPy Arrays', 5:'Pandas Basics', 6:'Data Cleaning',
+  7:'Data Analysis', 8:'Data Visualization', 9:'ML, SQL & APIs',
+  10:'Git & Portfolio'
+};
+
+const input   = document.getElementById('search-input');
+const results = document.getElementById('search-results');
+const hint    = document.getElementById('search-hint');
+
+function search(q) {
+  q = q.trim().toLowerCase();
+  if (!q) {
+    results.innerHTML = '';
+    hint.textContent = '100 lessons across 10 units';
+    return;
+  }
+  const matches = SEARCH_INDEX.filter(l =>
+    l.title.toLowerCase().includes(q) ||
+    UNIT_LABELS[l.unit].toLowerCase().includes(q)
+  );
+  hint.textContent = matches.length
+    ? `${matches.length} result${matches.length > 1 ? 's' : ''} for "${q}"`
+    : `No results for "${q}"`;
+
+  if (!matches.length) {
+    results.innerHTML = `<p class="search-empty">Try a different keyword — e.g. "pandas", "loop", "plot".</p>`;
+    return;
+  }
+
+  // Group by unit
+  const grouped = {};
+  matches.forEach(l => {
+    if (!grouped[l.unit]) grouped[l.unit] = [];
+    grouped[l.unit].push(l);
+  });
+
+  results.innerHTML = Object.entries(grouped).map(([unit, lessons]) => `
+    <div class="search-group">
+      <div class="search-group-header">Unit ${unit} — ${UNIT_LABELS[unit]}</div>
+      ${lessons.map(l => {
+        const done = isDone(parseInt(unit), l.idx);
+        const highlighted = l.title.replace(
+          new RegExp(`(${q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')})`, 'gi'),
+          '<mark>$1</mark>'
+        );
+        return `<a class="search-result-item${done ? ' done-lesson' : ''}" href="${l.url}#lesson-${l.idx}">
+          <span class="lesson-check${done ? ' done' : ''}">${done ? '✓' : ''}</span>
+          <span class="search-result-title">${highlighted}</span>
+          <span class="search-result-arrow">→</span>
+        </a>`;
+      }).join('')}
+    </div>
+  `).join('');
+}
+
+input.addEventListener('input', () => search(input.value));
+updateNavBadge();
+</script>
+</body>
+</html>

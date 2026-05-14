@@ -4,15 +4,17 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Unit 6 — Data Cleaning | PyTrack</title>
-<link rel="stylesheet" href="../css/style.css"/>
+<link rel="stylesheet" href="../css/style.css?v=20260514"/>
+  <link rel="icon" type="image/png" href="../New Logo last.png">
 </head>
-<body>
+<body class="code-card-preview">
 
 <nav>
-  <a class="nav-logo" href="../index.html">Py<span>Track</span></a>
+  <a class="nav-logo" href="../index.html"><img src="../New Logo last.png" alt="Ta3laM" class="nav-logo-img"></a>
   <div class="nav-right">
-    <div class="progress-badge" id="nav-progress">0 / 80 lessons</div>
+    <div class="progress-badge" id="nav-progress">0 / 100 lessons</div>
     <a class="btn-outline" href="../index.html">⌂ All Units</a>
+    <button id="theme-toggle" class="btn-theme-toggle" onclick="toggleTheme()" title="Toggle theme">☀️</button>
   </div>
 </nav>
 
@@ -49,7 +51,9 @@
 </div><div class="sidebar-unit">
   <div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🤖</span><span>Unit 9: ML, SQL & APIs</span><span class="sidebar-unit-arrow">▶</span></div>
   <div class="sidebar-lessons"><a class="sidebar-lesson" id="slink-9-0" href="unit-9.html" ><span class="lesson-check" id="chk-9-0"></span>Intro to Machine Learning</a><a class="sidebar-lesson" id="slink-9-1" href="unit-9.html" ><span class="lesson-check" id="chk-9-1"></span>Scikit-learn Basics</a><a class="sidebar-lesson" id="slink-9-2" href="unit-9.html" ><span class="lesson-check" id="chk-9-2"></span>Linear Regression</a><a class="sidebar-lesson" id="slink-9-3" href="unit-9.html" ><span class="lesson-check" id="chk-9-3"></span>Logistic Regression</a><a class="sidebar-lesson" id="slink-9-4" href="unit-9.html" ><span class="lesson-check" id="chk-9-4"></span>Decision Trees & Random Forest</a><a class="sidebar-lesson" id="slink-9-5" href="unit-9.html" ><span class="lesson-check" id="chk-9-5"></span>Model Evaluation</a><a class="sidebar-lesson" id="slink-9-6" href="unit-9.html" ><span class="lesson-check" id="chk-9-6"></span>Feature Engineering</a><a class="sidebar-lesson" id="slink-9-7" href="unit-9.html" ><span class="lesson-check" id="chk-9-7"></span>SQL with Python</a><a class="sidebar-lesson" id="slink-9-8" href="unit-9.html" ><span class="lesson-check" id="chk-9-8"></span>REST APIs & requests</a><a class="sidebar-lesson" id="slink-9-9" href="unit-9.html" ><span class="lesson-check" id="chk-9-9"></span>Web Scraping</a></div>
-</div><div class="sidebar-unit"><div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🏆</span><span>Capstone Projects</span><span class="sidebar-unit-arrow">▶</span></div><div class="sidebar-lessons"><a class="sidebar-lesson" href="../capstone.html">View Projects</a></div></div>
+</div><div class="sidebar-unit">
+  <div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🧰</span><span>Unit 10: Git & Portfolio Workflow</span><span class="sidebar-unit-arrow">▶</span></div>
+  <div class="sidebar-lessons"><a class="sidebar-lesson" id="slink-10-0" href="unit-10.html"><span class="lesson-check" id="chk-10-0"></span>Why Git for Data Projects?</a><a class="sidebar-lesson" id="slink-10-1" href="unit-10.html"><span class="lesson-check" id="chk-10-1"></span>Install & Configure Git</a><a class="sidebar-lesson" id="slink-10-2" href="unit-10.html"><span class="lesson-check" id="chk-10-2"></span>Repositories & Commits</a><a class="sidebar-lesson" id="slink-10-3" href="unit-10.html"><span class="lesson-check" id="chk-10-3"></span>Branches & Experiments</a><a class="sidebar-lesson" id="slink-10-4" href="unit-10.html"><span class="lesson-check" id="chk-10-4"></span>GitHub Remote Workflow</a><a class="sidebar-lesson" id="slink-10-5" href="unit-10.html"><span class="lesson-check" id="chk-10-5"></span>.gitignore & Data Safety</a><a class="sidebar-lesson" id="slink-10-6" href="unit-10.html"><span class="lesson-check" id="chk-10-6"></span>Project Folder Structure</a><a class="sidebar-lesson" id="slink-10-7" href="unit-10.html"><span class="lesson-check" id="chk-10-7"></span>requirements.txt & Environments</a><a class="sidebar-lesson" id="slink-10-8" href="unit-10.html"><span class="lesson-check" id="chk-10-8"></span>README for Data Projects</a><a class="sidebar-lesson" id="slink-10-9" href="unit-10.html"><span class="lesson-check" id="chk-10-9"></span>Portfolio Release Checklist</a></div></div><div class="sidebar-unit"><div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🏆</span><span>Capstone Projects</span><span class="sidebar-unit-arrow">▶</span></div><div class="sidebar-lessons"><a class="sidebar-lesson" href="../capstone.html">View Projects</a></div></div>
     </div>
   </aside>
 
@@ -108,7 +112,7 @@ print(df[df.isnull().any(axis=1)])
 # msno.matrix(df)</div></div>
 <div class="tip-box"><strong>💡 Tip:</strong> Always check missing values FIRST before any analysis. <span class="ci">df.info()</span> gives a quick count of non-null values per column.</div></div>
   <div class="task-section">
-  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice Exercise</span></div>
+  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice: Finding Missing Values</span></div>
   <div class="task-desc">Load a messy dataset, generate a full missing data report: count per column, percentage, and identify rows with more than 1 missing value.</div>
   <div class="task-starter-label">Starter code:</div>
   <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import pandas as pd, numpy as np
@@ -215,7 +219,7 @@ df.dropna(thresh=threshold, axis=1, inplace=True)
 df.dropna(how="all", inplace=True)</div></div>
 <div class="tip-box"><strong>💡 Tip:</strong> Prefer filling over dropping when possible — dropping rows loses data. Use group-based filling for the most accurate imputation.</div></div>
   <div class="task-section">
-  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice Exercise</span></div>
+  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice: Filling & Dropping Missing Data</span></div>
   <div class="task-desc">Apply 3 different filling strategies to a sales dataset and compare results: mean fill, group mean fill, and forward fill. Show which strategy reduces error most.</div>
   <div class="task-starter-label">Starter code:</div>
   <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import pandas as pd, numpy as np
@@ -313,7 +317,7 @@ print(df.dtypes)
 print(f"Category uses {df['Category'].memory_usage(deep=True):,} bytes")</div></div>
 <div class="tip-box"><strong>💡 Tip:</strong> Always fix data types right after loading. Wrong types cause silent errors — <span class="ci">groupby</span> on a numeric-as-string column gives wrong results.</div></div>
   <div class="task-section">
-  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice Exercise</span></div>
+  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice: Duplicates & Data Types</span></div>
   <div class="task-desc">Clean a transaction log: remove exact duplicates, remove duplicates by transaction ID (keep latest), fix all column types, and report what was changed.</div>
   <div class="task-starter-label">Starter code:</div>
   <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import pandas as pd, numpy as np
@@ -408,7 +412,7 @@ df["Amount"]  = pd.to_numeric(df["Amount"])
 df["FirstName"] = df["Name"].str.split().str[0]
 df["Domain"]    = df["Email"].str.split("@").str[-1]</div></div></div>
   <div class="task-section">
-  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice Exercise</span></div>
+  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice: String Cleaning</span></div>
   <div class="task-desc">Clean a messy product catalog: standardize names, fix prices (remove currency symbols), standardize categories, and extract brand from product name.</div>
   <div class="task-starter-label">Starter code:</div>
   <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import pandas as pd, numpy as np
@@ -509,7 +513,7 @@ Fences: [29,625, 74,625]
 Outliers: [1200000]
 Clean data: 7 of 8 rows</div></div>
   <div class="task-section">
-  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice Exercise</span></div>
+  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice: Detecting Outliers</span></div>
   <div class="task-desc">Detect outliers in a salary dataset using both Z-score and IQR methods. Compare results and investigate which are likely errors vs genuine cases.</div>
   <div class="task-starter-label">Starter code:</div>
   <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import pandas as pd, numpy as np
@@ -592,7 +596,7 @@ df_valid["Sales_Log"] = np.log(df_valid["Sales"])
 print("\nLog-transformed (no outlier effect):", df_valid["Sales_Log"].std().round(2))</div></div>
 <div class="tip-box"><strong>💡 Tip:</strong> Capping (Winsorizing) is often better than removal — you keep all rows and reduce outlier influence without losing data.</div></div>
   <div class="task-section">
-  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice Exercise</span></div>
+  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice: Removing Outliers</span></div>
   <div class="task-desc">Apply all 3 outlier strategies to a dataset. Compare: row count, mean, std before and after each strategy.</div>
   <div class="task-starter-label">Starter code:</div>
   <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import pandas as pd, numpy as np
@@ -684,7 +688,7 @@ for issue in validate(df):
   ⚠️  Non-positive salary: 2 rows
   ⚠️  Invalid score: 1 rows</div></div>
   <div class="task-section">
-  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice Exercise</span></div>
+  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice: Data Validation</span></div>
   <div class="task-desc">Build a complete validation system for a loan application dataset. Flag each row with specific issues and generate a validation report.</div>
   <div class="task-starter-label">Starter code:</div>
   <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import pandas as pd, numpy as np, re
@@ -779,7 +783,7 @@ print(df[["Level","Level_Ord"]])</div></div>
 2     Mid          2</div>
 <div class="tip-box"><strong>💡 Tip:</strong> Use ordinal encoding for ordered categories (Junior < Mid < Senior). Use one-hot for unordered categories (City, Product). Avoid label encoding for unordered — it implies Cairo(1) < Giza(2) which is wrong.</div></div>
   <div class="task-section">
-  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice Exercise</span></div>
+  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice: Encoding Categorical Data</span></div>
   <div class="task-desc">Encode a customer dataset: ordinal encode satisfaction level, one-hot encode region, and frequency encode product category.</div>
   <div class="task-starter-label">Starter code:</div>
   <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import pandas as pd
@@ -869,7 +873,7 @@ print("\nPerformance:")
 print(performance.value_counts())</div></div>
 <div class="tip-box"><strong>💡 Tip:</strong> Use <span class="ci">pd.cut()</span> for fixed boundaries (e.g., age groups). Use <span class="ci">pd.qcut()</span> for equal-sized groups (percentile-based).</div></div>
   <div class="task-section">
-  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice Exercise</span></div>
+  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice: Binning & Discretization</span></div>
   <div class="task-desc">Bin employee salaries into pay grades, create age groups, and analyze the distribution of performance scores by salary band.</div>
   <div class="task-starter-label">Starter code:</div>
   <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import pandas as pd, numpy as np
@@ -981,7 +985,7 @@ def clean_sales_data(df):
     return df, report</div></div>
 <div class="tip-box"><strong>💡 Tip:</strong> Always save original data before cleaning: df_original = df.copy(). Document every cleaning step for reproducibility.</div></div>
   <div class="task-section">
-  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice Exercise</span></div>
+  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice: Full Cleaning Pipeline</span></div>
   <div class="task-desc">Apply the full pipeline to a real messy dataset. Generate a before/after comparison report.</div>
   <div class="task-starter-label">Starter code:</div>
   <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import pandas as pd, numpy as np
@@ -1041,11 +1045,6 @@ After: 99 rows, 0 missing
 Sales mean: 50,134</div></div>
 </div>
 </div></div>
-    <div style="display:flex;justify-content:space-between;margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border)">
-      <a class="btn-nav" href="unit-5.html">← Unit 5: Pandas Basics</a>
-      <a class="btn-nav" href="unit-7.html">Unit 7: Data Analysis →</a>
-    </div>
-  
   <!-- Shared Nav Bar -->
   <div class="lesson-quiz-bar" style="margin-bottom:.8rem">
     <button class="btn-quiz" id="quiz-btn" onclick="openCurrentQuiz()">📝 Lesson Quiz — 5 Questions</button>
@@ -1070,7 +1069,7 @@ Sales mean: 50,134</div></div>
   </div>
 </div>
 
-<script src="../js/app.js"></script>
+<script src="../js/app.js?v=20260514"></script>
 <script>
 initUnit({
   id: 6,

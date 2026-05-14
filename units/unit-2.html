@@ -4,15 +4,17 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Unit 2 — Python Fundamentals | PyTrack</title>
-<link rel="stylesheet" href="../css/style.css"/>
+<link rel="stylesheet" href="../css/style.css?v=20260514"/>
+  <link rel="icon" type="image/png" href="../New Logo last.png">
 </head>
-<body>
+<body class="code-card-preview">
 
 <nav>
-  <a class="nav-logo" href="../index.html">Py<span>Track</span></a>
+  <a class="nav-logo" href="../index.html"><img src="../New Logo last.png" alt="Ta3laM" class="nav-logo-img"></a>
   <div class="nav-right">
-    <div class="progress-badge" id="nav-progress">0 / 80 lessons</div>
+    <div class="progress-badge" id="nav-progress">0 / 100 lessons</div>
     <a class="btn-outline" href="../index.html">⌂ All Units</a>
+    <button id="theme-toggle" class="btn-theme-toggle" onclick="toggleTheme()" title="Toggle theme">☀️</button>
   </div>
 </nav>
 
@@ -49,7 +51,9 @@
 </div><div class="sidebar-unit">
   <div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🤖</span><span>Unit 9: ML, SQL & APIs</span><span class="sidebar-unit-arrow">▶</span></div>
   <div class="sidebar-lessons"><a class="sidebar-lesson" id="slink-9-0" href="unit-9.html" ><span class="lesson-check" id="chk-9-0"></span>Intro to Machine Learning</a><a class="sidebar-lesson" id="slink-9-1" href="unit-9.html" ><span class="lesson-check" id="chk-9-1"></span>Scikit-learn Basics</a><a class="sidebar-lesson" id="slink-9-2" href="unit-9.html" ><span class="lesson-check" id="chk-9-2"></span>Linear Regression</a><a class="sidebar-lesson" id="slink-9-3" href="unit-9.html" ><span class="lesson-check" id="chk-9-3"></span>Logistic Regression</a><a class="sidebar-lesson" id="slink-9-4" href="unit-9.html" ><span class="lesson-check" id="chk-9-4"></span>Decision Trees & Random Forest</a><a class="sidebar-lesson" id="slink-9-5" href="unit-9.html" ><span class="lesson-check" id="chk-9-5"></span>Model Evaluation</a><a class="sidebar-lesson" id="slink-9-6" href="unit-9.html" ><span class="lesson-check" id="chk-9-6"></span>Feature Engineering</a><a class="sidebar-lesson" id="slink-9-7" href="unit-9.html" ><span class="lesson-check" id="chk-9-7"></span>SQL with Python</a><a class="sidebar-lesson" id="slink-9-8" href="unit-9.html" ><span class="lesson-check" id="chk-9-8"></span>REST APIs & requests</a><a class="sidebar-lesson" id="slink-9-9" href="unit-9.html" ><span class="lesson-check" id="chk-9-9"></span>Web Scraping</a></div>
-</div><div class="sidebar-unit"><div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🏆</span><span>Capstone Projects</span><span class="sidebar-unit-arrow">▶</span></div><div class="sidebar-lessons"><a class="sidebar-lesson" href="../capstone.html">View Projects</a></div></div>
+</div><div class="sidebar-unit">
+  <div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🧰</span><span>Unit 10: Git & Portfolio Workflow</span><span class="sidebar-unit-arrow">▶</span></div>
+  <div class="sidebar-lessons"><a class="sidebar-lesson" id="slink-10-0" href="unit-10.html"><span class="lesson-check" id="chk-10-0"></span>Why Git for Data Projects?</a><a class="sidebar-lesson" id="slink-10-1" href="unit-10.html"><span class="lesson-check" id="chk-10-1"></span>Install & Configure Git</a><a class="sidebar-lesson" id="slink-10-2" href="unit-10.html"><span class="lesson-check" id="chk-10-2"></span>Repositories & Commits</a><a class="sidebar-lesson" id="slink-10-3" href="unit-10.html"><span class="lesson-check" id="chk-10-3"></span>Branches & Experiments</a><a class="sidebar-lesson" id="slink-10-4" href="unit-10.html"><span class="lesson-check" id="chk-10-4"></span>GitHub Remote Workflow</a><a class="sidebar-lesson" id="slink-10-5" href="unit-10.html"><span class="lesson-check" id="chk-10-5"></span>.gitignore & Data Safety</a><a class="sidebar-lesson" id="slink-10-6" href="unit-10.html"><span class="lesson-check" id="chk-10-6"></span>Project Folder Structure</a><a class="sidebar-lesson" id="slink-10-7" href="unit-10.html"><span class="lesson-check" id="chk-10-7"></span>requirements.txt & Environments</a><a class="sidebar-lesson" id="slink-10-8" href="unit-10.html"><span class="lesson-check" id="chk-10-8"></span>README for Data Projects</a><a class="sidebar-lesson" id="slink-10-9" href="unit-10.html"><span class="lesson-check" id="chk-10-9"></span>Portfolio Release Checklist</a></div></div><div class="sidebar-unit"><div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🏆</span><span>Capstone Projects</span><span class="sidebar-unit-arrow">▶</span></div><div class="sidebar-lessons"><a class="sidebar-lesson" href="../capstone.html">View Projects</a></div></div>
     </div>
   </aside>
 
@@ -105,7 +109,7 @@ True</div>
   <div class="task-section">
   <div class="task-header">
     <span class="task-badge">🎯 TASK</span>
-    <span class="task-title">Practice Exercise</span>
+    <span class="task-title">Practice: Variables & Data Types</span>
   </div>
   <div class="task-desc">Create variables for a product record: name, price, quantity, in_stock, rating. Print each with its type. Then calculate total value (price × quantity).</div>
   <div class="task-starter-label">Starter code:</div>
@@ -202,7 +206,7 @@ Quarterly avg:     625,000 EGP</div></div>
   <div class="task-section">
   <div class="task-header">
     <span class="task-badge">🎯 TASK</span>
-    <span class="task-title">Practice Exercise</span>
+    <span class="task-title">Practice: Numbers & Math</span>
   </div>
   <div class="task-desc">Calculate loan payments: principal = 500,000 EGP, annual rate = 12%, years = 5. Calculate monthly payment using the formula: M = P × r(1+r)^n / ((1+r)^n - 1)</div>
   <div class="task-starter-label">Starter code:</div>
@@ -309,11 +313,83 @@ print(f"Code:  {42:05d}")            # 00042</div></div>
 Sales: 125,000
 Rate:  8.5%
 Name:       Layla
-Code:  00042</div></div>
+Code:  00042</div>
+<h3>Indexing & Slicing</h3>
+<div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">text = "Python Data"
+#        0 1 2 3 4 5 6 7 8 9 10   ← positive index
+#       -11-10-9-8-7-6-5-4-3-2-1   ← negative index
+
+print(text[0])       # 'P'     — first character
+print(text[-1])      # 'a'     — last character
+print(text[7:11])    # 'Data'  — [start:stop] (stop NOT included)
+print(text[:6])      # 'Python'— from start to index 6
+print(text[7:])      # 'Data'  — from index 7 to end
+print(text[::2])     # 'Pto aa'— every 2nd character
+print(text[::-1])    # 'ataD nohtyP' — reversed string!</div></div>
+<div class="output-block"><div class="output-label">Output</div>P
+a
+Data
+Python
+Data
+Pto aa
+ataD nohtyP</div>
+<h3>Escape Characters</h3>
+<div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">print("Line 1\nLine 2")          # \n  = new line
+print("Name:\tAhmed")             # \t  = tab (4 spaces)
+print("She said \"hello\"")       # \"  = literal double-quote
+print("C:\\Users\\Ahmed")         # \\  = literal backslash
+print('It\'s easy')               # \'  = literal single-quote
+
+# Raw string r"..." ignores ALL escape characters
+path = r"C:\Users\Ahmed\Desktop\data.csv"
+print(path)   # prints exactly: C:\Users\Ahmed\Desktop\data.csv</div></div>
+<div class="output-block"><div class="output-label">Output</div>Line 1
+Line 2
+Name:	Ahmed
+She said "hello"
+C:\Users\Ahmed
+It's easy
+C:\Users\Ahmed\Desktop\data.csv</div>
+<h3>String Methods Reference</h3>
+<div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">s = "  Hello, World!  "
+
+# ── Case ──────────────────────────────
+s.upper()           # "  HELLO, WORLD!  "
+s.lower()           # "  hello, world!  "
+s.title()           # "  Hello, World!  "
+s.capitalize()      # first char upper, rest lower
+s.swapcase()        # flip every letter's case
+
+# ── Trim ──────────────────────────────
+s.strip()           # "Hello, World!"   — both sides
+s.lstrip()          # left side only
+s.rstrip()          # right side only
+
+# ── Search ────────────────────────────
+s.find("World")     # 9  — index of first match, -1 if missing
+s.index("World")    # 9  — same but raises ValueError if missing
+s.count("l")        # 3  — how many times it appears
+s.startswith("  ")  # True
+s.endswith("  ")    # True
+
+# ── Replace & Split ───────────────────
+s.replace("World", "Python")     # "  Hello, Python!  "
+s.split(",")                     # ['  Hello', ' World!  ']
+"_".join(["a","b","c"])          # "a_b_c"
+
+# ── Check Type ────────────────────────
+"abc123".isalnum()  # True  — letters AND digits only
+"abc".isalpha()     # True  — letters only
+"123".isdigit()     # True  — digits only
+"  ".isspace()      # True  — whitespace only
+"Hello".isupper()   # False
+"hello".islower()   # True</div></div>
+<div class="tip-box"><strong>💡 Remember:</strong> Strings are <strong>immutable</strong> — methods always return a NEW string. The original is never changed. Always assign: <span class="ci">name = name.strip().title()</span></div>
+</div>
   <div class="task-section">
   <div class="task-header">
     <span class="task-badge">🎯 TASK</span>
-    <span class="task-title">Practice Exercise</span>
+    <span class="task-title">Practice: Strings</span>
   </div>
   <div class="task-desc">Clean and format a messy customer record: fix spacing, capitalize name, extract domain from email, and build a formatted profile card.</div>
   <div class="task-starter-label">Starter code:</div>
@@ -410,11 +486,86 @@ print(sorted(sales))        # ascending
 print(sorted(sales, reverse=True))  # descending
 print(sales.count(72000))   # 2 — appears twice
 print(sales.index(31000))   # 2 — position of value
-print(list(reversed(sales)))# reversed list</div></div></div>
+print(list(reversed(sales)))# reversed list</div></div>
+<h3>Copying Lists</h3>
+<div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">original = [1, 2, 3, 4, 5]
+
+# ❌ WRONG — both names point to the SAME list
+wrong_copy = original
+wrong_copy.append(99)
+print(original)     # [1, 2, 3, 4, 5, 99]  ← original changed!
+
+# ✅ Correct shallow copy — 3 ways (all equivalent)
+copy1 = original.copy()
+copy2 = original[:]
+copy3 = list(original)
+
+copy1.append(100)
+print(original)     # [1, 2, 3, 4, 5, 99]  ← original safe
+
+# ✅ Deep copy — use for lists that contain other lists
+import copy
+matrix = [[1, 2], [3, 4]]
+deep   = copy.deepcopy(matrix)
+deep[0][0] = 999
+print(matrix[0][0])  # 1 — original untouched</div></div>
+<div class="output-block"><div class="output-label">Output</div>[1, 2, 3, 4, 5, 99]
+[1, 2, 3, 4, 5, 99]
+1</div>
+<h3>Joining & Combining Lists</h3>
+<div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">a = [1, 2, 3]
+b = [4, 5, 6]
+
+# + operator — creates a NEW list
+combined = a + b
+print(combined)        # [1, 2, 3, 4, 5, 6]
+
+# extend() — adds to existing list IN PLACE
+a.extend(b)
+print(a)               # [1, 2, 3, 4, 5, 6]
+
+# * repetition
+repeated = [0] * 5
+print(repeated)        # [0, 0, 0, 0, 0]
+
+# zip() — pair two lists together
+names  = ["Ahmed", "Sara",  "Omar"]
+scores = [88,       95,      72]
+paired = list(zip(names, scores))
+print(paired)          # [('Ahmed', 88), ('Sara', 95), ('Omar', 72)]
+
+# enumerate() — get index AND value
+for i, name in enumerate(names, start=1):
+    print(f"{i}. {name}")</div></div>
+<div class="output-block"><div class="output-label">Output</div>[1, 2, 3, 4, 5, 6]
+[1, 2, 3, 4, 5, 6]
+[0, 0, 0, 0, 0]
+[('Ahmed', 88), ('Sara', 95), ('Omar', 72)]
+1. Ahmed
+2. Sara
+3. Omar</div>
+<h3>List Methods Quick Reference</h3>
+<div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">lst = [3, 1, 4, 1, 5, 9, 2, 6]
+
+lst.append(7)          # add 1 item to end
+lst.insert(0, 0)       # insert at index
+lst.extend([8, 9])     # add multiple items
+lst.remove(1)          # remove first occurrence of value
+lst.pop()              # remove & return last item
+lst.pop(0)             # remove & return item at index
+lst.clear()            # remove ALL items → []
+lst.sort()             # sort in-place (ascending)
+lst.sort(reverse=True) # sort descending
+lst.reverse()          # reverse in-place
+lst.index(5)           # find index of value (ValueError if missing)
+lst.count(1)           # count occurrences of value
+lst.copy()             # shallow copy</div></div>
+<div class="note-box"><strong>🔑 Key Rule:</strong> Methods like <span class="ci">sort()</span>, <span class="ci">reverse()</span>, <span class="ci">append()</span> modify the list <strong>in place</strong> and return <span class="ci">None</span>. Functions like <span class="ci">sorted()</span> and <span class="ci">reversed()</span> return a new object.</div>
+</div>
   <div class="task-section">
   <div class="task-header">
     <span class="task-badge">🎯 TASK</span>
-    <span class="task-title">Practice Exercise</span>
+    <span class="task-title">Practice: Lists</span>
   </div>
   <div class="task-desc">Given a list of employee salaries, do the following: find min/max/avg, remove the highest and lowest, add 10% raise to all remaining, sort descending.</div>
   <div class="task-starter-label">Starter code:</div>
@@ -514,11 +665,75 @@ for city, amount in sales.items():
 
 # Dict comprehension
 doubled = {k: v*2 for k,v in sales.items()}
-print(doubled)</div></div></div>
+print(doubled)</div></div>
+<h3>Nested Dictionaries</h3>
+<div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">company = {
+    "Cairo": {
+        "manager": "Hoda",
+        "staff":   45,
+        "revenue": 850_000
+    },
+    "Alex": {
+        "manager": "Karim",
+        "staff":   28,
+        "revenue": 420_000
+    }
+}
+
+# Access nested value
+print(company["Cairo"]["manager"])   # "Hoda"
+print(company["Alex"]["revenue"])    # 420000
+
+# Add a new branch
+company["Giza"] = {"manager": "Sara", "staff": 20, "revenue": 310_000}
+
+# Loop through nested dict
+for branch, info in company.items():
+    print(f"{branch}: {info['staff']} staff — revenue {info['revenue']:,}")
+
+# Total revenue across all branches
+total = sum(b["revenue"] for b in company.values())
+print(f"Total: {total:,}")</div></div>
+<div class="output-block"><div class="output-label">Output</div>Hoda
+420000
+Cairo: 45 staff — revenue 850,000
+Alex: 28 staff — revenue 420,000
+Giza: 20 staff — revenue 310,000
+Total: 1,580,000</div>
+<h3>Dict Methods Reference</h3>
+<div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">d = {"a": 1, "b": 2, "c": 3}
+
+d.keys()               # dict_keys(['a', 'b', 'c'])
+d.values()             # dict_values([1, 2, 3])
+d.items()              # dict_items([('a',1), ('b',2), ('c',3)])
+
+d.get("a")             # 1 — safe access
+d.get("z", 0)          # 0 — default if key missing
+
+d.setdefault("d", 99)  # adds "d":99 only if "d" doesn't exist
+d.update({"b": 20})    # update/add multiple keys
+
+d.pop("c")             # remove key "c", return its value
+d.popitem()            # remove & return last inserted (key, value)
+d.clear()              # empty the dict → {}
+
+# Create dict from keys
+template = dict.fromkeys(["name","age","city"], None)
+print(template)        # {'name': None, 'age': None, 'city': None}
+
+# Copy (shallow)
+original = {"x": 1, "y": 2}
+clone    = original.copy()
+
+# Merge two dicts (Python 3.9+)
+merged = {"a": 1} | {"b": 2}
+print(merged)          # {'a': 1, 'b': 2}</div></div>
+<div class="tip-box"><strong>💡 Tip:</strong> Always use <span class="ci">d.get("key", default)</span> instead of <span class="ci">d["key"]</span> when the key might not exist — it avoids a <span class="ci">KeyError</span>.</div>
+</div>
   <div class="task-section">
   <div class="task-header">
     <span class="task-badge">🎯 TASK</span>
-    <span class="task-title">Practice Exercise</span>
+    <span class="task-title">Practice: Dictionaries</span>
   </div>
   <div class="task-desc">Build an inventory system: create a dict of 5 products with price and stock. Calculate total inventory value, find the most expensive product, and update stock after selling 3 units of 'Laptop'.</div>
   <div class="task-starter-label">Starter code:</div>
@@ -615,11 +830,76 @@ print(a ^ b)          # Symmetric:    {1,2,6,7}
 # Practical use: remove duplicates from list
 sales_ids = [101, 102, 101, 103, 102, 104]
 unique_ids = list(set(sales_ids))
-print(sorted(unique_ids))  # [101, 102, 103, 104]</div></div></div>
+print(sorted(unique_ids))  # [101, 102, 103, 104]</div></div>
+<h3>Tuple Methods & Patterns</h3>
+<div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">scores = (88, 95, 72, 95, 60, 88, 95)
+
+# Only 2 methods
+print(scores.count(95))      # 3 — how many times 95 appears
+print(scores.index(72))      # 2 — index of first 72
+
+# Tuples can be used as dict keys (lists cannot!)
+locations = {
+    (30.0444, 31.2357): "Cairo",
+    (31.2001, 29.9187): "Alexandria"
+}
+
+# Convert between tuple and list
+as_list  = list(scores)      # → mutable list
+as_tuple = tuple(as_list)    # → back to tuple
+
+# Extended unpacking
+first, *middle, last = (1, 2, 3, 4, 5)
+print(first)   # 1
+print(middle)  # [2, 3, 4]
+print(last)    # 5
+
+# When to use Tuple vs List?
+# Tuple → fixed data that shouldn't change (coordinates, RGB, DB row)
+# List  → data you'll modify (shopping cart, scores, names)</div></div>
+<div class="output-block"><div class="output-label">Output</div>3
+2
+1
+[2, 3, 4]
+5</div>
+<h3>Set Methods & Operations</h3>
+<div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">tags = {"python", "data", "excel"}
+
+# Add & Remove
+tags.add("sql")               # add one item
+tags.update(["pandas","numpy"])  # add multiple items
+tags.remove("excel")          # remove — raises KeyError if missing
+tags.discard("java")          # remove safely — no error if missing
+# tags.pop()                  # remove & return a random item
+# tags.clear()                # empty the set → set()
+
+print(tags)
+
+# Membership check — MUCH faster than list!
+print("python" in tags)       # True
+
+# Subset / Superset
+a = {1, 2, 3}
+b = {1, 2, 3, 4, 5}
+print(a.issubset(b))          # True  — all of a is in b
+print(b.issuperset(a))        # True  — b contains all of a
+print(a.isdisjoint({6, 7}))   # True  — no common elements
+
+# Frozen set — immutable set (can be used as dict key)
+frozen = frozenset([1, 2, 3])
+print(frozen)                 # frozenset({1, 2, 3})</div></div>
+<div class="output-block"><div class="output-label">Output</div>{'python', 'data', 'sql', 'pandas', 'numpy'}
+True
+True
+True
+True
+frozenset({1, 2, 3})</div>
+<div class="note-box"><strong>🔑 Use Sets When:</strong> You need fast membership testing (<span class="ci">in</span> operator), deduplication, or mathematical set operations. Sets are <strong>unordered</strong> — you can't use indexing like <span class="ci">s[0]</span>.</div>
+</div>
   <div class="task-section">
   <div class="task-header">
     <span class="task-badge">🎯 TASK</span>
-    <span class="task-title">Practice Exercise</span>
+    <span class="task-title">Practice: Tuples & Sets</span>
   </div>
   <div class="task-desc">You have two lists of customer IDs: last month and this month. Use sets to find: new customers, lost customers, and loyal customers (in both).</div>
   <div class="task-starter-label">Starter code:</div>
@@ -727,7 +1007,7 @@ print(nums)</div></div></div>
   <div class="task-section">
   <div class="task-header">
     <span class="task-badge">🎯 TASK</span>
-    <span class="task-title">Practice Exercise</span>
+    <span class="task-title">Practice: Type Conversion</span>
   </div>
   <div class="task-desc">Build a data type validator: given a list of raw input values (strings from a form), convert each to the correct type and handle errors gracefully.</div>
   <div class="task-starter-label">Starter code:</div>
@@ -845,7 +1125,7 @@ print(counts)  # Counter({'Cairo': 3, 'Alex': 2, 'Giza': 1})</div></div></div>
   <div class="task-section">
   <div class="task-header">
     <span class="task-badge">🎯 TASK</span>
-    <span class="task-title">Practice Exercise</span>
+    <span class="task-title">Practice: Modules & Import</span>
   </div>
   <div class="task-desc">Create your own module 'analytics.py' with 3 functions: calculate_growth(), format_currency(), and get_summary(). Then import and use it.</div>
   <div class="task-starter-label">Starter code:</div>
@@ -932,7 +1212,7 @@ print(parts)</div></div><div class="output-block"><div class="output-label">Outp
   <div class="task-section">
   <div class="task-header">
     <span class="task-badge">🎯 TASK</span>
-    <span class="task-title">Practice Exercise</span>
+    <span class="task-title">Practice: Regular Expressions</span>
   </div>
   <div class="task-desc">Validate phone numbers (01x-xxxx-xxxx) and extract all prices (EGP amounts) from a text string.</div>
   <div class="task-starter-label">Starter code:</div>
@@ -1022,7 +1302,7 @@ def sell(stock, qty):
   <div class="task-section">
   <div class="task-header">
     <span class="task-badge">🎯 TASK</span>
-    <span class="task-title">Practice Exercise</span>
+    <span class="task-title">Practice: Exception Handling</span>
   </div>
   <div class="task-desc">Build a safe CSV reader function that handles: file not found, empty file, and invalid data types. Return a list of dicts or an error message.</div>
   <div class="task-starter-label">Starter code:</div>
@@ -1087,11 +1367,6 @@ error — File not found: missing.csv</div>
   </div>
 </div>
 </div></div>
-    <div style="display:flex;justify-content:space-between;margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border)">
-      <a class="btn-nav" href="unit-1.html">← Unit 1: Getting Started</a>
-      <a class="btn-nav" href="unit-3.html">Unit 3: Control Flow →</a>
-    </div>
-  
   <!-- Shared Nav Bar -->
   <div class="lesson-quiz-bar" style="margin-bottom:.8rem">
     <button class="btn-quiz" id="quiz-btn" onclick="openCurrentQuiz()">📝 Lesson Quiz — 5 Questions</button>
@@ -1116,7 +1391,7 @@ error — File not found: missing.csv</div>
   </div>
 </div>
 
-<script src="../js/app.js"></script>
+<script src="../js/app.js?v=20260514"></script>
 <script>
 initUnit({
   id: 2,

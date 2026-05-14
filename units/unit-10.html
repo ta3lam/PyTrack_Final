@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Unit 10 - Git, GitHub & Project Structure | PyTrack</title>
+<link rel="stylesheet" href="../css/style.css?v=20260514"/>
+  <link rel="icon" type="image/png" href="../New Logo last.png">
+</head>
+<body class="code-card-preview">
+
+<nav>
+  <a class="nav-logo" href="../index.html"><img src="../New Logo last.png" alt="Ta3laM" class="nav-logo-img"></a>
+  <div class="nav-right">
+    <div class="progress-badge" id="nav-progress">0 / 100 lessons</div>
+    <a class="btn-outline" href="../index.html">⌂ All Units</a>
+    <button id="theme-toggle" class="btn-theme-toggle" onclick="toggleTheme()" title="Toggle theme">☀️</button>
+  </div>
+</nav>
+
+<div class="lesson-page">
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <a href="../index.html" class="sidebar-home">⌂ PyTrack - All Units</a>
+    </div>
+    <div class="sidebar-inner">
+      <div class="sidebar-unit">
+  <div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🚀</span><span>Unit 1: Getting Started</span><span class="sidebar-unit-arrow">▶</span></div>
+  <div class="sidebar-lessons"><a class="sidebar-lesson" id="slink-1-0" href="unit-1.html"><span class="lesson-check" id="chk-1-0"></span>What is Python & Data Analysis?</a><a class="sidebar-lesson" id="slink-1-1" href="unit-1.html"><span class="lesson-check" id="chk-1-1"></span>Installing Anaconda</a><a class="sidebar-lesson" id="slink-1-2" href="unit-1.html"><span class="lesson-check" id="chk-1-2"></span>Jupyter Notebook Basics</a><a class="sidebar-lesson" id="slink-1-3" href="unit-1.html"><span class="lesson-check" id="chk-1-3"></span>Your First Python Code</a><a class="sidebar-lesson" id="slink-1-4" href="unit-1.html"><span class="lesson-check" id="chk-1-4"></span>Understanding Errors</a><a class="sidebar-lesson" id="slink-1-5" href="unit-1.html"><span class="lesson-check" id="chk-1-5"></span>Variables & Operators</a><a class="sidebar-lesson" id="slink-1-6" href="unit-1.html"><span class="lesson-check" id="chk-1-6"></span>Virtual Environments & pip</a><a class="sidebar-lesson" id="slink-1-7" href="unit-1.html"><span class="lesson-check" id="chk-1-7"></span>Python in VS Code</a><a class="sidebar-lesson" id="slink-1-8" href="unit-1.html"><span class="lesson-check" id="chk-1-8"></span>Running Python Scripts</a><a class="sidebar-lesson" id="slink-1-9" href="unit-1.html"><span class="lesson-check" id="chk-1-9"></span>Comments & Code Style</a></div>
+</div><div class="sidebar-unit">
+  <div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🐍</span><span>Unit 2: Python Fundamentals</span><span class="sidebar-unit-arrow">▶</span></div>
+  <div class="sidebar-lessons"><a class="sidebar-lesson" id="slink-2-0" href="unit-2.html"><span class="lesson-check" id="chk-2-0"></span>Variables & Data Types</a><a class="sidebar-lesson" id="slink-2-1" href="unit-2.html"><span class="lesson-check" id="chk-2-1"></span>Numbers & Math</a><a class="sidebar-lesson" id="slink-2-2" href="unit-2.html"><span class="lesson-check" id="chk-2-2"></span>Strings</a><a class="sidebar-lesson" id="slink-2-3" href="unit-2.html"><span class="lesson-check" id="chk-2-3"></span>Lists</a><a class="sidebar-lesson" id="slink-2-4" href="unit-2.html"><span class="lesson-check" id="chk-2-4"></span>Dictionaries</a><a class="sidebar-lesson" id="slink-2-5" href="unit-2.html"><span class="lesson-check" id="chk-2-5"></span>Tuples & Sets</a><a class="sidebar-lesson" id="slink-2-6" href="unit-2.html"><span class="lesson-check" id="chk-2-6"></span>Type Conversion</a><a class="sidebar-lesson" id="slink-2-7" href="unit-2.html"><span class="lesson-check" id="chk-2-7"></span>Modules & Import</a><a class="sidebar-lesson" id="slink-2-8" href="unit-2.html"><span class="lesson-check" id="chk-2-8"></span>Regular Expressions</a><a class="sidebar-lesson" id="slink-2-9" href="unit-2.html"><span class="lesson-check" id="chk-2-9"></span>Exception Handling</a></div>
+</div><div class="sidebar-unit">
+  <div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🔄</span><span>Unit 3: Control Flow</span><span class="sidebar-unit-arrow">▶</span></div>
+  <div class="sidebar-lessons"><a class="sidebar-lesson" id="slink-3-0" href="unit-3.html"><span class="lesson-check" id="chk-3-0"></span>If / Elif / Else</a><a class="sidebar-lesson" id="slink-3-1" href="unit-3.html"><span class="lesson-check" id="chk-3-1"></span>For Loops</a><a class="sidebar-lesson" id="slink-3-2" href="unit-3.html"><span class="lesson-check" id="chk-3-2"></span>While Loops</a><a class="sidebar-lesson" id="slink-3-3" href="unit-3.html"><span class="lesson-check" id="chk-3-3"></span>Functions</a><a class="sidebar-lesson" id="slink-3-4" href="unit-3.html"><span class="lesson-check" id="chk-3-4"></span>Lambda Functions</a><a class="sidebar-lesson" id="slink-3-5" href="unit-3.html"><span class="lesson-check" id="chk-3-5"></span>List Comprehensions</a><a class="sidebar-lesson" id="slink-3-6" href="unit-3.html"><span class="lesson-check" id="chk-3-6"></span>Dict & Set Comprehensions</a><a class="sidebar-lesson" id="slink-3-7" href="unit-3.html"><span class="lesson-check" id="chk-3-7"></span>File I/O</a><a class="sidebar-lesson" id="slink-3-8" href="unit-3.html"><span class="lesson-check" id="chk-3-8"></span>Classes & OOP Basics</a><a class="sidebar-lesson" id="slink-3-9" href="unit-3.html"><span class="lesson-check" id="chk-3-9"></span>Inheritance & Methods</a></div>
+</div><div class="sidebar-unit">
+  <div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🔢</span><span>Unit 4: NumPy Arrays</span><span class="sidebar-unit-arrow">▶</span></div>
+  <div class="sidebar-lessons"><a class="sidebar-lesson" id="slink-4-0" href="unit-4.html"><span class="lesson-check" id="chk-4-0"></span>Introduction to NumPy</a><a class="sidebar-lesson" id="slink-4-1" href="unit-4.html"><span class="lesson-check" id="chk-4-1"></span>Arrays & Dimensions</a><a class="sidebar-lesson" id="slink-4-2" href="unit-4.html"><span class="lesson-check" id="chk-4-2"></span>Operations & Filtering</a><a class="sidebar-lesson" id="slink-4-3" href="unit-4.html"><span class="lesson-check" id="chk-4-3"></span>Statistics with NumPy</a><a class="sidebar-lesson" id="slink-4-4" href="unit-4.html"><span class="lesson-check" id="chk-4-4"></span>Reshape, Sort & Search</a><a class="sidebar-lesson" id="slink-4-5" href="unit-4.html"><span class="lesson-check" id="chk-4-5"></span>Random Numbers</a><a class="sidebar-lesson" id="slink-4-6" href="unit-4.html"><span class="lesson-check" id="chk-4-6"></span>Broadcasting</a><a class="sidebar-lesson" id="slink-4-7" href="unit-4.html"><span class="lesson-check" id="chk-4-7"></span>Linear Algebra Basics</a><a class="sidebar-lesson" id="slink-4-8" href="unit-4.html"><span class="lesson-check" id="chk-4-8"></span>Date & Time with NumPy</a><a class="sidebar-lesson" id="slink-4-9" href="unit-4.html"><span class="lesson-check" id="chk-4-9"></span>Performance Tips</a></div>
+</div><div class="sidebar-unit">
+  <div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🐼</span><span>Unit 5: Pandas Basics</span><span class="sidebar-unit-arrow">▶</span></div>
+  <div class="sidebar-lessons"><a class="sidebar-lesson" id="slink-5-0" href="unit-5.html"><span class="lesson-check" id="chk-5-0"></span>Pandas Series</a><a class="sidebar-lesson" id="slink-5-1" href="unit-5.html"><span class="lesson-check" id="chk-5-1"></span>DataFrames</a><a class="sidebar-lesson" id="slink-5-2" href="unit-5.html"><span class="lesson-check" id="chk-5-2"></span>Reading CSV & Excel</a><a class="sidebar-lesson" id="slink-5-3" href="unit-5.html"><span class="lesson-check" id="chk-5-3"></span>Exploring Your Data</a><a class="sidebar-lesson" id="slink-5-4" href="unit-5.html"><span class="lesson-check" id="chk-5-4"></span>Selecting & Filtering</a><a class="sidebar-lesson" id="slink-5-5" href="unit-5.html"><span class="lesson-check" id="chk-5-5"></span>Adding & Modifying Columns</a><a class="sidebar-lesson" id="slink-5-6" href="unit-5.html"><span class="lesson-check" id="chk-5-6"></span>Sorting & Ranking</a><a class="sidebar-lesson" id="slink-5-7" href="unit-5.html"><span class="lesson-check" id="chk-5-7"></span>apply() & map()</a><a class="sidebar-lesson" id="slink-5-8" href="unit-5.html"><span class="lesson-check" id="chk-5-8"></span>String Methods in Pandas</a><a class="sidebar-lesson" id="slink-5-9" href="unit-5.html"><span class="lesson-check" id="chk-5-9"></span>Working with Dates</a></div>
+</div><div class="sidebar-unit">
+  <div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🧹</span><span>Unit 6: Data Cleaning</span><span class="sidebar-unit-arrow">▶</span></div>
+  <div class="sidebar-lessons"><a class="sidebar-lesson" id="slink-6-0" href="unit-6.html"><span class="lesson-check" id="chk-6-0"></span>Finding Missing Values</a><a class="sidebar-lesson" id="slink-6-1" href="unit-6.html"><span class="lesson-check" id="chk-6-1"></span>Filling & Dropping Missing Data</a><a class="sidebar-lesson" id="slink-6-2" href="unit-6.html"><span class="lesson-check" id="chk-6-2"></span>Duplicates & Data Types</a><a class="sidebar-lesson" id="slink-6-3" href="unit-6.html"><span class="lesson-check" id="chk-6-3"></span>String Cleaning</a><a class="sidebar-lesson" id="slink-6-4" href="unit-6.html"><span class="lesson-check" id="chk-6-4"></span>Detecting Outliers</a><a class="sidebar-lesson" id="slink-6-5" href="unit-6.html"><span class="lesson-check" id="chk-6-5"></span>Removing Outliers</a><a class="sidebar-lesson" id="slink-6-6" href="unit-6.html"><span class="lesson-check" id="chk-6-6"></span>Data Validation</a><a class="sidebar-lesson" id="slink-6-7" href="unit-6.html"><span class="lesson-check" id="chk-6-7"></span>Encoding Categorical Data</a><a class="sidebar-lesson" id="slink-6-8" href="unit-6.html"><span class="lesson-check" id="chk-6-8"></span>Binning & Discretization</a><a class="sidebar-lesson" id="slink-6-9" href="unit-6.html"><span class="lesson-check" id="chk-6-9"></span>Full Cleaning Pipeline</a></div>
+</div><div class="sidebar-unit">
+  <div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>📊</span><span>Unit 7: Data Analysis</span><span class="sidebar-unit-arrow">▶</span></div>
+  <div class="sidebar-lessons"><a class="sidebar-lesson" id="slink-7-0" href="unit-7.html"><span class="lesson-check" id="chk-7-0"></span>Descriptive Statistics</a><a class="sidebar-lesson" id="slink-7-1" href="unit-7.html"><span class="lesson-check" id="chk-7-1"></span>GroupBy — Grouped Analysis</a><a class="sidebar-lesson" id="slink-7-2" href="unit-7.html"><span class="lesson-check" id="chk-7-2"></span>Merging DataFrames</a><a class="sidebar-lesson" id="slink-7-3" href="unit-7.html"><span class="lesson-check" id="chk-7-3"></span>Concat & Join</a><a class="sidebar-lesson" id="slink-7-4" href="unit-7.html"><span class="lesson-check" id="chk-7-4"></span>Pivot Tables</a><a class="sidebar-lesson" id="slink-7-5" href="unit-7.html"><span class="lesson-check" id="chk-7-5"></span>Time Series Basics</a><a class="sidebar-lesson" id="slink-7-6" href="unit-7.html"><span class="lesson-check" id="chk-7-6"></span>Window Functions</a><a class="sidebar-lesson" id="slink-7-7" href="unit-7.html"><span class="lesson-check" id="chk-7-7"></span>Correlation & Regression</a><a class="sidebar-lesson" id="slink-7-8" href="unit-7.html"><span class="lesson-check" id="chk-7-8"></span>Sampling & Hypothesis Testing</a><a class="sidebar-lesson" id="slink-7-9" href="unit-7.html"><span class="lesson-check" id="chk-7-9"></span>Building Analysis Reports</a></div>
+</div><div class="sidebar-unit">
+  <div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>📈</span><span>Unit 8: Data Visualization</span><span class="sidebar-unit-arrow">▶</span></div>
+  <div class="sidebar-lessons"><a class="sidebar-lesson" id="slink-8-0" href="unit-8.html"><span class="lesson-check" id="chk-8-0"></span>Matplotlib Basics</a><a class="sidebar-lesson" id="slink-8-1" href="unit-8.html"><span class="lesson-check" id="chk-8-1"></span>Bar & Line Charts</a><a class="sidebar-lesson" id="slink-8-2" href="unit-8.html"><span class="lesson-check" id="chk-8-2"></span>Histograms & Scatter Plots</a><a class="sidebar-lesson" id="slink-8-3" href="unit-8.html"><span class="lesson-check" id="chk-8-3"></span>Pie & Area Charts</a><a class="sidebar-lesson" id="slink-8-4" href="unit-8.html"><span class="lesson-check" id="chk-8-4"></span>Seaborn Charts</a><a class="sidebar-lesson" id="slink-8-5" href="unit-8.html"><span class="lesson-check" id="chk-8-5"></span>Heatmaps & Pair Plots</a><a class="sidebar-lesson" id="slink-8-6" href="unit-8.html"><span class="lesson-check" id="chk-8-6"></span>Subplots & Dashboards</a><a class="sidebar-lesson" id="slink-8-7" href="unit-8.html"><span class="lesson-check" id="chk-8-7"></span>Plotly — Interactive Charts</a><a class="sidebar-lesson" id="slink-8-8" href="unit-8.html"><span class="lesson-check" id="chk-8-8"></span>Chart Styling & Themes</a><a class="sidebar-lesson" id="slink-8-9" href="unit-8.html"><span class="lesson-check" id="chk-8-9"></span>Exporting & Sharing Charts</a></div>
+</div><div class="sidebar-unit">
+  <div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🤖</span><span>Unit 9: ML, SQL & APIs</span><span class="sidebar-unit-arrow">▶</span></div>
+  <div class="sidebar-lessons"><a class="sidebar-lesson" id="slink-9-0" href="unit-9.html"><span class="lesson-check" id="chk-9-0"></span>Intro to Machine Learning</a><a class="sidebar-lesson" id="slink-9-1" href="unit-9.html"><span class="lesson-check" id="chk-9-1"></span>Scikit-learn Basics</a><a class="sidebar-lesson" id="slink-9-2" href="unit-9.html"><span class="lesson-check" id="chk-9-2"></span>Linear Regression</a><a class="sidebar-lesson" id="slink-9-3" href="unit-9.html"><span class="lesson-check" id="chk-9-3"></span>Logistic Regression</a><a class="sidebar-lesson" id="slink-9-4" href="unit-9.html"><span class="lesson-check" id="chk-9-4"></span>Decision Trees & Random Forest</a><a class="sidebar-lesson" id="slink-9-5" href="unit-9.html"><span class="lesson-check" id="chk-9-5"></span>Model Evaluation</a><a class="sidebar-lesson" id="slink-9-6" href="unit-9.html"><span class="lesson-check" id="chk-9-6"></span>Feature Engineering</a><a class="sidebar-lesson" id="slink-9-7" href="unit-9.html"><span class="lesson-check" id="chk-9-7"></span>SQL with Python</a><a class="sidebar-lesson" id="slink-9-8" href="unit-9.html"><span class="lesson-check" id="chk-9-8"></span>REST APIs & requests</a><a class="sidebar-lesson" id="slink-9-9" href="unit-9.html"><span class="lesson-check" id="chk-9-9"></span>Web Scraping</a></div>
+</div>
+      <div class="sidebar-unit">
+        <div class="sidebar-unit-header active-unit open" onclick="toggleUnit(this)"><span>🧰</span><span>Unit 10: Git & Portfolio Workflow</span><span class="sidebar-unit-arrow">▶</span></div>
+        <div class="sidebar-lessons open">
+          <a class="sidebar-lesson active" id="slink-10-0" href="javascript:showLesson(0)" onclick="showLesson(0);return false;"><span class="lesson-check" id="chk-10-0"></span>Why Git for Data Projects?</a>
+          <a class="sidebar-lesson" id="slink-10-1" href="javascript:showLesson(1)" onclick="showLesson(1);return false;"><span class="lesson-check" id="chk-10-1"></span>Install & Configure Git</a>
+          <a class="sidebar-lesson" id="slink-10-2" href="javascript:showLesson(2)" onclick="showLesson(2);return false;"><span class="lesson-check" id="chk-10-2"></span>Repositories & Commits</a>
+          <a class="sidebar-lesson" id="slink-10-3" href="javascript:showLesson(3)" onclick="showLesson(3);return false;"><span class="lesson-check" id="chk-10-3"></span>Branches & Experiments</a>
+          <a class="sidebar-lesson" id="slink-10-4" href="javascript:showLesson(4)" onclick="showLesson(4);return false;"><span class="lesson-check" id="chk-10-4"></span>GitHub Remote Workflow</a>
+          <a class="sidebar-lesson" id="slink-10-5" href="javascript:showLesson(5)" onclick="showLesson(5);return false;"><span class="lesson-check" id="chk-10-5"></span>.gitignore & Data Safety</a>
+          <a class="sidebar-lesson" id="slink-10-6" href="javascript:showLesson(6)" onclick="showLesson(6);return false;"><span class="lesson-check" id="chk-10-6"></span>Project Folder Structure</a>
+          <a class="sidebar-lesson" id="slink-10-7" href="javascript:showLesson(7)" onclick="showLesson(7);return false;"><span class="lesson-check" id="chk-10-7"></span>requirements.txt & Environments</a>
+          <a class="sidebar-lesson" id="slink-10-8" href="javascript:showLesson(8)" onclick="showLesson(8);return false;"><span class="lesson-check" id="chk-10-8"></span>README for Data Projects</a>
+          <a class="sidebar-lesson" id="slink-10-9" href="javascript:showLesson(9)" onclick="showLesson(9);return false;"><span class="lesson-check" id="chk-10-9"></span>Portfolio Release Checklist</a>
+        </div>
+      </div>
+      <div class="sidebar-unit"><div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🏆</span><span>Capstone Projects</span><span class="sidebar-unit-arrow">▶</span></div><div class="sidebar-lessons"><a class="sidebar-lesson" href="../capstone.html">View Projects</a></div></div>
+    </div>
+  </aside>
+
+  <main class="lesson-main">
+    <div class="breadcrumb"><a href="../index.html">PyTrack</a> › <span>Unit 10 - Git, GitHub & Project Structure</span></div>
+    <div id="lesson-panels">
+
+<div class="lesson-panel active" id="panel-0">
+  <div class="lesson-title-bar"><h2>🧰 Why Git for Data Projects?</h2><p>Professional data work needs history, reproducibility, and clean delivery.</p></div>
+  <div class="lesson-body">
+<h3>The problem Git solves</h3>
+<p>Without Git, projects turn into folders like <code class="ci">final.csv</code>, <code class="ci">final_v2.ipynb</code>, and <code class="ci">final_REALLY_FINAL.ipynb</code>. Git gives you a timeline of changes, so every experiment has context.</p>
+<h3>What Git tracks</h3>
+<ul>
+<li><strong>Code</strong> - notebooks, Python scripts, SQL files, and configs.</li>
+<li><strong>Decisions</strong> - commit messages explain what changed and why.</li>
+<li><strong>Project state</strong> - you can return to an older working version.</li>
+</ul>
+<div class="note-box"><strong>Rule:</strong> Git is for source files and small docs. Large raw data, secrets, model binaries, and private files should not be committed.</div>
+<h3>Git vs GitHub</h3>
+<p><strong>Git</strong> is the version-control tool on your machine. <strong>GitHub</strong> is a hosting and collaboration platform for Git repositories.</p>
+  </div>
+  <div class="task-section">
+    <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Audit a Project Folder</span></div>
+    <div class="task-desc">Create a quick audit checklist for a data project. Mark which files should be tracked by Git and which should be ignored.</div>
+    <div class="task-starter-label">Starter code:</div>
+    <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">files = [
+    "analysis.ipynb",
+    "src/clean_data.py",
+    "README.md",
+    "data/raw/customers.csv",
+    ".env",
+    "model.pkl"
+]
+
+# Print each file with one of:
+# TRACK, IGNORE, or REVIEW
+for file in files:
+    print(file, "->", "???")</div></div>
+    <button class="btn-try-it" onclick="tryCode(this.previousElementSibling.querySelector('.code-body').textContent)">⚡ Try in Playground</button>
+    <button class="btn-show-solution" onclick="toggleSolution(this)">👁 Show Solution</button>
+    <div class="task-solution" style="display:none">
+      <div class="solution-label">✅ Solution</div>
+      <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">files = [
+    "analysis.ipynb",
+    "src/clean_data.py",
+    "README.md",
+    "data/raw/customers.csv",
+    ".env",
+    "model.pkl"
+]
+
+for file in files:
+    if file.startswith("data/raw/") or file.endswith((".pkl", ".joblib")):
+        decision = "IGNORE or store outside Git"
+    elif file == ".env":
+        decision = "IGNORE - contains secrets"
+    elif file.endswith((".py", ".ipynb", ".md", ".sql", ".txt")):
+        decision = "TRACK"
+    else:
+        decision = "REVIEW"
+    print(f"{file:24} -> {decision}")</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="lesson-panel" id="panel-1">
+  <div class="lesson-title-bar"><h2>⚙️ Install & Configure Git</h2><p>Set your identity and confirm Git is ready.</p></div>
+  <div class="lesson-body">
+<h3>Essential commands</h3>
+<div class="code-block"><div class="code-header"><span>bash</span><button class="copy-btn">copy</button></div><div class="code-body">git --version
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+git config --global init.defaultBranch main
+git config --list</div></div>
+<h3>Why identity matters</h3>
+<p>Every commit stores an author name and email. This is how GitHub connects your local commits to your profile.</p>
+<div class="tip-box"><strong>Tip:</strong> Use the same email address connected to your GitHub account, or use GitHub's private noreply email if you prefer privacy.</div>
+  </div>
+  <div class="task-section">
+    <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Generate Your Git Setup Checklist</span></div>
+    <div class="task-desc">Create a command checklist for configuring Git on a new machine.</div>
+    <div class="task-starter-label">Starter code:</div>
+    <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">name = "Your Name"
+email = "you@example.com"
+
+commands = [
+    # add the setup commands here
+]
+
+for command in commands:
+    print(command)</div></div>
+    <button class="btn-try-it" onclick="tryCode(this.previousElementSibling.querySelector('.code-body').textContent)">⚡ Try in Playground</button>
+    <button class="btn-show-solution" onclick="toggleSolution(this)">👁 Show Solution</button>
+    <div class="task-solution" style="display:none">
+      <div class="solution-label">✅ Solution</div>
+      <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">name = "Your Name"
+email = "you@example.com"
+
+commands = [
+    "git --version",
+    f'git config --global user.name "{name}"',
+    f'git config --global user.email "{email}"',
+    "git config --global init.defaultBranch main",
+    "git config --list"
+]
+
+for i, command in enumerate(commands, start=1):
+    print(f"{i}. {command}")</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="lesson-panel" id="panel-2">
+  <div class="lesson-title-bar"><h2>📦 Repositories & Commits</h2><p>A repository is the tracked project; a commit is a saved checkpoint.</p></div>
+  <div class="lesson-body">
+<h3>Core workflow</h3>
+<div class="code-block"><div class="code-header"><span>bash</span><button class="copy-btn">copy</button></div><div class="code-body">git init
+git status
+git add README.md notebooks/analysis.ipynb src/clean.py
+git commit -m "Add first analysis workflow"</div></div>
+<h3>Good commit messages</h3>
+<p>A useful commit message says what changed in a specific, readable way. Use verbs like <code class="ci">Add</code>, <code class="ci">Fix</code>, <code class="ci">Refactor</code>, <code class="ci">Document</code>, and <code class="ci">Update</code>.</p>
+  </div>
+  <div class="task-section">
+    <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Build a Commit Plan</span></div>
+    <div class="task-desc">Given a list of project changes, group them into focused commits with clear messages.</div>
+    <div class="task-starter-label">Starter code:</div>
+    <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">changes = [
+    "clean missing values",
+    "add revenue chart",
+    "write README",
+    "fix typo in notebook",
+    "save raw dataset"
+]
+
+# Create focused commit messages.
+commit_messages = []
+
+for message in commit_messages:
+    print("-", message)</div></div>
+    <button class="btn-try-it" onclick="tryCode(this.previousElementSibling.querySelector('.code-body').textContent)">⚡ Try in Playground</button>
+    <button class="btn-show-solution" onclick="toggleSolution(this)">👁 Show Solution</button>
+    <div class="task-solution" style="display:none">
+      <div class="solution-label">✅ Solution</div>
+      <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">commit_messages = [
+    "Add data cleaning workflow",
+    "Add revenue visualization",
+    "Document project setup in README",
+    "Fix notebook typo",
+    "Ignore raw dataset instead of committing it"
+]
+
+for message in commit_messages:
+    print("-", message)</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="lesson-panel" id="panel-3">
+  <div class="lesson-title-bar"><h2>🌿 Branches & Safe Experiments</h2><p>Branches let you experiment without damaging the main project.</p></div>
+  <div class="lesson-body">
+<h3>Common branch workflow</h3>
+<div class="code-block"><div class="code-header"><span>bash</span><button class="copy-btn">copy</button></div><div class="code-body">git switch -c feature/churn-model
+git status
+git add .
+git commit -m "Add churn model baseline"
+git switch main
+git merge feature/churn-model</div></div>
+<h3>Naming branches</h3>
+<p>Use clear names such as <code class="ci">feature/sales-dashboard</code>, <code class="ci">fix/readme-setup</code>, or <code class="ci">analysis/customer-churn-eda</code>.</p>
+  </div>
+  <div class="task-section">
+    <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Create Branch Names</span></div>
+    <div class="task-desc">Convert project tasks into clean branch names.</div>
+    <div class="task-starter-label">Starter code:</div>
+    <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">tasks = [
+    "Add EDA notebook",
+    "Fix README instructions",
+    "Build sales dashboard",
+    "Try random forest model"
+]
+
+# Convert each task into a branch name.
+for task in tasks:
+    print(task, "->", "???")</div></div>
+    <button class="btn-try-it" onclick="tryCode(this.previousElementSibling.querySelector('.code-body').textContent)">⚡ Try in Playground</button>
+    <button class="btn-show-solution" onclick="toggleSolution(this)">👁 Show Solution</button>
+    <div class="task-solution" style="display:none">
+      <div class="solution-label">✅ Solution</div>
+      <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import re
+
+tasks = [
+    ("analysis", "Add EDA notebook"),
+    ("fix", "Fix README instructions"),
+    ("feature", "Build sales dashboard"),
+    ("experiment", "Try random forest model")
+]
+
+for prefix, task in tasks:
+    slug = re.sub(r"[^a-z0-9]+", "-", task.lower()).strip("-")
+    print(f"{task:28} -> {prefix}/{slug}")</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="lesson-panel" id="panel-4">
+  <div class="lesson-title-bar"><h2>☁️ GitHub Remote Workflow</h2><p>Push your local repository to GitHub and collaborate safely.</p></div>
+  <div class="lesson-body">
+<h3>Local to GitHub</h3>
+<div class="code-block"><div class="code-header"><span>bash</span><button class="copy-btn">copy</button></div><div class="code-body">git remote add origin https://github.com/username/project-name.git
+git branch -M main
+git push -u origin main</div></div>
+<h3>Daily sync commands</h3>
+<div class="code-block"><div class="code-header"><span>bash</span><button class="copy-btn">copy</button></div><div class="code-body">git pull
+git status
+git add .
+git commit -m "Update analysis"
+git push</div></div>
+<div class="note-box"><strong>Professional habit:</strong> Pull before starting work, commit focused changes, and push when the project is in a meaningful state.</div>
+  </div>
+  <div class="task-section">
+    <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Generate Remote Commands</span></div>
+    <div class="task-desc">Generate the first-push commands for a GitHub repository.</div>
+    <div class="task-starter-label">Starter code:</div>
+    <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">username = "yourusername"
+repo = "sales-dashboard"
+
+# Print the commands needed to connect and push.
+commands = []
+
+for command in commands:
+    print(command)</div></div>
+    <button class="btn-try-it" onclick="tryCode(this.previousElementSibling.querySelector('.code-body').textContent)">⚡ Try in Playground</button>
+    <button class="btn-show-solution" onclick="toggleSolution(this)">👁 Show Solution</button>
+    <div class="task-solution" style="display:none">
+      <div class="solution-label">✅ Solution</div>
+      <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">username = "yourusername"
+repo = "sales-dashboard"
+
+commands = [
+    f"git remote add origin https://github.com/{username}/{repo}.git",
+    "git branch -M main",
+    "git push -u origin main"
+]
+
+for command in commands:
+    print(command)</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="lesson-panel" id="panel-5">
+  <div class="lesson-title-bar"><h2>🛡️ .gitignore & Data Safety</h2><p>Protect private files and keep repositories lightweight.</p></div>
+  <div class="lesson-body">
+<h3>Files you usually ignore</h3>
+<ul>
+<li><code class="ci">.env</code> files with API keys.</li>
+<li>Large raw datasets and exports.</li>
+<li>Python cache folders like <code class="ci">__pycache__/</code>.</li>
+<li>Model binaries like <code class="ci">*.pkl</code> unless deliberately versioned elsewhere.</li>
+</ul>
+<div class="code-block"><div class="code-header"><span>gitignore</span><button class="copy-btn">copy</button></div><div class="code-body">.env
+__pycache__/
+*.pyc
+data/raw/
+data/private/
+models/*.pkl
+.ipynb_checkpoints/</div></div>
+  </div>
+  <div class="task-section">
+    <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Generate a Data Project .gitignore</span></div>
+    <div class="task-desc">Create a .gitignore template for a professional data analysis repository.</div>
+    <div class="task-starter-label">Starter code:</div>
+    <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">ignore_rules = [
+    # add rules here
+]
+
+print("\\n".join(ignore_rules))</div></div>
+    <button class="btn-try-it" onclick="tryCode(this.previousElementSibling.querySelector('.code-body').textContent)">⚡ Try in Playground</button>
+    <button class="btn-show-solution" onclick="toggleSolution(this)">👁 Show Solution</button>
+    <div class="task-solution" style="display:none">
+      <div class="solution-label">✅ Solution</div>
+      <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">ignore_rules = [
+    ".env",
+    "__pycache__/",
+    "*.pyc",
+    ".ipynb_checkpoints/",
+    "data/raw/",
+    "data/private/",
+    "reports/tmp/",
+    "models/*.pkl",
+    "models/*.joblib",
+    "*.log"
+]
+
+print("\\n".join(ignore_rules))</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="lesson-panel" id="panel-6">
+  <div class="lesson-title-bar"><h2>🗂️ Project Folder Structure</h2><p>A clear structure helps other people trust and rerun your work.</p></div>
+  <div class="lesson-body">
+<h3>Recommended layout</h3>
+<div class="code-block"><div class="code-header"><span>text</span><button class="copy-btn">copy</button></div><div class="code-body">project-name/
+  README.md
+  requirements.txt
+  notebooks/
+    01_eda.ipynb
+    02_modeling.ipynb
+  src/
+    clean_data.py
+    features.py
+  data/
+    raw/
+    processed/
+  reports/
+    figures/</div></div>
+<p>This layout separates exploration, reusable code, data, and final reports. It also makes the repository easier to review.</p>
+  </div>
+  <div class="task-section">
+    <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Create a Project Tree</span></div>
+    <div class="task-desc">Generate a clean folder tree for a customer churn project.</div>
+    <div class="task-starter-label">Starter code:</div>
+    <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">project = "customer-churn-analysis"
+folders = [
+    # add folders here
+]
+
+print(project + "/")
+for folder in folders:
+    print("  " + folder)</div></div>
+    <button class="btn-try-it" onclick="tryCode(this.previousElementSibling.querySelector('.code-body').textContent)">⚡ Try in Playground</button>
+    <button class="btn-show-solution" onclick="toggleSolution(this)">👁 Show Solution</button>
+    <div class="task-solution" style="display:none">
+      <div class="solution-label">✅ Solution</div>
+      <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">project = "customer-churn-analysis"
+items = [
+    "README.md",
+    "requirements.txt",
+    "notebooks/01_eda.ipynb",
+    "notebooks/02_modeling.ipynb",
+    "src/clean_data.py",
+    "src/train_model.py",
+    "data/raw/",
+    "data/processed/",
+    "reports/figures/"
+]
+
+print(project + "/")
+for item in items:
+    print("  " + item)</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="lesson-panel" id="panel-7">
+  <div class="lesson-title-bar"><h2>📌 requirements.txt & Environments</h2><p>Reproducibility means someone else can install the same dependencies.</p></div>
+  <div class="lesson-body">
+<h3>Two common files</h3>
+<div class="code-block"><div class="code-header"><span>bash</span><button class="copy-btn">copy</button></div><div class="code-body">pip freeze > requirements.txt
+pip install -r requirements.txt</div></div>
+<h3>Better manual requirements for portfolio projects</h3>
+<div class="code-block"><div class="code-header"><span>text</span><button class="copy-btn">copy</button></div><div class="code-body">pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+jupyter</div></div>
+<p>A manually curated requirements file is often cleaner than freezing every package from a large environment.</p>
+  </div>
+  <div class="task-section">
+    <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Build Requirements from Imports</span></div>
+    <div class="task-desc">Given imports from a notebook, generate a minimal requirements list.</div>
+    <div class="task-starter-label">Starter code:</div>
+    <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">imports = ["pandas", "numpy", "matplotlib.pyplot", "sklearn", "sqlite3"]
+
+# Map imports to package names.
+requirements = []
+
+for package in requirements:
+    print(package)</div></div>
+    <button class="btn-try-it" onclick="tryCode(this.previousElementSibling.querySelector('.code-body').textContent)">⚡ Try in Playground</button>
+    <button class="btn-show-solution" onclick="toggleSolution(this)">👁 Show Solution</button>
+    <div class="task-solution" style="display:none">
+      <div class="solution-label">✅ Solution</div>
+      <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">imports = ["pandas", "numpy", "matplotlib.pyplot", "sklearn", "sqlite3"]
+
+package_map = {
+    "pandas": "pandas",
+    "numpy": "numpy",
+    "matplotlib": "matplotlib",
+    "sklearn": "scikit-learn",
+    "seaborn": "seaborn"
+}
+
+requirements = []
+for item in imports:
+    root = item.split(".")[0]
+    if root in package_map and package_map[root] not in requirements:
+        requirements.append(package_map[root])
+
+for package in requirements:
+    print(package)</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="lesson-panel" id="panel-8">
+  <div class="lesson-title-bar"><h2>📝 README for Data Projects</h2><p>Your README is the front door to your portfolio project.</p></div>
+  <div class="lesson-body">
+<h3>README sections that matter</h3>
+<ul>
+<li>Project goal and business question.</li>
+<li>Dataset source and limitations.</li>
+<li>Method summary.</li>
+<li>Key findings with visuals.</li>
+<li>How to run the project.</li>
+</ul>
+<div class="code-block"><div class="code-header"><span>markdown</span><button class="copy-btn">copy</button></div><div class="code-body"># Customer Churn Analysis
+
+## Goal
+Predict which customers are likely to churn and identify retention opportunities.
+
+## Key Findings
+1. Month-to-month contracts have the highest churn risk.
+2. Higher monthly charges are associated with higher churn.
+
+## How to Run
+pip install -r requirements.txt</div></div>
+  </div>
+  <div class="task-section">
+    <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Generate a README Draft</span></div>
+    <div class="task-desc">Create a README template for a sales dashboard portfolio project.</div>
+    <div class="task-starter-label">Starter code:</div>
+    <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">project = "Sales Dashboard"
+goal = "Analyze revenue trends and product performance"
+findings = [
+    # add findings here
+]
+
+# Build markdown text.
+readme = ""
+print(readme)</div></div>
+    <button class="btn-try-it" onclick="tryCode(this.previousElementSibling.querySelector('.code-body').textContent)">⚡ Try in Playground</button>
+    <button class="btn-show-solution" onclick="toggleSolution(this)">👁 Show Solution</button>
+    <div class="task-solution" style="display:none">
+      <div class="solution-label">✅ Solution</div>
+      <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">project = "Sales Dashboard"
+goal = "Analyze revenue trends and product performance"
+findings = [
+    "Revenue peaks in Q4.",
+    "Technology products drive the highest profit.",
+    "Discounted orders have lower margins."
+]
+
+readme = f"""# {project}
+
+## Goal
+{goal}
+
+## Key Findings
+"""
+for i, finding in enumerate(findings, start=1):
+    readme += f"{i}. {finding}\\n"
+
+readme += """
+## How to Run
+1. Install dependencies: pip install -r requirements.txt
+2. Open notebooks/01_eda.ipynb
+3. Run the dashboard script.
+"""
+
+print(readme)</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="lesson-panel" id="panel-9">
+  <div class="lesson-title-bar"><h2>🚢 Portfolio Release Checklist</h2><p>Before publishing, review the project like a hiring manager would.</p></div>
+  <div class="lesson-body">
+<h3>Release criteria</h3>
+<ul>
+<li>Notebook runs top-to-bottom.</li>
+<li>README explains the business question and findings.</li>
+<li>No secrets or private data are committed.</li>
+<li>Charts are readable and decision-focused.</li>
+<li>Environment and data instructions are clear.</li>
+</ul>
+<h3>Final Git flow</h3>
+<div class="code-block"><div class="code-header"><span>bash</span><button class="copy-btn">copy</button></div><div class="code-body">git status
+git add README.md requirements.txt notebooks/ src/
+git commit -m "Prepare portfolio release"
+git push</div></div>
+  </div>
+  <div class="task-section">
+    <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Score Your Project Readiness</span></div>
+    <div class="task-desc">Build a small scoring checklist. A project is portfolio-ready when it scores at least 5 out of 6.</div>
+    <div class="task-starter-label">Starter code:</div>
+    <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">checks = {
+    "README explains goal": True,
+    "Notebook runs top-to-bottom": False,
+    "No secrets committed": True,
+    "requirements.txt exists": True,
+    "5+ insights included": False,
+    "charts are readable": True
+}
+
+# Calculate score and print readiness decision.</div></div>
+    <button class="btn-try-it" onclick="tryCode(this.previousElementSibling.querySelector('.code-body').textContent)">⚡ Try in Playground</button>
+    <button class="btn-show-solution" onclick="toggleSolution(this)">👁 Show Solution</button>
+    <div class="task-solution" style="display:none">
+      <div class="solution-label">✅ Solution</div>
+      <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">checks = {
+    "README explains goal": True,
+    "Notebook runs top-to-bottom": False,
+    "No secrets committed": True,
+    "requirements.txt exists": True,
+    "5+ insights included": False,
+    "charts are readable": True
+}
+
+score = sum(checks.values())
+total = len(checks)
+
+for item, passed in checks.items():
+    print(("PASS" if passed else "TODO"), "-", item)
+
+print(f"\\nScore: {score}/{total}")
+if score >= 5:
+    print("Portfolio-ready.")
+else:
+    print("Not ready yet. Fix the TODO items first.")</div></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+
+  <div class="lesson-quiz-bar" style="margin-bottom:.8rem">
+    <button class="btn-quiz" id="quiz-btn" onclick="openCurrentQuiz()">📝 Lesson Quiz - 5 Questions</button>
+    <span class="quiz-done-badge" id="quiz-done-global" style="display:none">✓ Quiz done</span>
+  </div>
+  <div class="lesson-nav">
+    <button class="btn-nav" id="btn-prev" onclick="prevLesson()" disabled>← Prev</button>
+    <button class="btn-mark" id="btn-mark" onclick="markAndNext()">✓ Mark Done & Next →</button>
+    <a class="btn-nav" id="btn-next-unit" href="../capstone.html" style="display:none">Capstone Projects →</a>
+    <button class="btn-nav" id="btn-next" onclick="showLesson(currentLesson+1)">Next →</button>
+  </div>
+</main>
+</div>
+
+<div class="modal-overlay" id="quiz-modal">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 id="quiz-title">Quiz</h3>
+      <button class="modal-close" onclick="closeQuiz()">×</button>
+    </div>
+    <div id="quiz-body"></div>
+  </div>
+</div>
+
+<script src="../js/app.js?v=20260514"></script>
+<script>
+initUnit({
+  id: 10,
+  lessons: [
+    {"title":"Why Git for Data Projects?","quizzes":[{"q":"What problem does Git primarily solve?","opts":["Making charts prettier","Tracking project history and changes","Cleaning missing values","Running SQL queries"],"ans":1,"exp":"Git records changes over time so you can understand, compare, and restore project states."},{"q":"What should usually NOT be committed to Git?","opts":["README.md","Python scripts","Raw private data and secrets","Small SQL files"],"ans":2,"exp":"Private data, API keys, and large raw files should be ignored or stored safely outside Git."},{"q":"GitHub is best described as:","opts":["A pandas replacement","A hosted platform for Git repositories","A plotting library","A local Python environment"],"ans":1,"exp":"Git is the tool; GitHub hosts repositories and supports collaboration."},{"q":"A commit is:","opts":["A saved checkpoint of changes","A chart type","A database table","A model metric"],"ans":0,"exp":"A commit stores a snapshot of staged changes with a message and author metadata."},{"q":"Why are commit messages useful?","opts":["They speed up Python","They explain what changed and why","They remove missing values","They encrypt data"],"ans":1,"exp":"Good commit messages make project history understandable to you and reviewers."}]},
+    {"title":"Install & Configure Git","quizzes":[{"q":"Which command checks the installed Git version?","opts":["git check","git --version","git install","git show-version"],"ans":1,"exp":"git --version prints the installed Git version."},{"q":"Which setting stores your commit author name?","opts":["user.name","author.id","commit.name","github.name"],"ans":0,"exp":"git config --global user.name sets the author name used in commits."},{"q":"Why should your Git email match GitHub?","opts":["So commits connect to your profile","So pandas can read files","So notebooks run faster","So plots export correctly"],"ans":0,"exp":"GitHub uses the commit email to associate commits with your account."},{"q":"What does init.defaultBranch main configure?","opts":["Default data file","Default branch name for new repos","Default chart theme","Default Python version"],"ans":1,"exp":"It makes new repositories start with a branch named main."},{"q":"Which command lists Git configuration values?","opts":["git config --list","git list config","git settings","git show all"],"ans":0,"exp":"git config --list displays active Git configuration values."}]},
+    {"title":"Repositories & Commits","quizzes":[{"q":"What does git init do?","opts":["Deletes a repo","Creates a new Git repository","Uploads to GitHub","Runs a notebook"],"ans":1,"exp":"git init creates the .git folder that stores repository history."},{"q":"What does git status show?","opts":["Model accuracy","Changed, staged, and untracked files","Python packages","Dataset shape"],"ans":1,"exp":"git status tells you what changed and what is staged for commit."},{"q":"What does git add do?","opts":["Stages files for the next commit","Pushes to GitHub","Creates a chart","Runs tests"],"ans":0,"exp":"git add stages selected changes so they can be committed."},{"q":"Which commit message is best?","opts":["stuff","final","Add churn EDA notebook","changes"],"ans":2,"exp":"Specific commit messages are easier to review and understand later."},{"q":"Why keep commits focused?","opts":["To make history easier to review","To reduce RAM usage","To remove outliers","To increase accuracy automatically"],"ans":0,"exp":"Focused commits make it easier to understand and reverse individual changes."}]},
+    {"title":"Branches & Experiments","quizzes":[{"q":"What is a branch for?","opts":["Safe parallel work or experiments","Changing file encoding only","Deleting notebooks","Installing packages"],"ans":0,"exp":"Branches let you work on changes without disturbing main."},{"q":"Which command creates and switches to a branch?","opts":["git branch-only name","git switch -c name","git create name","git move name"],"ans":1,"exp":"git switch -c branch-name creates a branch and switches to it."},{"q":"What branch name is clearest?","opts":["test","new","feature/sales-dashboard","abc"],"ans":2,"exp":"A descriptive prefix and purpose make branch names understandable."},{"q":"What does merge do?","opts":["Combines branch changes","Deletes GitHub","Formats notebooks","Builds a model"],"ans":0,"exp":"git merge brings changes from one branch into another."},{"q":"Why not experiment directly on main?","opts":["Main should stay stable","Main cannot hold notebooks","GitHub blocks it","Python cannot run on main"],"ans":0,"exp":"Keeping main stable makes the repository easier to trust."}]},
+    {"title":"GitHub Remote Workflow","quizzes":[{"q":"What is a remote?","opts":["A link to a hosted repository","A model server","A database row","A chart export"],"ans":0,"exp":"A remote is a named URL, usually origin, pointing to GitHub or another host."},{"q":"What does git push do?","opts":["Uploads commits to a remote","Downloads data","Cleans strings","Creates a virtual environment"],"ans":0,"exp":"git push sends your local commits to the remote repository."},{"q":"What does git pull do?","opts":["Fetches and integrates remote changes","Runs code","Deletes branches","Creates README"],"ans":0,"exp":"git pull updates your local branch with remote changes."},{"q":"Which command adds a GitHub remote?","opts":["git remote add origin URL","git add remote URL","git github URL","git push remote"],"ans":0,"exp":"git remote add origin URL connects your local repo to a remote called origin."},{"q":"What does -u in git push -u origin main do?","opts":["Sets upstream tracking","Updates Python","Uploads data only","Uninstalls Git"],"ans":0,"exp":"It connects the local branch to the remote branch for future push/pull defaults."}]},
+    {"title":".gitignore & Data Safety","quizzes":[{"q":"What is .gitignore for?","opts":["Listing files Git should ignore","Explaining model metrics","Creating charts","Storing passwords"],"ans":0,"exp":".gitignore tells Git which files and folders not to track."},{"q":"Which file should be ignored?","opts":["README.md",".env","src/clean.py","notebooks/01_eda.ipynb"],"ans":1,"exp":".env often contains secrets and should not be committed."},{"q":"Why ignore data/raw/?","opts":["Raw data can be large, private, or not redistributable","Raw data breaks Markdown","Git cannot track folders","Python cannot read it"],"ans":0,"exp":"Raw datasets are often too large or sensitive for Git."},{"q":"Which is safe to track?","opts":["API key",".env","README.md","private customer CSV"],"ans":2,"exp":"README.md is documentation and should usually be tracked."},{"q":"If a secret was committed, what should you do first?","opts":["Rotate/revoke the secret","Rename the notebook","Change chart color","Ignore the README"],"ans":0,"exp":"Once exposed, the secret should be revoked or rotated immediately."}]},
+    {"title":"Project Folder Structure","quizzes":[{"q":"Why use folders like notebooks/, src/, data/, reports/?","opts":["To make the project organized and reusable","To hide files from GitHub","To speed up charts automatically","To avoid writing code"],"ans":0,"exp":"A clear structure helps reviewers understand and rerun the project."},{"q":"Where should reusable Python functions go?","opts":["src/","data/raw/","reports/figures/","README.md only"],"ans":0,"exp":"Reusable code belongs in src/ or a similar source folder."},{"q":"Where should final charts often go?","opts":["reports/figures/","__pycache__/","data/private/","random folders"],"ans":0,"exp":"reports/figures/ is a common location for exported visuals."},{"q":"Why number notebooks like 01_eda.ipynb?","opts":["To show the intended order","To encrypt them","To make them smaller","To run Git faster"],"ans":0,"exp":"Numbered notebooks communicate workflow order."},{"q":"What should README.md explain?","opts":["Goal, data, method, findings, and how to run","Only your name","Only package versions","Only raw data"],"ans":0,"exp":"A strong README makes the project understandable and reproducible."}]},
+    {"title":"requirements.txt & Environments","quizzes":[{"q":"What does requirements.txt contain?","opts":["Python package dependencies","Raw customer records","Git commit IDs only","Chart screenshots"],"ans":0,"exp":"requirements.txt lists packages needed to run the project."},{"q":"Which command installs from requirements.txt?","opts":["pip install -r requirements.txt","pip read requirements.txt","python install requirements","git install requirements"],"ans":0,"exp":"pip install -r requirements.txt installs listed dependencies."},{"q":"Why avoid committing a huge accidental pip freeze?","opts":["It may include unrelated packages","Git cannot store text","README will fail","Charts become invisible"],"ans":0,"exp":"A bloated requirements file makes setup harder and less portable."},{"q":"Which package name should represent sklearn imports?","opts":["scikit-learn","sklearn-package","python-sklearn-only","modelkit"],"ans":0,"exp":"The installable package is scikit-learn, even though imports use sklearn."},{"q":"What is reproducibility?","opts":["Someone else can rerun your project with the same setup","Your chart is colorful","Your dataset is private","Your notebook is long"],"ans":0,"exp":"Reproducibility means the workflow can be rerun reliably."}]},
+    {"title":"README for Data Projects","quizzes":[{"q":"What is the README's main job?","opts":["Explain the project clearly to reviewers","Store raw data","Replace all code","Hide errors"],"ans":0,"exp":"The README is the first thing most reviewers see."},{"q":"Which section is most important for a portfolio data project?","opts":["Goal and key findings","Random jokes","Only import statements","No headings"],"ans":0,"exp":"Reviewers need to understand the problem and outcome quickly."},{"q":"What should dataset source include?","opts":["Where data came from and limitations","Only row count","Only colors","Only file extension"],"ans":0,"exp":"Source and limitations help readers judge trustworthiness."},{"q":"What should How to Run include?","opts":["Setup and run steps","Only screenshots","Only conclusions","Only GitHub username"],"ans":0,"exp":"Reproducible projects include clear setup steps."},{"q":"Why include visuals in README?","opts":["To communicate results quickly","To slow the page down","To avoid analysis","To replace all explanation"],"ans":0,"exp":"Good visuals help readers grasp findings without opening every notebook."}]},
+    {"title":"Portfolio Release Checklist","quizzes":[{"q":"What should happen before publishing?","opts":["Run the notebook top-to-bottom","Commit secrets","Delete README","Ignore errors"],"ans":0,"exp":"A portfolio notebook should run cleanly from start to finish."},{"q":"A project is not ready if:","opts":["It contains API keys","It has a README","It has requirements.txt","It has a clear goal"],"ans":0,"exp":"Secrets must never be published."},{"q":"What makes charts portfolio-ready?","opts":["Readable labels and decision-focused titles","Many random colors","No axis labels","Tiny text"],"ans":0,"exp":"Charts should support communication, not just decoration."},{"q":"Why include limitations?","opts":["It shows honest analysis judgment","It weakens the project automatically","It hides bad code","It replaces results"],"ans":0,"exp":"Professional analysts clearly state limits and assumptions."},{"q":"What is a good final commit message?","opts":["Prepare portfolio release","stuff","final final","asdf"],"ans":0,"exp":"A clear final commit message explains the release step."}]}
+  ]
+});
+const params = new URLSearchParams(location.search);
+const startLesson = parseInt(params.get("lesson") || "0");
+if (startLesson > 0) showLesson(startLesson);
+</script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Professional Roadmap | PyTrack</title>
+<link rel="stylesheet" href="css/style.css?v=20260514"/>
+  <link rel="icon" type="image/png" href="New Logo last.png">
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html"><img src="New Logo last.png" alt="Ta3laM" class="nav-logo-img"></a>
+  <div class="nav-right">
+    <div class="progress-badge">Professional Path</div>
+    <a class="btn-outline" href="index.html">All Units</a>
+    <button id="theme-toggle" class="btn-theme-toggle" onclick="toggleTheme()" title="Toggle theme">☀️</button>
+  </div>
+</nav>
+
+<main class="roadmap-page">
+  <section class="roadmap-hero">
+    <div>
+      <div class="hero-tag">Course Structure</div>
+      <h1>Professional <em>Data Analysis Roadmap</em></h1>
+      <p>This page turns the course audit into a practical expansion plan. The first professional unit is now live, and the lesson-level review is documented in <a href="LESSON_AUDIT.md">LESSON_AUDIT.md</a>. The next layer should continue closing the gaps around EDA, statistics, advanced SQL, data products, storytelling, and portfolio delivery.</p>
+    </div>
+    <aside class="roadmap-summary" aria-label="Roadmap summary">
+      <div><strong>100</strong><span>live lessons</span></div>
+      <div><strong>5</strong><span>remaining priority gaps</span></div>
+      <div><strong>2</strong><span>companion notebooks</span></div>
+      <div><strong>4</strong><span>future pro units</span></div>
+    </aside>
+  </section>
+
+  <section class="coverage-board" aria-labelledby="coverage-heading">
+    <div class="section-kicker">Coverage Audit</div>
+    <h2 id="coverage-heading">What is covered now?</h2>
+    <div class="coverage-grid">
+      <article class="coverage-card">
+        <span class="status-chip status-done">covered</span>
+        <h3>Python Foundations</h3>
+        <p>Units 1-3 cover setup, notebooks, syntax, data structures, functions, files, and error handling.</p>
+        <div class="coverage-meter" style="--pct:92%"><span></span></div>
+      </article>
+      <article class="coverage-card">
+        <span class="status-chip status-done">covered</span>
+        <h3>Analysis Core</h3>
+        <p>Units 4-6 cover NumPy, pandas, missing data, types, validation, outliers, and cleaning workflows.</p>
+        <div class="coverage-meter" style="--pct:88%"><span></span></div>
+      </article>
+      <article class="coverage-card">
+        <span class="status-chip status-partial">partial</span>
+        <h3>EDA and Statistics</h3>
+        <p>Unit 7 starts the topic; the training notebook adds distributions, sampling, confidence intervals, and hypothesis tests.</p>
+        <div class="coverage-meter" style="--pct:62%"><span></span></div>
+      </article>
+      <article class="coverage-card">
+        <span class="status-chip status-gap">gap</span>
+        <h3>SQL and Data Sources</h3>
+        <p>Unit 9 introduces SQL/APIs, but advanced joins, window functions, CTEs, JSON, and source quality need a full module.</p>
+        <div class="coverage-meter" style="--pct:45%"><span></span></div>
+      </article>
+      <article class="coverage-card">
+        <span class="status-chip status-partial">partial</span>
+        <h3>Storytelling and Dashboards</h3>
+        <p>Unit 8 has visualization tools. The missing layer is choosing charts, writing insights, and packaging dashboards for decisions.</p>
+        <div class="coverage-meter" style="--pct:58%"><span></span></div>
+      </article>
+      <article class="coverage-card">
+        <span class="status-chip status-partial">partial</span>
+        <h3>Portfolio Workflow</h3>
+        <p>Unit 10 now covers Git, GitHub, reproducibility, README structure, and release checklists. Deployment can become a later expansion.</p>
+        <div class="coverage-meter" style="--pct:72%"><span></span></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="roadmap-grid" aria-label="Recommended learning order">
+    <article class="roadmap-card">
+      <span class="roadmap-step">01</span>
+      <h2>Python Foundations</h2>
+      <p>Finish Units 1-3 first. The goal is comfort with notebooks, scripts, functions, data structures, errors, and reusable code.</p>
+      <ul>
+        <li>Outcome: write clean Python scripts and notebooks.</li>
+        <li>Practice: solve every lesson task without opening the solution first.</li>
+      </ul>
+    </article>
+    <article class="roadmap-card">
+      <span class="roadmap-step">02</span>
+      <h2>Analysis Core</h2>
+      <p>Use Units 4-6 to build the working analyst toolkit: arrays, DataFrames, missing values, outliers, types, and cleaning rules.</p>
+      <ul>
+        <li>Outcome: clean a raw CSV into an analysis-ready dataset.</li>
+        <li>Practice: document every cleaning decision.</li>
+      </ul>
+    </article>
+    <article class="roadmap-card">
+      <span class="roadmap-step">03</span>
+      <h2>EDA and Statistics</h2>
+      <p>Turn summaries into real questions: distributions, segments, correlations, confidence intervals, and hypothesis testing.</p>
+      <ul>
+        <li>Outcome: produce 5 decision-ready findings.</li>
+        <li>Practice: use the training notebook statistics sections.</li>
+      </ul>
+    </article>
+    <article class="roadmap-card">
+      <span class="roadmap-step">04</span>
+      <h2>SQL and Data Sources</h2>
+      <p>Expand beyond files: relational joins, CTEs, window functions, APIs, JSON normalization, and responsible scraping.</p>
+      <ul>
+        <li>Outcome: combine database, API, and CSV data in one project.</li>
+        <li>Practice: rebuild a pandas analysis from SQL queries.</li>
+      </ul>
+    </article>
+    <article class="roadmap-card">
+      <span class="roadmap-step">05</span>
+      <h2>Visualization and Storytelling</h2>
+      <p>Move from charts to communication: chart choice, annotation, executive summaries, accessibility, and narrative order.</p>
+      <ul>
+        <li>Outcome: one-page insight report with annotated visuals.</li>
+        <li>Practice: rewrite chart titles as business conclusions.</li>
+      </ul>
+    </article>
+    <article class="roadmap-card">
+      <span class="roadmap-step">06</span>
+      <h2>Dashboards and Portfolio</h2>
+      <p>Package the work: Plotly or Streamlit dashboards, demo apps, polished project summaries, and deployment notes.</p>
+      <ul>
+        <li>Outcome: one public portfolio project.</li>
+        <li>Practice: ship a dashboard and a clean README.</li>
+      </ul>
+    </article>
+    <article class="roadmap-card">
+      <span class="roadmap-step">07</span>
+      <h2>ML for Analysts</h2>
+      <p>Keep ML practical: train/test split, leakage, baseline models, metrics, feature importance, and business interpretation.</p>
+      <ul>
+        <li>Outcome: explain model performance without overclaiming.</li>
+        <li>Practice: compare a baseline with one improved model.</li>
+      </ul>
+    </article>
+    <article class="roadmap-card">
+      <span class="roadmap-step">08</span>
+      <h2>Capstone Delivery</h2>
+      <p>Finish with real datasets, a clean notebook, a dashboard or report, a README, and 5-7 decision-focused insights.</p>
+      <ul>
+        <li>Outcome: interview-ready project evidence.</li>
+        <li>Practice: review the project as if it belongs to a client.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="gap-section" aria-labelledby="gap-heading">
+    <div class="section-kicker">Expansion Priority</div>
+    <h2 id="gap-heading">Recommended future units</h2>
+    <div class="track-table-wrap">
+      <table class="track-table">
+        <thead>
+          <tr>
+            <th>Next unit</th>
+            <th>Main problem it solves</th>
+            <th>Expected deliverable</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Unit 11: EDA and Applied Statistics</td>
+            <td>The current path needs deeper business questions, distributions, sampling, confidence, and hypothesis testing.</td>
+            <td>An EDA report with evidence-backed recommendations.</td>
+          </tr>
+          <tr>
+            <td>Unit 12: Advanced SQL and Data Sources</td>
+            <td>Unit 9 is crowded; SQL, APIs, JSON, and scraping deserve a dedicated workflow.</td>
+            <td>A mini warehouse analysis using SQL plus an external API.</td>
+          </tr>
+          <tr>
+            <td>Unit 13: Dashboards and Data Storytelling</td>
+            <td>Charts become valuable only when they support decisions and can be shared clearly.</td>
+            <td>A dashboard and a one-page executive summary.</td>
+          </tr>
+          <tr>
+            <td>Unit 14: Portfolio Review and Deployment</td>
+            <td>Learners need to turn exercises into polished portfolio artifacts.</td>
+            <td>A deployed portfolio project with review checklist.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="pro-section">
+    <div class="section-kicker">Current Companion Files</div>
+    <h2>Use these resources now</h2>
+    <p>The notebooks already add practical coverage for Git, EDA, statistics, SQL, APIs, dashboards, and portfolio preparation while the web units are being expanded.</p>
+    <div class="pro-actions">
+      <a class="btn-nav" href="notebooks/training_notebook.zip" download="training_notebook.zip">Download Training Notebook</a>
+      <a class="btn-nav" href="notebooks/quiz_notebook.zip" download="quiz_notebook.zip">Download Quiz Notebook</a>
+      <a class="btn-quiz" href="capstone.html">View Capstones</a>
+    </div>
+  </section>
+</main>
+<script src="js/app.js?v=20260514"></script>
+</body>
+</html>

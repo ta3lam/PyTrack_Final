@@ -4,15 +4,17 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Unit 8 — Data Visualization | PyTrack</title>
-<link rel="stylesheet" href="../css/style.css"/>
+<link rel="stylesheet" href="../css/style.css?v=20260514"/>
+  <link rel="icon" type="image/png" href="../New Logo last.png">
 </head>
-<body>
+<body class="code-card-preview">
 
 <nav>
-  <a class="nav-logo" href="../index.html">Py<span>Track</span></a>
+  <a class="nav-logo" href="../index.html"><img src="../New Logo last.png" alt="Ta3laM" class="nav-logo-img"></a>
   <div class="nav-right">
-    <div class="progress-badge" id="nav-progress">0 / 80 lessons</div>
+    <div class="progress-badge" id="nav-progress">0 / 100 lessons</div>
     <a class="btn-outline" href="../index.html">⌂ All Units</a>
+    <button id="theme-toggle" class="btn-theme-toggle" onclick="toggleTheme()" title="Toggle theme">☀️</button>
   </div>
 </nav>
 
@@ -49,7 +51,9 @@
 </div><div class="sidebar-unit">
   <div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🤖</span><span>Unit 9: ML, SQL & APIs</span><span class="sidebar-unit-arrow">▶</span></div>
   <div class="sidebar-lessons"><a class="sidebar-lesson" id="slink-9-0" href="unit-9.html" ><span class="lesson-check" id="chk-9-0"></span>Intro to Machine Learning</a><a class="sidebar-lesson" id="slink-9-1" href="unit-9.html" ><span class="lesson-check" id="chk-9-1"></span>Scikit-learn Basics</a><a class="sidebar-lesson" id="slink-9-2" href="unit-9.html" ><span class="lesson-check" id="chk-9-2"></span>Linear Regression</a><a class="sidebar-lesson" id="slink-9-3" href="unit-9.html" ><span class="lesson-check" id="chk-9-3"></span>Logistic Regression</a><a class="sidebar-lesson" id="slink-9-4" href="unit-9.html" ><span class="lesson-check" id="chk-9-4"></span>Decision Trees & Random Forest</a><a class="sidebar-lesson" id="slink-9-5" href="unit-9.html" ><span class="lesson-check" id="chk-9-5"></span>Model Evaluation</a><a class="sidebar-lesson" id="slink-9-6" href="unit-9.html" ><span class="lesson-check" id="chk-9-6"></span>Feature Engineering</a><a class="sidebar-lesson" id="slink-9-7" href="unit-9.html" ><span class="lesson-check" id="chk-9-7"></span>SQL with Python</a><a class="sidebar-lesson" id="slink-9-8" href="unit-9.html" ><span class="lesson-check" id="chk-9-8"></span>REST APIs & requests</a><a class="sidebar-lesson" id="slink-9-9" href="unit-9.html" ><span class="lesson-check" id="chk-9-9"></span>Web Scraping</a></div>
-</div><div class="sidebar-unit"><div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🏆</span><span>Capstone Projects</span><span class="sidebar-unit-arrow">▶</span></div><div class="sidebar-lessons"><a class="sidebar-lesson" href="../capstone.html">View Projects</a></div></div>
+</div><div class="sidebar-unit">
+  <div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🧰</span><span>Unit 10: Git & Portfolio Workflow</span><span class="sidebar-unit-arrow">▶</span></div>
+  <div class="sidebar-lessons"><a class="sidebar-lesson" id="slink-10-0" href="unit-10.html"><span class="lesson-check" id="chk-10-0"></span>Why Git for Data Projects?</a><a class="sidebar-lesson" id="slink-10-1" href="unit-10.html"><span class="lesson-check" id="chk-10-1"></span>Install & Configure Git</a><a class="sidebar-lesson" id="slink-10-2" href="unit-10.html"><span class="lesson-check" id="chk-10-2"></span>Repositories & Commits</a><a class="sidebar-lesson" id="slink-10-3" href="unit-10.html"><span class="lesson-check" id="chk-10-3"></span>Branches & Experiments</a><a class="sidebar-lesson" id="slink-10-4" href="unit-10.html"><span class="lesson-check" id="chk-10-4"></span>GitHub Remote Workflow</a><a class="sidebar-lesson" id="slink-10-5" href="unit-10.html"><span class="lesson-check" id="chk-10-5"></span>.gitignore & Data Safety</a><a class="sidebar-lesson" id="slink-10-6" href="unit-10.html"><span class="lesson-check" id="chk-10-6"></span>Project Folder Structure</a><a class="sidebar-lesson" id="slink-10-7" href="unit-10.html"><span class="lesson-check" id="chk-10-7"></span>requirements.txt & Environments</a><a class="sidebar-lesson" id="slink-10-8" href="unit-10.html"><span class="lesson-check" id="chk-10-8"></span>README for Data Projects</a><a class="sidebar-lesson" id="slink-10-9" href="unit-10.html"><span class="lesson-check" id="chk-10-9"></span>Portfolio Release Checklist</a></div></div><div class="sidebar-unit"><div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🏆</span><span>Capstone Projects</span><span class="sidebar-unit-arrow">▶</span></div><div class="sidebar-lessons"><a class="sidebar-lesson" href="../capstone.html">View Projects</a></div></div>
     </div>
   </aside>
 
@@ -102,7 +106,7 @@ ax.legend()
 plt.show()</div></div>
 <div class="tip-box"><strong>💡 Tip:</strong> Always use <span class="ci">fig, ax = plt.subplots()</span> — gives full control and handles multiple subplots easily.</div></div>
   <div class="task-section">
-  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice Exercise</span></div>
+  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice: Matplotlib Basics</span></div>
   <div class="task-desc">Create a professional line chart of weekly website traffic for 8 weeks. Add: trend line, average reference line, peak annotation, and proper styling.</div>
   <div class="task-starter-label">Starter code:</div>
   <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import matplotlib.pyplot as plt
@@ -198,7 +202,7 @@ axes[1].legend(); axes[1].set_title("Stacked")
 
 plt.tight_layout(); plt.show()</div></div></div>
   <div class="task-section">
-  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice Exercise</span></div>
+  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice: Bar & Line Charts</span></div>
   <div class="task-desc">Create a horizontal bar chart showing top 10 products by revenue. Add value labels, color by performance tier, and include a reference line for the average.</div>
   <div class="task-starter-label">Starter code:</div>
   <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import matplotlib.pyplot as plt
@@ -300,7 +304,7 @@ ax.set_title("Marketing Spend vs Sales"); ax.legend()
 ax.set_xlabel("Marketing (EGP)"); ax.set_ylabel("Sales (EGP)")
 plt.tight_layout(); plt.show()</div></div></div>
   <div class="task-section">
-  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice Exercise</span></div>
+  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice: Histograms & Scatter Plots</span></div>
   <div class="task-desc">Create a side-by-side comparison: distribution of sales before and after a marketing campaign. Show histogram, KDE, and summary statistics.</div>
   <div class="task-starter-label">Starter code:</div>
   <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import matplotlib.pyplot as plt, numpy as np
@@ -398,7 +402,7 @@ ax.set_title("Sales by Product (Stacked Area)", fontsize=14)
 ax.set_xlabel("Month"); ax.set_ylabel("Sales (thousands)")
 ax.legend(loc="upper left"); plt.tight_layout(); plt.show()</div></div></div>
   <div class="task-section">
-  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice Exercise</span></div>
+  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice: Pie & Area Charts</span></div>
   <div class="task-desc">Create a dashboard with 3 charts: pie for product mix, area chart for monthly trend, and a donut for regional split.</div>
   <div class="task-starter-label">Starter code:</div>
   <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import matplotlib.pyplot as plt, numpy as np
@@ -485,7 +489,7 @@ axes[1,1].set_title("Average Sales by Quarter")
 plt.tight_layout(); plt.show()</div></div>
 <div class="tip-box"><strong>💡 Tip:</strong> Seaborn themes: 'darkgrid', 'whitegrid', 'dark', 'white', 'ticks'. Palettes: 'Blues', 'Set2', 'rocket', 'muted', 'deep'.</div></div>
   <div class="task-section">
-  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice Exercise</span></div>
+  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice: Seaborn Charts</span></div>
   <div class="task-desc">Create a seaborn analysis dashboard: boxplot, violin, and a point plot showing quarterly trends per region.</div>
   <div class="task-starter-label">Starter code:</div>
   <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import seaborn as sns, matplotlib.pyplot as plt, pandas as pd, numpy as np
@@ -584,7 +588,7 @@ g = sns.pairplot(pair_df, hue="Region", diag_kind="kde",
 g.fig.suptitle("Pair Plot — Sales Analysis", y=1.02)
 plt.show()</div></div></div>
   <div class="task-section">
-  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice Exercise</span></div>
+  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice: Heatmaps & Pair Plots</span></div>
   <div class="task-desc">Create a heatmap showing monthly sales performance by product, a correlation heatmap with mask, and annotate the strongest correlations.</div>
   <div class="task-starter-label">Starter code:</div>
   <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import seaborn as sns, matplotlib.pyplot as plt, pandas as pd, numpy as np
@@ -698,7 +702,7 @@ axes[1,1].set_title("Product Mix")
 
 plt.tight_layout(); plt.savefig("dashboard.png",dpi=150); plt.show()</div></div></div>
   <div class="task-section">
-  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice Exercise</span></div>
+  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice: Subplots & Dashboards</span></div>
   <div class="task-desc">Build a complete executive dashboard: 6-panel layout with KPI indicators, trend, regional comparison, product mix, distribution, and correlation.</div>
   <div class="task-starter-label">Starter code:</div>
   <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import matplotlib.pyplot as plt, numpy as np, pandas as pd
@@ -838,7 +842,7 @@ fig.update_layout(height=600, showlegend=False,
 fig.show()</div></div>
 <div class="tip-box"><strong>💡 Tip:</strong> Save Plotly charts as HTML for easy sharing: fig.write_html('chart.html'). No dependencies needed to view!</div></div>
   <div class="task-section">
-  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice Exercise</span></div>
+  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice: Plotly — Interactive Charts</span></div>
   <div class="task-desc">Create an interactive Plotly dashboard: line chart of monthly sales, bar chart by region, scatter of marketing vs sales, and a pie chart.</div>
   <div class="task-starter-label">Starter code:</div>
   <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import plotly.graph_objects as go
@@ -961,7 +965,7 @@ print(sns.color_palette("Set2").as_hex())
 print(sns.color_palette("rocket",5).as_hex())</div></div>
 <div class="tip-box"><strong>💡 Tip:</strong> For professional reports: use 'whitegrid' or 'white' with muted colors. For presentations: use 'talk' context with bold colors.</div></div>
   <div class="task-section">
-  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice Exercise</span></div>
+  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice: Chart Styling & Themes</span></div>
   <div class="task-desc">Create the same chart with 4 different styles. Compare: default, seaborn-whitegrid, dark, and a custom professional style.</div>
   <div class="task-starter-label">Starter code:</div>
   <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import matplotlib.pyplot as plt, numpy as np
@@ -1050,7 +1054,7 @@ with pd.ExcelWriter("report.xlsx", engine="xlsxwriter") as writer:
 print("Excel with chart saved!")</div></div>
 <div class="tip-box"><strong>💡 Tip:</strong> For web sharing: save as PNG/HTML. For print: use PDF or SVG. For Excel reports: use xlsxwriter. Always use bbox_inches='tight' to prevent label cropping.</div></div>
   <div class="task-section">
-  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice Exercise</span></div>
+  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice: Exporting & Sharing Charts</span></div>
   <div class="task-desc">Create a complete multi-format export pipeline: save a dashboard as PNG, PDF, SVG, and HTML (Plotly), then package all files.</div>
   <div class="task-starter-label">Starter code:</div>
   <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import matplotlib.pyplot as plt, numpy as np
@@ -1108,11 +1112,6 @@ Saved exports/chart.pdf: 47.2KB
 Saved exports/chart.svg: 38.9KB</div></div>
 </div>
 </div></div>
-    <div style="display:flex;justify-content:space-between;margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border)">
-      <a class="btn-nav" href="unit-7.html">← Unit 7: Data Analysis</a>
-      <span></span>
-    </div>
-  
   <!-- Shared Nav Bar -->
   <div class="lesson-quiz-bar" style="margin-bottom:.8rem">
     <button class="btn-quiz" id="quiz-btn" onclick="openCurrentQuiz()">📝 Lesson Quiz — 5 Questions</button>
@@ -1137,7 +1136,7 @@ Saved exports/chart.svg: 38.9KB</div></div>
   </div>
 </div>
 
-<script src="../js/app.js"></script>
+<script src="../js/app.js?v=20260514"></script>
 <script>
 initUnit({
   id: 8,

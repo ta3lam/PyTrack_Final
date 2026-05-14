@@ -4,28 +4,32 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>PyTrack — Python for Data Analysis</title>
-<link rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" href="css/style.css?v=20260514"/>
+  <link rel="icon" type="image/png" href="New Logo last.png">
 </head>
 <body>
 
 <nav>
-  <a class="nav-logo" href="index.html">Py<span>Track</span></a>
+  <a class="nav-logo" href="index.html"><img src="New Logo last.png" alt="Ta3laM" class="nav-logo-img"></a>
   <div class="nav-right">
-    <div class="progress-badge" id="nav-progress">0 / 90 lessons</div>
+    <div class="progress-badge" id="nav-progress">0 / 100 lessons</div>
+    <a class="btn-outline" href="search.html">⌕ Search</a>
+    <a class="btn-outline" href="roadmap.html">Roadmap</a>
     <a class="btn-outline" href="index.html">⌂ All Units</a>
+    <button id="theme-toggle" class="btn-theme-toggle" onclick="toggleTheme()" title="Toggle theme">☀️</button>
   </div>
 </nav>
 
 <div class="hero">
   <div class="hero-tag">Full Track Course</div>
   <h1 class="hero-title">Python for<br/><em>Data Analysis</em></h1>
-  <p class="hero-sub">From absolute zero to professional data analyst. 9 units, 90 lessons, hands-on tasks and quizzes — all free.</p>
+  <p class="hero-sub">From absolute zero to professional data analyst. 10 units, 100 lessons, hands-on tasks and quizzes — all free.</p>
 
   <div class="hero-stats">
-    <div class="stat"><span class="stat-num">9</span><span class="stat-lbl">Units</span></div>
-    <div class="stat"><span class="stat-num">90</span><span class="stat-lbl">Lessons</span></div>
-    <div class="stat"><span class="stat-num">90</span><span class="stat-lbl">Tasks</span></div>
-    <div class="stat"><span class="stat-num">450</span><span class="stat-lbl">Quiz Qs</span></div>
+    <div class="stat"><span class="stat-num">10</span><span class="stat-lbl">Units</span></div>
+    <div class="stat"><span class="stat-num">100</span><span class="stat-lbl">Lessons</span></div>
+    <div class="stat"><span class="stat-num">100</span><span class="stat-lbl">Tasks</span></div>
+    <div class="stat"><span class="stat-num">500</span><span class="stat-lbl">Quiz Qs</span></div>
   </div>
 
   <div class="overall-progress">
@@ -178,7 +182,23 @@
     <span class="unit-prog-label" id="plabel-9">0 / 10</span>
   </div>
 </a>
-<a class="unit-card" id="card-cap" href="capstone.html" style="border-color:rgba(245,158,11,.35);background:linear-gradient(135deg,rgba(245,158,11,.04),rgba(7,13,26,1));">
+<a class="unit-card" id="card-10" href="units/unit-10.html">
+  <div class="unit-top">
+    <div class="unit-icon-wrap">🧰</div>
+    <div class="unit-meta">
+      <div class="unit-num">UNIT 10 — 10 LESSONS</div>
+      <div class="unit-title">Git & Portfolio Workflow</div>
+    </div>
+  </div>
+  <div class="unit-desc">Version control, GitHub, project structure, reproducibility, README writing, and portfolio release habits.</div>
+  <div class="unit-prog-row">
+    <div class="unit-prog-bar">
+      <div class="unit-prog-fill" id="prog-10" style="width:0%"></div>
+    </div>
+    <span class="unit-prog-label" id="plabel-10">0 / 10</span>
+  </div>
+</a>
+<a class="unit-card capstone-card" id="card-cap" href="capstone.html">
   <div class="unit-top">
     <div class="unit-icon-wrap">🏆</div>
     <div class="unit-meta">
@@ -188,20 +208,41 @@
   </div>
   <div class="unit-desc">Apply everything in 3 real-world projects with real public datasets. The final step.</div>
   <div class="unit-prog-row">
-    <div class="unit-prog-bar" style="background:rgba(245,158,11,.15)">
-      <div class="unit-prog-fill" style="width:0%;background:linear-gradient(90deg,#f59e0b,#f97316)"></div>
+    <div class="unit-prog-bar capstone-progress">
+      <div class="unit-prog-fill capstone-progress-fill" style="width:0%"></div>
     </div>
-    <span class="unit-prog-label" style="color:var(--accent3)">Real Data</span>
+    <span class="unit-prog-label capstone-progress-label">Real Data</span>
   </div>
 </a>
 </div>
+
+  <section class="pro-section" aria-labelledby="pro-heading">
+    <div class="section-kicker">Professional Track</div>
+    <h2 id="pro-heading">Recommended next layer</h2>
+    <p>The 10-unit course now includes the first professional workflow unit. Use these companion resources to continue with deeper EDA, statistics, SQL, APIs, dashboards, and portfolio projects.</p>
+    <div class="pro-actions">
+      <a class="btn-quiz" href="roadmap.html">View Roadmap</a>
+      <a class="btn-nav" href="notebooks/training_notebook.zip" download="training_notebook.zip">Download Training Notebook</a>
+      <a class="btn-nav" href="notebooks/quiz_notebook.zip" download="quiz_notebook.zip">Download Quiz Notebook</a>
+    </div>
+  </section>
+
+  <section class="pro-section" style="margin-top:1rem" aria-labelledby="progress-heading">
+    <div class="section-kicker">Your Progress</div>
+    <h2 id="progress-heading">Backup & Restore</h2>
+    <p>Export your progress to a file so you never lose it when switching browsers or devices.</p>
+    <div class="pro-actions">
+      <button class="btn-nav" onclick="exportProgress()">⬇ Export Progress</button>
+      <label class="btn-nav" style="cursor:pointer">⬆ Import Progress<input type="file" accept=".json" style="display:none" onchange="importProgress(event)"></label>
+    </div>
+  </section>
 </div>
 
-<script src="js/app.js"></script>
+<script src="js/app.js?v=20260514"></script>
 <script>
 (function updateHome() {
-  const LESSONS_PER_UNIT = {"1": 10, "2": 10, "3": 10, "4": 10, "5": 10, "6": 10, "7": 10, "8": 10, "9": 10};
-  const TOTAL = 90;
+  const LESSONS_PER_UNIT = {"1": 10, "2": 10, "3": 10, "4": 10, "5": 10, "6": 10, "7": 10, "8": 10, "9": 10, "10": 10};
+  const TOTAL = 100;
   let grand_total = 0;
 
   Object.entries(LESSONS_PER_UNIT).forEach(([uid, n_lessons]) => {

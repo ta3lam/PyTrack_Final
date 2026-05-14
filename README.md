@@ -11,16 +11,16 @@
 
 **Python for Data Analysis — Full Track Course**
 
-[![Units](https://img.shields.io/badge/Units-9-3b82f6?style=flat-square)](#units)
-[![Lessons](https://img.shields.io/badge/Lessons-90-06b6d4?style=flat-square)](#units)
-[![Quiz Questions](https://img.shields.io/badge/Quiz%20Questions-450-f59e0b?style=flat-square)](#units)
+[![Units](https://img.shields.io/badge/Units-10-3b82f6?style=flat-square)](#units)
+[![Lessons](https://img.shields.io/badge/Lessons-100-06b6d4?style=flat-square)](#units)
+[![Quiz Questions](https://img.shields.io/badge/Quiz%20Questions-500-f59e0b?style=flat-square)](#units)
 [![Projects](https://img.shields.io/badge/Capstone%20Projects-3-10b981?style=flat-square)](#capstone)
 [![No Framework](https://img.shields.io/badge/No%20Framework-Vanilla%20JS-ef4444?style=flat-square)](#tech-stack)
 [![License](https://img.shields.io/badge/License-MIT-8b5cf6?style=flat-square)](LICENSE)
 
 *From absolute zero to professional data analyst — free, no signup, runs in the browser.*
 
-[**🚀 Live Demo**](https://yourusername.github.io/pytrack) · [**📖 Curriculum**](#units) · [**⚡ Features**](#features)
+[**Open Course**](index.html) · [**Roadmap**](roadmap.html) · [**Curriculum**](#units) · [**Features**](#features)
 
 </div>
 
@@ -38,12 +38,13 @@ Everything is stored in `localStorage` so progress persists across sessions. The
 
 | Feature | Description |
 |---|---|
-| ⚡ **Code Playground** | Run Python in the browser via Pyodide. numpy & pandas included. |
-| 📝 **Per-lesson Quizzes** | 5 questions per lesson, 450 total. Instant feedback with explanations. |
+| ⚡ **Code Playground** | Run Python in the browser via Pyodide. numpy, pandas, matplotlib, scipy, scikit-learn, requests, and beautifulsoup4 load on demand. |
+| 📝 **Per-lesson Quizzes** | 5 questions per lesson, 500 total. Instant feedback with explanations. |
 | 🎯 **Practice Tasks** | Every lesson has a hands-on task with starter code + solution. |
 | 📊 **Progress Tracking** | Persistent progress via localStorage. Sidebar + nav badge. |
 | 🏆 **Capstone Projects** | 3 real-world projects with public datasets and starter code. |
-| 📱 **Responsive** | Works on desktop and mobile. |
+| 📱 **Responsive** | Works on desktop and mobile with lesson navigation. |
+| 🧭 **Professional Roadmap** | A recommended path for Git, EDA, statistics, SQL, APIs, dashboards, portfolio work, and ML. |
 | 🔌 **Zero Dependencies** | Pure HTML/CSS/JS — no build step, no npm, no framework. |
 
 ---
@@ -61,8 +62,25 @@ Everything is stored in `localStorage` so progress persists across sessions. The
 | 07 | 📊 **Data Analysis** | GroupBy, merge, pivot tables, time series, regression | 10 |
 | 08 | 📈 **Data Visualization** | Matplotlib, Seaborn, Plotly, dashboards, export | 10 |
 | 09 | 🤖 **ML, SQL & APIs** | Scikit-learn, regression, classification, SQL, REST APIs, scraping | 10 |
+| 10 | 🧰 **Git & Portfolio Workflow** | Git, GitHub, project structure, environments, README, release checklist | 10 |
 
-**Total: 90 lessons · 90 tasks · 450 quiz questions**
+**Total: 100 lessons · 100 tasks · 500 quiz questions**
+
+---
+
+## Professional Roadmap
+
+The first 10 units cover the main learning path plus the first professional workflow layer. The project also includes `roadmap.html` as a coverage audit and expansion plan, `LESSON_AUDIT.md` as a lesson-level review, plus two companion notebooks for continued practice:
+
+- Git/GitHub and reproducible project structure (now covered in Unit 10)
+- deeper EDA and statistics
+- SQL, APIs, JSON, and web data workflows
+- dashboards, storytelling, and portfolio delivery
+- practical ML for analysts
+
+Use `notebooks/training_notebook.zip` for extended practice and `notebooks/quiz_notebook.zip` for self-grading review downloads. The original `.ipynb` files are kept in the same folder for editing.
+
+The roadmap now identifies which topics are covered, which are partial, and which should become future professional units.
 
 ---
 
@@ -76,7 +94,7 @@ Three real-world projects that cover the full data pipeline:
 📊 Sales Dashboard           → SQL + time series + interactive Plotly dashboard
 ```
 
-Each project includes step-by-step instructions, links to real public datasets, and starter code.
+Each project includes a portfolio-ready rubric, step-by-step instructions, links to real public datasets, and starter code.
 
 ---
 
@@ -98,8 +116,8 @@ No React, no Vue, no build step. Open `index.html` and it works.
 ### Run locally
 
 ```bash
-git clone https://github.com/yourusername/pytrack.git
-cd pytrack
+# From this project folder
+cd Python_Track_Ta3lam
 
 # Option 1: Python (simplest)
 python -m http.server 8000
@@ -124,7 +142,7 @@ git push origin main
 # Settings → Pages → Branch: main → / (root) → Save
 
 # 4. Your site will be live at:
-# https://yourusername.github.io/pytrack
+# https://<github-username>.github.io/<repository-name>/
 ```
 
 Takes about 2 minutes after the first push.
@@ -136,27 +154,35 @@ Takes about 2 minutes after the first push.
 ```
 pytrack/
 │
-├── index.html          ← Homepage — unit cards + overall progress
+├── index.html                    ← Homepage — unit cards + overall progress
+├── roadmap.html                  ← Professional learning path and expansion plan
+├── capstone.html                 ← Capstone Projects
 │
-├── unit-1.html         ← Getting Started
-├── unit-2.html         ← Python Fundamentals
-├── unit-3.html         ← Control Flow
-├── unit-4.html         ← NumPy Arrays
-├── unit-5.html         ← Pandas Basics
-├── unit-6.html         ← Data Cleaning
-├── unit-7.html         ← Data Analysis
-├── unit-8.html         ← Data Visualization
-├── unit-9.html         ← ML, SQL & APIs
+├── units/
+│   ├── unit-1.html               ← Getting Started
+│   ├── unit-2.html               ← Python Fundamentals
+│   ├── unit-3.html               ← Control Flow
+│   ├── unit-4.html               ← NumPy Arrays
+│   ├── unit-5.html               ← Pandas Basics
+│   ├── unit-6.html               ← Data Cleaning
+│   ├── unit-7.html               ← Data Analysis
+│   ├── unit-8.html               ← Data Visualization
+│   ├── unit-9.html               ← ML, SQL & APIs
+│   └── unit-10.html              ← Git & Portfolio Workflow
 │
-├── capstone.html       ← Capstone Projects
+├── notebooks/
+│   ├── training_notebook.ipynb   ← Extended practical training
+│   ├── training_notebook.zip     ← Downloadable training notebook
+│   ├── quiz_notebook.ipynb       ← Self-grading quiz notebook
+│   └── quiz_notebook.zip         ← Downloadable quiz notebook
 │
-├── app.js              ← All JS: quiz logic, progress, sidebar, playground
-├── style.css           ← All styles: dark theme, components, playground
+├── js/app.js                     ← Quiz logic, progress, sidebar, Pyodide playground
+├── css/style.css                 ← Dark theme, components, responsive layout
 │
 └── README.md
 ```
 
-All files are flat in the root — no subdirectories, no build output.
+No build step is required. The site is static, with content split into `units/`, `css/`, `js/`, and `notebooks/`.
 
 ---
 
@@ -176,7 +202,9 @@ df = pd.DataFrame({
 print(df.sort_values('sales', ascending=False))
 ```
 
-**Supported packages out of the box:** `numpy`, `pandas`, `math`, `statistics`, `datetime`, `json`, `re`, `collections`, `itertools`
+**Supported packages:** Python standard-library modules work directly. Larger packages such as `numpy`, `pandas`, `matplotlib`, `scipy`, `scikit-learn`, `requests`, and `beautifulsoup4` are loaded by Pyodide when the code imports them.
+
+Live API and scraping examples may still be limited by browser CORS rules. If that happens, run the same code in Jupyter or VS Code.
 
 **First load:** ~10-15 seconds (downloads ~10MB WebAssembly runtime). Subsequent loads are instant (cached).
 
@@ -235,10 +263,10 @@ Contributions welcome — especially:
 
 ```bash
 # Fork the repo, make changes, then open a PR
-git checkout -b feature/unit-10-deep-learning
+git checkout -b feature/unit-11-eda-statistics
 # edit files...
-git commit -m "Add Unit 10: Deep Learning with TensorFlow"
-git push origin feature/unit-10-deep-learning
+git commit -m "Add Unit 11: EDA and Applied Statistics"
+git push origin feature/unit-11-eda-statistics
 ```
 
 ---
@@ -253,6 +281,6 @@ MIT — free to use, modify, and distribute. See [LICENSE](LICENSE) for details.
 
 Built with ☕ and a lot of `print()` statements.
 
-**[⭐ Star this repo](https://github.com/yourusername/pytrack)** if PyTrack helped you learn Python!
+Open the course from `index.html`, or deploy the same static files to GitHub Pages when ready.
 
 </div>

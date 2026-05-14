@@ -4,15 +4,17 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Unit 7 — Data Analysis | PyTrack</title>
-<link rel="stylesheet" href="../css/style.css"/>
+<link rel="stylesheet" href="../css/style.css?v=20260514"/>
+  <link rel="icon" type="image/png" href="../New Logo last.png">
 </head>
-<body>
+<body class="code-card-preview">
 
 <nav>
-  <a class="nav-logo" href="../index.html">Py<span>Track</span></a>
+  <a class="nav-logo" href="../index.html"><img src="../New Logo last.png" alt="Ta3laM" class="nav-logo-img"></a>
   <div class="nav-right">
-    <div class="progress-badge" id="nav-progress">0 / 80 lessons</div>
+    <div class="progress-badge" id="nav-progress">0 / 100 lessons</div>
     <a class="btn-outline" href="../index.html">⌂ All Units</a>
+    <button id="theme-toggle" class="btn-theme-toggle" onclick="toggleTheme()" title="Toggle theme">☀️</button>
   </div>
 </nav>
 
@@ -49,7 +51,9 @@
 </div><div class="sidebar-unit">
   <div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🤖</span><span>Unit 9: ML, SQL & APIs</span><span class="sidebar-unit-arrow">▶</span></div>
   <div class="sidebar-lessons"><a class="sidebar-lesson" id="slink-9-0" href="unit-9.html" ><span class="lesson-check" id="chk-9-0"></span>Intro to Machine Learning</a><a class="sidebar-lesson" id="slink-9-1" href="unit-9.html" ><span class="lesson-check" id="chk-9-1"></span>Scikit-learn Basics</a><a class="sidebar-lesson" id="slink-9-2" href="unit-9.html" ><span class="lesson-check" id="chk-9-2"></span>Linear Regression</a><a class="sidebar-lesson" id="slink-9-3" href="unit-9.html" ><span class="lesson-check" id="chk-9-3"></span>Logistic Regression</a><a class="sidebar-lesson" id="slink-9-4" href="unit-9.html" ><span class="lesson-check" id="chk-9-4"></span>Decision Trees & Random Forest</a><a class="sidebar-lesson" id="slink-9-5" href="unit-9.html" ><span class="lesson-check" id="chk-9-5"></span>Model Evaluation</a><a class="sidebar-lesson" id="slink-9-6" href="unit-9.html" ><span class="lesson-check" id="chk-9-6"></span>Feature Engineering</a><a class="sidebar-lesson" id="slink-9-7" href="unit-9.html" ><span class="lesson-check" id="chk-9-7"></span>SQL with Python</a><a class="sidebar-lesson" id="slink-9-8" href="unit-9.html" ><span class="lesson-check" id="chk-9-8"></span>REST APIs & requests</a><a class="sidebar-lesson" id="slink-9-9" href="unit-9.html" ><span class="lesson-check" id="chk-9-9"></span>Web Scraping</a></div>
-</div><div class="sidebar-unit"><div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🏆</span><span>Capstone Projects</span><span class="sidebar-unit-arrow">▶</span></div><div class="sidebar-lessons"><a class="sidebar-lesson" href="../capstone.html">View Projects</a></div></div>
+</div><div class="sidebar-unit">
+  <div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🧰</span><span>Unit 10: Git & Portfolio Workflow</span><span class="sidebar-unit-arrow">▶</span></div>
+  <div class="sidebar-lessons"><a class="sidebar-lesson" id="slink-10-0" href="unit-10.html"><span class="lesson-check" id="chk-10-0"></span>Why Git for Data Projects?</a><a class="sidebar-lesson" id="slink-10-1" href="unit-10.html"><span class="lesson-check" id="chk-10-1"></span>Install & Configure Git</a><a class="sidebar-lesson" id="slink-10-2" href="unit-10.html"><span class="lesson-check" id="chk-10-2"></span>Repositories & Commits</a><a class="sidebar-lesson" id="slink-10-3" href="unit-10.html"><span class="lesson-check" id="chk-10-3"></span>Branches & Experiments</a><a class="sidebar-lesson" id="slink-10-4" href="unit-10.html"><span class="lesson-check" id="chk-10-4"></span>GitHub Remote Workflow</a><a class="sidebar-lesson" id="slink-10-5" href="unit-10.html"><span class="lesson-check" id="chk-10-5"></span>.gitignore & Data Safety</a><a class="sidebar-lesson" id="slink-10-6" href="unit-10.html"><span class="lesson-check" id="chk-10-6"></span>Project Folder Structure</a><a class="sidebar-lesson" id="slink-10-7" href="unit-10.html"><span class="lesson-check" id="chk-10-7"></span>requirements.txt & Environments</a><a class="sidebar-lesson" id="slink-10-8" href="unit-10.html"><span class="lesson-check" id="chk-10-8"></span>README for Data Projects</a><a class="sidebar-lesson" id="slink-10-9" href="unit-10.html"><span class="lesson-check" id="chk-10-9"></span>Portfolio Release Checklist</a></div></div><div class="sidebar-unit"><div class="sidebar-unit-header" onclick="toggleUnit(this)"><span>🏆</span><span>Capstone Projects</span><span class="sidebar-unit-arrow">▶</span></div><div class="sidebar-lessons"><a class="sidebar-lesson" href="../capstone.html">View Projects</a></div></div>
     </div>
   </aside>
 
@@ -112,7 +116,7 @@ pairs = corr.where(mask).stack().sort_values(ascending=False)
 print("\nTop correlations:")
 print(pairs.head(3))</div></div></div>
   <div class="task-section">
-  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice Exercise</span></div>
+  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice: Descriptive Statistics</span></div>
   <div class="task-desc">Perform a complete descriptive analysis on a sales dataset: central tendency, spread, shape, and identify key insights.</div>
   <div class="task-starter-label">Starter code:</div>
   <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import pandas as pd, numpy as np
@@ -205,7 +209,7 @@ df["Above_Avg"]  = df["vs_avg"] &gt; 0
 high_regions = df.groupby("Region").filter(lambda x: x["Sales"].mean() &gt; 30000)
 print(f"High regions: {high_regions['Region'].unique()}")</div></div></div>
   <div class="task-section">
-  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice Exercise</span></div>
+  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice: GroupBy — Grouped Analysis</span></div>
   <div class="task-desc">Analyze sales by region AND product. Find top product per region, regions missing from top 10 by revenue, and flag underperforming combinations.</div>
   <div class="task-starter-label">Starter code:</div>
   <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import pandas as pd, numpy as np
@@ -316,7 +320,7 @@ merged = pd.merge(orders2, customers2,
 print(merged)</div></div>
 <div class="tip-box"><strong>💡 Tip:</strong> Always check the row count after merging — an unexpected increase means duplicate keys in one of the DataFrames.</div></div>
   <div class="task-section">
-  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice Exercise</span></div>
+  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice: Merging DataFrames</span></div>
   <div class="task-desc">Merge 3 tables: orders, customers, and products. Calculate revenue per customer and identify top customers by city.</div>
   <div class="task-starter-label">Starter code:</div>
   <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import pandas as pd
@@ -422,7 +426,7 @@ stacked = pd.concat([df_a, df_b], ignore_index=True)
 print(stacked)  # NaN where columns don't exist</div></div>
 <div class="tip-box"><strong>💡 Tip:</strong> Add a source column before concat to track which file/period each row came from. Essential when combining multiple sheets or files.</div></div>
   <div class="task-section">
-  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice Exercise</span></div>
+  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice: Concat & Join</span></div>
   <div class="task-desc">Combine 4 quarterly DataFrames into one annual dataset. Add quarter labels, verify totals, and create a quarterly comparison.</div>
   <div class="task-starter-label">Starter code:</div>
   <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import pandas as pd, numpy as np
@@ -522,7 +526,7 @@ ct = pd.crosstab(df["Region"], df["Quarter"],
 print(ct.round(1))</div></div>
 <div class="tip-box"><strong>💡 Tip:</strong> Use margins=True to automatically add totals row and column. Use fill_value=0 to replace NaN with 0 in the pivot table.</div></div>
   <div class="task-section">
-  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice Exercise</span></div>
+  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice: Pivot Tables</span></div>
   <div class="task-desc">Create a comprehensive pivot analysis: revenue by region/quarter, market share by product, and identify best region-product combinations.</div>
   <div class="task-starter-label">Starter code:</div>
   <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import pandas as pd, numpy as np
@@ -612,7 +616,7 @@ Quarterly:
 2024-03-31  4391581  48260.0     91
 2024-06-30  4512345  49585.0     91</div></div>
   <div class="task-section">
-  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice Exercise</span></div>
+  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice: Time Series Basics</span></div>
   <div class="task-desc">Analyze a year of daily sales: find seasonality patterns, best/worst day of week, month-over-month growth, and detect trend.</div>
   <div class="task-starter-label">Starter code:</div>
   <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import pandas as pd, numpy as np
@@ -713,7 +717,7 @@ result2 = pd.DataFrame({
 print(result2.tail(5))</div></div>
 <div class="tip-box"><strong>💡 Tip:</strong> Rolling averages smooth out noise in time series. Use 3-period MA for short-term trend, 12-period for long-term.</div></div>
   <div class="task-section">
-  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice Exercise</span></div>
+  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice: Window Functions</span></div>
   <div class="task-desc">Apply window functions to daily sales: calculate 7-day and 30-day moving averages, detect days where sales spike > 2 std above rolling mean, and calculate cumulative revenue milestones.</div>
   <div class="task-starter-label">Starter code:</div>
   <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import pandas as pd, numpy as np
@@ -818,7 +822,7 @@ print(f"Slope (b):     {b:.2f}")
 print(f"R²:            {r_squared:.3f}")
 print(f"\nFor 6000 marketing: {a + b*6000:,.0f} predicted sales")</div></div></div>
   <div class="task-section">
-  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice Exercise</span></div>
+  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice: Correlation & Regression</span></div>
   <div class="task-desc">Perform correlation analysis on a multi-variable dataset. Find the variables most correlated with sales, build a simple regression, and interpret results.</div>
   <div class="task-starter-label">Starter code:</div>
   <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import pandas as pd, numpy as np
@@ -928,7 +932,7 @@ print(f"p-value:     {p_value:.4f}")
 print(f"Significant (p&lt;0.05): {p_value &lt; 0.05}")</div></div>
 <div class="tip-box"><strong>💡 Tip:</strong> p-value < 0.05 means we reject the null hypothesis — the difference is statistically significant (not due to random chance).</div></div>
   <div class="task-section">
-  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice Exercise</span></div>
+  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice: Sampling & Hypothesis Testing</span></div>
   <div class="task-desc">Compare sales between two marketing campaigns using hypothesis testing. Determine if the difference is statistically significant.</div>
   <div class="task-starter-label">Starter code:</div>
   <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import numpy as np, pandas as pd
@@ -1015,7 +1019,7 @@ def sales_report(df, title="Sales Report"):
     return monthly</div></div>
 <div class="tip-box"><strong>💡 Tip:</strong> A good report has: Overview → Trend → Breakdown → Insights → Recommendations. Always answer the 'so what' question.</div></div>
   <div class="task-section">
-  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice Exercise</span></div>
+  <div class="task-header"><span class="task-badge">🎯 TASK</span><span class="task-title">Practice: Building Analysis Reports</span></div>
   <div class="task-desc">Build a full quarterly business report with: executive summary, KPI dashboard, regional analysis, product performance, and growth analysis.</div>
   <div class="task-starter-label">Starter code:</div>
   <div class="code-block"><div class="code-header"><span>python</span><button class="copy-btn">copy</button></div><div class="code-body">import pandas as pd, numpy as np
@@ -1078,11 +1082,6 @@ Phone     6,089,456
 Tablet    5,973,887</div></div>
 </div>
 </div></div>
-    <div style="display:flex;justify-content:space-between;margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border)">
-      <a class="btn-nav" href="unit-6.html">← Unit 6: Data Cleaning</a>
-      <a class="btn-nav" href="unit-8.html">Unit 8: Data Visualization →</a>
-    </div>
-  
   <!-- Shared Nav Bar -->
   <div class="lesson-quiz-bar" style="margin-bottom:.8rem">
     <button class="btn-quiz" id="quiz-btn" onclick="openCurrentQuiz()">📝 Lesson Quiz — 5 Questions</button>
@@ -1107,7 +1106,7 @@ Tablet    5,973,887</div></div>
   </div>
 </div>
 
-<script src="../js/app.js"></script>
+<script src="../js/app.js?v=20260514"></script>
 <script>
 initUnit({
   id: 7,
